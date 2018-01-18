@@ -15,6 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WorldOne" />
+        <activity android:name=".WorldSelection" />
+        <activity android:name=".Tree" />
+        <activity android:name=".ResultOfImage"></activity>
     </application>
 
 </manifest>

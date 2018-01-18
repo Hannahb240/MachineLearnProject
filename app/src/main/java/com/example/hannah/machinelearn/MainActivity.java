@@ -1,7 +1,12 @@
  package com.example.hannah.machinelearn;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.opencv.android.OpenCVLoader;
@@ -13,6 +18,9 @@ import org.opencv.android.OpenCVLoader;
         System.loadLibrary("native-lib");
         System.loadLibrary("opencv_java3");
     }
+
+     Button goToWorldButton;
+     ImageView imgView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +40,19 @@ import org.opencv.android.OpenCVLoader;
 
         tv.setText(tv.getText() + "\n" + validate(0L, 0L));
 
-
-
+        goToWorldButton = (Button) findViewById(R.id.goToWorldSelection);
 
     }
+
+     public void changeActivity(View view) {
+
+        Button buttonPressed = (Button) findViewById(view.getId());
+         String buttonText = buttonPressed.getText().toString();
+         if(buttonText.equals("Go to world selection")) {
+             Intent intent = new Intent(getApplicationContext(), WorldSelection.class);
+             startActivity(intent);
+         }
+     }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
