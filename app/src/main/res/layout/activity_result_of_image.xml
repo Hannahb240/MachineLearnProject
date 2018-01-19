@@ -10,4 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannah.machinelearn.ResultOfImage">
 
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="80dp"
+        android:text="return"
+        android:onClick="changeActivity"/>
+
 </RelativeLayout>

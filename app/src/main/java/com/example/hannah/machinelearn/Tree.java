@@ -24,6 +24,7 @@ public class Tree extends AppCompatActivity {
 
     //Button to take a photo
     Button takePhoto;
+    Button seeResult;
 
     ImageView myImageView;
 
@@ -38,6 +39,8 @@ public class Tree extends AppCompatActivity {
         setContentView(R.layout.activity_tree);
 
         takePhoto = (Button) findViewById(R.id.takePhoto);
+        seeResult = (Button) findViewById(R.id.seeResult);
+        seeResult.setVisibility(View.INVISIBLE);
         myImageView = (ImageView) findViewById(R.id.myImgView);
 
         //Photo code
@@ -71,7 +74,7 @@ public class Tree extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap photo = (Bitmap) extras.get("data");
             myImageView.setImageBitmap(photo);
-
+            seeResult.setVisibility(View.VISIBLE);
             takePhoto.setText("Take another image");
 
 
@@ -86,6 +89,7 @@ public class Tree extends AppCompatActivity {
         if(buttonText.equals("Result")) {
             Intent intent = new Intent(getApplicationContext(), ResultOfImage.class);
             startActivity(intent);
+            this.finish();
         }
     }
 
