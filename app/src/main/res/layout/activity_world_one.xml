@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_world_one"
     android:layout_width="match_parent"
@@ -9,20 +9,76 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannah.machinelearn.WorldOne"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/grass">
+
 
     <Button
         android:id="@+id/returnButton"
-        android:layout_width="140dp"
-        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="80dp"
         android:text="return"
         android:onClick="changeActivity"/>
 
     <ImageButton
-        android:id="@+id/selectTree"
+        android:id="@+id/selectTree1"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/stand2" />
-</LinearLayout>
+        android:layout_marginTop="100dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/selectTree2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/selectTree3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/selectTree4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/selectTree5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/selectTree6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/selectTree7"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/selectTree8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/tree" />
+
+</RelativeLayout>

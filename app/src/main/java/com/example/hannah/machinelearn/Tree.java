@@ -66,6 +66,12 @@ public class Tree extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
     }
 
+    //return
+    public void returrn(View view){
+        this.finish();
+    }
+
+
     //Return image captured
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){

@@ -11,7 +11,14 @@ import android.widget.TextView;
 public class WorldOne extends AppCompatActivity {
 
     //Tree buttons
-    ImageButton treeButton;
+    ImageButton treeButton1;
+    ImageButton treeButton2;
+    ImageButton treeButton3;
+    ImageButton treeButton4;
+    ImageButton treeButton5;
+    ImageButton treeButton6;
+    ImageButton treeButton7;
+    ImageButton treeButton8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +29,77 @@ public class WorldOne extends AppCompatActivity {
         //Return button
         Button returnButton = (Button) findViewById(R.id.returnButton);
 
-        //Tree number 1
-        treeButton = (ImageButton) findViewById(R.id.selectTree);
-        treeButton.setOnClickListener(new View.OnClickListener() {
+        //Tree  1
+        treeButton1 = (ImageButton) findViewById(R.id.selectTree1);
+        treeButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
                 startActivity(intent);
             }
         });
 
+        //Tree 2
+        treeButton2 = (ImageButton) findViewById(R.id.selectTree2);
+        treeButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                startActivity(intent);
+            }
+        });
 
+        //Tree 3
+        treeButton2 = (ImageButton) findViewById(R.id.selectTree3);
+        treeButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                startActivity(intent);
+            }
+        });
+
+        //Tree 4
+        treeButton2 = (ImageButton) findViewById(R.id.selectTree4);
+        treeButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                startActivity(intent);
+            }
+        });
+
+        //Tree 5
+        treeButton2 = (ImageButton) findViewById(R.id.selectTree5);
+        treeButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                startActivity(intent);
+            }
+        });
+
+        //Tree 6
+        treeButton2 = (ImageButton) findViewById(R.id.selectTree6);
+        treeButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                startActivity(intent);
+            }
+        });
+
+        //Tree 7
+        treeButton2 = (ImageButton) findViewById(R.id.selectTree7);
+        treeButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                startActivity(intent);
+            }
+        });
+
+        //Tree 7
+        treeButton2 = (ImageButton) findViewById(R.id.selectTree8);
+        treeButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
