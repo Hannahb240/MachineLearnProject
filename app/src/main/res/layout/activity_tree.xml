@@ -48,7 +48,7 @@
         android:layout_width="140dp"
         android:layout_height="100dp"
         android:text="Take photo"
-        android:onClick="returrn"
+        android:onClick="launchCamera"
         android:layout_marginStart="17dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/seeResult" />

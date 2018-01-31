@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannah.machinelearn.WorldOne"
     android:orientation="vertical"
-    android:background="@drawable/grass">
+    android:background="@drawable/gamemap">
 
 
     <Button
@@ -23,62 +23,75 @@
 
     <ImageButton
         android:id="@+id/selectTree1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/tree" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="250dp"
+        android:background="@drawable/treeagain" />
 
-    <ImageButton
-        android:id="@+id/selectTree2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/tree" />
-
-    <ImageButton
-        android:id="@+id/selectTree3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/tree" />
-
-    <ImageButton
-        android:id="@+id/selectTree4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/tree" />
-
-    <ImageButton
-        android:id="@+id/selectTree5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="100dp"
-        android:background="@drawable/tree" />
 
     <ImageButton
         android:id="@+id/selectTree6"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="300dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginLeft="100dp"
-        android:background="@drawable/tree" />
+        android:background="@drawable/treeagain"
+        android:layout_below="@+id/selectTree3"
+        android:layout_alignParentEnd="true" />
 
     <ImageButton
-        android:id="@+id/selectTree7"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="100dp"
-        android:background="@drawable/tree" />
+        android:id="@+id/selectTree4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/treeagain"
+        android:layout_alignTop="@+id/selectTree5"
+        android:layout_marginRight="100dp"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/selectTree2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/treeagain" />
 
     <ImageButton
         android:id="@+id/selectTree8"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="100dp"
-        android:background="@drawable/tree" />
+        android:background="@drawable/treeagain"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/selectTree7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/treeagain"
+        android:layout_marginStart="13dp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/selectTree8" />
+
+    <ImageButton
+        android:id="@+id/selectTree3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/treeagain"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="200dp"
+        android:layout_below="@+id/returnButton" />
+
+    <ImageButton
+        android:id="@+id/selectTree5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="140dp"
+        android:background="@drawable/treeagain"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

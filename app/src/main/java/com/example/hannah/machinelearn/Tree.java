@@ -26,6 +26,8 @@ public class Tree extends AppCompatActivity {
     Button takePhoto;
     Button seeResult;
 
+    int typeOfTree;
+
     ImageView myImageView;
 
     //Photo variables
@@ -35,6 +37,10 @@ public class Tree extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Bundle b = getIntent().getExtras();
+        typeOfTree = b.getInt("key");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree);
 
@@ -94,6 +100,10 @@ public class Tree extends AppCompatActivity {
         String buttonText = buttonPressed.getText().toString();
         if(buttonText.equals("Result")) {
             Intent intent = new Intent(getApplicationContext(), ResultOfImage.class);
+            Bundle b = new Bundle();
+            b.putInt("key",typeOfTree); //Your id
+            intent.putExtras(b); //Put your id to your next Intent
+            startActivity(intent);
             startActivity(intent);
             this.finish();
         }

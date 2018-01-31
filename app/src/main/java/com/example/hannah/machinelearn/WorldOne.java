@@ -20,11 +20,22 @@ public class WorldOne extends AppCompatActivity {
     ImageButton treeButton7;
     ImageButton treeButton8;
 
+    ImageButton treeButton1Done;
+    ImageButton treeButton2Done;
+    ImageButton treeButton3Done;
+    ImageButton treeButton4Done;
+    ImageButton treeButton5Done;
+    ImageButton treeButton6Done;
+    ImageButton treeButton7Done;
+    ImageButton treeButton8Done;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_world_one);
+
 
         //Return button
         Button returnButton = (Button) findViewById(R.id.returnButton);
@@ -34,7 +45,11 @@ public class WorldOne extends AppCompatActivity {
         treeButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 1); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree1).setBackgroundResource(R.drawable.treedone);
             }
         });
 
@@ -43,63 +58,93 @@ public class WorldOne extends AppCompatActivity {
         treeButton2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 2); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree2).setBackgroundResource(R.drawable.treedone);
             }
         });
 
         //Tree 3
-        treeButton2 = (ImageButton) findViewById(R.id.selectTree3);
-        treeButton2.setOnClickListener(new View.OnClickListener() {
+        treeButton3 = (ImageButton) findViewById(R.id.selectTree3);
+        treeButton3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 3); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree3).setBackgroundResource(R.drawable.treedone);
             }
         });
 
         //Tree 4
-        treeButton2 = (ImageButton) findViewById(R.id.selectTree4);
-        treeButton2.setOnClickListener(new View.OnClickListener() {
+        treeButton4 = (ImageButton) findViewById(R.id.selectTree4);
+        treeButton4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 4); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree4).setBackgroundResource(R.drawable.treedone);
             }
         });
 
         //Tree 5
-        treeButton2 = (ImageButton) findViewById(R.id.selectTree5);
-        treeButton2.setOnClickListener(new View.OnClickListener() {
+        treeButton5 = (ImageButton) findViewById(R.id.selectTree5);
+        treeButton5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 3); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree5).setBackgroundResource(R.drawable.treedone);
             }
         });
 
         //Tree 6
-        treeButton2 = (ImageButton) findViewById(R.id.selectTree6);
-        treeButton2.setOnClickListener(new View.OnClickListener() {
+        treeButton6 = (ImageButton) findViewById(R.id.selectTree6);
+        treeButton6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 3); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree6).setBackgroundResource(R.drawable.treedone);
             }
         });
 
         //Tree 7
-        treeButton2 = (ImageButton) findViewById(R.id.selectTree7);
-        treeButton2.setOnClickListener(new View.OnClickListener() {
+        treeButton7 = (ImageButton) findViewById(R.id.selectTree7);
+        treeButton7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 2); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree7).setBackgroundResource(R.drawable.treedone);
             }
         });
 
         //Tree 7
-        treeButton2 = (ImageButton) findViewById(R.id.selectTree8);
-        treeButton2.setOnClickListener(new View.OnClickListener() {
+        treeButton8 = (ImageButton) findViewById(R.id.selectTree8);
+        treeButton8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Bundle b = new Bundle();
+                b.putInt("key", 4); //Your id
+                intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                findViewById(R.id.selectTree8 ).setBackgroundResource(R.drawable.treedone);
             }
         });
+
+
 
     }
 
