@@ -18,7 +18,9 @@
         <activity android:name=".WorldOne" />
         <activity android:name=".WorldSelection" />
         <activity android:name=".Tree" />
-        <activity android:name=".ResultOfImage"></activity>
+        <activity android:name=".ResultOfImage" />
+        <activity android:name=".LemonTree" />
+        <activity android:name=".TakePhoto"></activity>
     </application>
 
 </manifest>

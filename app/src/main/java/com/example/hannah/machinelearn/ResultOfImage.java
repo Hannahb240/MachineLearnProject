@@ -10,9 +10,7 @@ import android.widget.ImageView;
 public class ResultOfImage extends AppCompatActivity {
 
 
-
     Button returnToWorldOne;
-    Button sayHello;
     int typeOfTree;
 
     @Override
@@ -21,17 +19,20 @@ public class ResultOfImage extends AppCompatActivity {
         setContentView(R.layout.activity_result_of_image);
         ImageView img= (ImageView) findViewById(R.id.fruitType);
 
+
+        //Get the parameter set by the previous activity.
+        //This parameter is used to set the image in the result class.
         Bundle b = getIntent().getExtras();
         typeOfTree = b.getInt("key");
 
         switch(typeOfTree){
             case 1:img.setImageResource(R.drawable.lemon);
                 break;
-            case 2:img.setImageResource(R.drawable.peach);
+            case 2:img.setImageResource(R.drawable.orange);
                 break;
-            case 3: img.setImageResource(R.drawable.orange);
+            case 3: img.setImageResource(R.drawable.apple);
                 break;
-            case 4: img.setImageResource(R.drawable.leaf);
+            case 4: img.setImageResource(R.drawable.pear);
                 break;
         }
     }

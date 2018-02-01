@@ -20,36 +20,32 @@ public class WorldOne extends AppCompatActivity {
     ImageButton treeButton7;
     ImageButton treeButton8;
 
-    ImageButton treeButton1Done;
-    ImageButton treeButton2Done;
-    ImageButton treeButton3Done;
-    ImageButton treeButton4Done;
-    ImageButton treeButton5Done;
-    ImageButton treeButton6Done;
-    ImageButton treeButton7Done;
-    ImageButton treeButton8Done;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_world_one);
 
-
         //Return button
         Button returnButton = (Button) findViewById(R.id.returnButton);
 
-        //Tree  1
+        //Tree 1
         treeButton1 = (ImageButton) findViewById(R.id.selectTree1);
         treeButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Intent intent = new Intent(getApplicationContext(), LemonTree.class);
                 Bundle b = new Bundle();
                 b.putInt("key", 1); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree1).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree1).setBackgroundResource(R.drawable.lemontree);
             }
         });
 
@@ -62,7 +58,14 @@ public class WorldOne extends AppCompatActivity {
                 b.putInt("key", 2); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree2).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree2).setBackgroundResource(R.drawable.orangetree);
             }
         });
 
@@ -75,7 +78,14 @@ public class WorldOne extends AppCompatActivity {
                 b.putInt("key", 3); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree3).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree3).setBackgroundResource(R.drawable.appletree);
             }
         });
 
@@ -88,7 +98,14 @@ public class WorldOne extends AppCompatActivity {
                 b.putInt("key", 4); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree4).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree4).setBackgroundResource(R.drawable.peartree);
             }
         });
 
@@ -98,10 +115,17 @@ public class WorldOne extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
                 Bundle b = new Bundle();
-                b.putInt("key", 3); //Your id
+                b.putInt("key", 2); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree5).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree5).setBackgroundResource(R.drawable.orangetree);
             }
         });
 
@@ -114,7 +138,14 @@ public class WorldOne extends AppCompatActivity {
                 b.putInt("key", 3); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree6).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree6).setBackgroundResource(R.drawable.appletree);
             }
         });
 
@@ -124,27 +155,39 @@ public class WorldOne extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
                 Bundle b = new Bundle();
-                b.putInt("key", 2); //Your id
+                b.putInt("key", 4); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree7).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree7).setBackgroundResource(R.drawable.peartree);
             }
         });
 
-        //Tree 7
+        //Tree 8
         treeButton8 = (ImageButton) findViewById(R.id.selectTree8);
         treeButton8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Tree.class);
                 Bundle b = new Bundle();
-                b.putInt("key", 4); //Your id
+                b.putInt("key", 3); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
-                findViewById(R.id.selectTree8 ).setBackgroundResource(R.drawable.treedone);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                findViewById(R.id.selectTree8 ).setBackgroundResource(R.drawable.appletree);
             }
         });
-
-
 
     }
 
@@ -157,5 +200,4 @@ public class WorldOne extends AppCompatActivity {
             this.finish();
         }
     }
-
 }
