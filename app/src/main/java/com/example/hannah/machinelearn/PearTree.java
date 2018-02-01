@@ -23,7 +23,7 @@ public class PearTree extends AppCompatActivity {
         clickedNextOnceAlreadyFlag = false;
 
         //Instuctions
-        pearTreeInstructions = (TextView) findViewById(R.id.orangeInstructions);
+        pearTreeInstructions = (TextView) findViewById(R.id.pearInstructions);
         pearTreeInstructions.setText("Be creative and come up with your own action to get the fruit from the tree!");
         pearTreeInstructions.setTextSize(30);
         pearTreeInstructions.setTextColor(Color.parseColor("#000000"));
