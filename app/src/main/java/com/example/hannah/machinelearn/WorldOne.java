@@ -53,7 +53,7 @@ public class WorldOne extends AppCompatActivity {
         treeButton2 = (ImageButton) findViewById(R.id.selectTree2);
         treeButton2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Intent intent = new Intent(getApplicationContext(), OrangeTree.class);
                 Bundle b = new Bundle();
                 b.putInt("key", 2); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
@@ -73,7 +73,7 @@ public class WorldOne extends AppCompatActivity {
         treeButton3 = (ImageButton) findViewById(R.id.selectTree3);
         treeButton3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Intent intent = new Intent(getApplicationContext(), AppleTree.class);
                 Bundle b = new Bundle();
                 b.putInt("key", 3); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
@@ -93,7 +93,7 @@ public class WorldOne extends AppCompatActivity {
         treeButton4 = (ImageButton) findViewById(R.id.selectTree4);
         treeButton4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Tree.class);
+                Intent intent = new Intent(getApplicationContext(), PearTree.class);
                 Bundle b = new Bundle();
                 b.putInt("key", 4); //Your id
                 intent.putExtras(b); //Put your id to your next Intent

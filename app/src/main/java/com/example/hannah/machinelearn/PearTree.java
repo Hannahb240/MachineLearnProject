@@ -8,26 +8,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LemonTree extends AppCompatActivity {
+public class PearTree extends AppCompatActivity {
 
     Button nextButton;
-    TextView lemonTreeInstructions;
+    TextView pearTreeInstructions;
     boolean clickedNextOnceAlreadyFlag;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lemon_tree);
+        setContentView(R.layout.activity_pear_tree);
+
         clickedNextOnceAlreadyFlag = false;
 
         //Instuctions
-        lemonTreeInstructions = (TextView) findViewById(R.id.lemonInstructions);
-        lemonTreeInstructions.setText("Looks like you'll need to reach up to get the fruit from the tree.");
-        lemonTreeInstructions.setTextSize(30);
-        lemonTreeInstructions.setTextColor(Color.parseColor("#000000"));
+        pearTreeInstructions = (TextView) findViewById(R.id.orangeInstructions);
+        pearTreeInstructions.setText("Be creative and come up with your own action to get the fruit from the tree!");
+        pearTreeInstructions.setTextSize(30);
+        pearTreeInstructions.setTextColor(Color.parseColor("#000000"));
 
         //Next button
         nextButton = (Button) findViewById(R.id.nextButton);
+
 
     }
 
@@ -36,19 +39,17 @@ public class LemonTree extends AppCompatActivity {
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
         if (buttonText.equals("Next")) {
-            if(!clickedNextOnceAlreadyFlag) {
-                lemonTreeInstructions.setText("Act this out and take a photo!");
+            if (!clickedNextOnceAlreadyFlag) {
+                pearTreeInstructions.setText("Act this out and take a photo!");
                 clickedNextOnceAlreadyFlag = true;
-            }
-            else{
+            } else {
                 Intent intent = new Intent(getApplicationContext(), TakePhoto.class);
                 Bundle b = new Bundle();
-                b.putInt("key", 1); //Your id
+                b.putInt("key", 4); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
             }
 
         }
     }
-
 }

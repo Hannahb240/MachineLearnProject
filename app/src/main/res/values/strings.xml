@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MachineLearn</string>
+    <string name="title_activity_apple_tree">AppleTree</string>
 </resources>
