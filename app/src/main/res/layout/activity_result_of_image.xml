@@ -10,14 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannah.machinelearn.ResultOfImage">
 
-    <Button
-        android:id="@+id/returnButton"
-        android:layout_width="140dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="80dp"
-        android:text="return"
-        android:onClick="changeActivity"/>
-
     <ImageView
         android:id="@+id/fruitType"
         android:layout_width="200dp"
@@ -27,6 +19,35 @@
         android:layout_marginTop="200dp"
         android:scaleType="center"/>
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:text="Next"
+        android:id="@+id/next"
+        android:onClick="selectNext" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:text="Next Lemon"
+        android:id="@+id/nextLemon"
+        android:onClick="selectNextLemon" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="200dp"
+        android:text="Return"
+        android:id="@+id/returnButton"
+        android:onClick="returnToWorldOne" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </RelativeLayout>

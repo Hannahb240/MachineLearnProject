@@ -45,9 +45,10 @@ public class PearTree extends AppCompatActivity {
             } else {
                 Intent intent = new Intent(getApplicationContext(), TakePhoto.class);
                 Bundle b = new Bundle();
-                b.putInt("key", 4); //Your id
-                intent.putExtras(b); //Put your id to your next Intent
+                b.putInt("key", 4);
+                intent.putExtras(b);
                 startActivity(intent);
+                this.finish();
             }
 
         }

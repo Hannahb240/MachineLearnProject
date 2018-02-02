@@ -43,6 +43,7 @@ public class WorldOne extends AppCompatActivity {
                 intent.putExtras(b);
                 startActivity(intent);
                 findViewById(R.id.selectTree1).setBackgroundResource(R.drawable.lemontree);
+                finish();
             }
         });
 

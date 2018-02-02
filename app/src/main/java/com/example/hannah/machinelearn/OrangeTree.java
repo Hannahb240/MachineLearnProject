@@ -46,6 +46,7 @@ public class OrangeTree extends AppCompatActivity {
                 b.putInt("key", 2); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                this.finish();
             }
 
         }

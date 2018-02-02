@@ -46,6 +46,7 @@ public class LemonTree extends AppCompatActivity {
                 b.putInt("key", 1); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                this.finish();
             }
 
         }

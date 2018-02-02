@@ -47,6 +47,7 @@ public class AppleTree extends AppCompatActivity {
                 b.putInt("key", 3); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 startActivity(intent);
+                this.finish();
             }
 
         }
