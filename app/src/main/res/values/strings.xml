@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MachineLearn</string>
     <string name="title_activity_apple_tree">AppleTree</string>
+    <string name="title_activity_already_chosen_orange">AlreadyChosenOrange</string>
 </resources>

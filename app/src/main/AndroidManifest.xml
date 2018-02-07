@@ -15,15 +15,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WorldOne" />
-        <activity android:name=".WorldSelection" />
-        <activity android:name=".ResultOfImage" />
-        <activity android:name=".LemonTree" />
-        <activity android:name=".TakePhoto" />
-        <activity android:name=".OrangeTree" />
-        <activity android:name=".AppleTree" />
-        <activity android:name=".PearTree" />
-        <activity android:name=".LemonResult"></activity>
+        <activity android:name=".One_WorldOne" />
+        <activity android:name=".Main_WorldSelection" />
+        <activity android:name=".One_ResultOfImage" />
+        <activity android:name=".One_LemonTree" />
+        <activity android:name=".One_TakePhoto" />
+        <activity android:name=".One_OrangeTree" />
+        <activity android:name=".One_LemonTree$AppleTree" />
+        <activity android:name=".One_PearTree" />
+        <activity android:name=".One_Lemon_LemonResult" />
+        <activity android:name=".One_Lemon_GiveLemonToKing" />
+        <activity android:name=".One_AppleTree"></activity>
     </application>
 
 </manifest>

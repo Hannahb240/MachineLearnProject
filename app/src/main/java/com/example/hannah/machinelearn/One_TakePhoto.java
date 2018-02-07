@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class TakePhoto extends AppCompatActivity {
+public class One_TakePhoto extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -24,7 +24,7 @@ public class TakePhoto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_take_photo);
+        setContentView(R.layout.activity_one_take_photo);
 
         Bundle b = getIntent().getExtras();
         typeOfTree = b.getInt("key");
@@ -70,13 +70,16 @@ public class TakePhoto extends AppCompatActivity {
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
         if(buttonText.equals("Next")) {
-            Intent intent = new Intent(getApplicationContext(), ResultOfImage.class);
+            Intent intent = new Intent(getApplicationContext(), One_ResultOfImage.class);
             Bundle b = new Bundle();
             b.putInt("key",typeOfTree);
             intent.putExtras(b);
             startActivity(intent);
             this.finish();
         }
+
+
+
     }
 
 

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class WorldSelection extends AppCompatActivity {
+public class Main_WorldSelection extends AppCompatActivity {
 
 
     Button worldOneButton;
@@ -19,7 +19,7 @@ public class WorldSelection extends AppCompatActivity {
         worldOneButton = (Button) findViewById(R.id.goToWorld);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_world_selection);
+        setContentView(R.layout.activity_main_world_selection);
     }
 
 
@@ -28,7 +28,7 @@ public class WorldSelection extends AppCompatActivity {
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
         if(buttonText.equals("World one")) {
-            Intent intent = new Intent(getApplicationContext(), WorldOne.class);
+            Intent intent = new Intent(getApplicationContext(), One_WorldOne.class);
             startActivity(intent);
         }
     }

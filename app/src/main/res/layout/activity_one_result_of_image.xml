@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.ResultOfImage">
+    tools:context="com.example.hannah.machinelearn.One_ResultOfImage">
 
     <ImageView
         android:id="@+id/fruitType"
@@ -26,14 +26,6 @@
         android:text="Next"
         android:id="@+id/next"
         android:onClick="selectNext" />
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="400dp"
-        android:text="Next Lemon"
-        android:id="@+id/nextLemon"
-        android:onClick="selectNextLemon" />
 
     <Button
         android:layout_width="100dp"

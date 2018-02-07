@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,7 +48,7 @@ import org.opencv.android.OpenCVLoader;
         Button buttonPressed = (Button) findViewById(view.getId());
          String buttonText = buttonPressed.getText().toString();
          if(buttonText.equals("Go to world selection")) {
-             Intent intent = new Intent(getApplicationContext(), WorldSelection.class);
+             Intent intent = new Intent(getApplicationContext(), Main_WorldSelection.class);
              startActivity(intent);
          }
      }

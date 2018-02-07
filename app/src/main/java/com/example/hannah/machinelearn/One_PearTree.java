@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PearTree extends AppCompatActivity {
+public class One_PearTree extends AppCompatActivity {
 
     Button nextButton;
     TextView pearTreeInstructions;
@@ -18,7 +18,7 @@ public class PearTree extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pear_tree);
+        setContentView(R.layout.activity_one_pear_tree);
 
         clickedNextOnceAlreadyFlag = false;
 
@@ -43,7 +43,7 @@ public class PearTree extends AppCompatActivity {
                 pearTreeInstructions.setText("Act this out and take a photo!");
                 clickedNextOnceAlreadyFlag = true;
             } else {
-                Intent intent = new Intent(getApplicationContext(), TakePhoto.class);
+                Intent intent = new Intent(getApplicationContext(), One_TakePhoto.class);
                 Bundle b = new Bundle();
                 b.putInt("key", 4);
                 intent.putExtras(b);

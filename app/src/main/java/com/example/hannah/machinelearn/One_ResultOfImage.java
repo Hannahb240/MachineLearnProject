@@ -9,14 +9,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ResultOfImage extends AppCompatActivity {
+public class One_ResultOfImage extends AppCompatActivity {
 
     int typeOfTree;
     TextView resultOfPhoto;
 
     Button nextButton;
-    Button nextButtonLemon;
     Button returnToWorldOne;
+
+    int flagForNextSelectedOnTypeLemon;
 
 
     String orangeText = "You picked an orange! This must be an orange tree.";
@@ -27,8 +28,9 @@ public class ResultOfImage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result_of_image);
+        setContentView(R.layout.activity_one_result_of_image);
         ImageView img= (ImageView) findViewById(R.id.fruitType);
+        flagForNextSelectedOnTypeLemon = 0;
 
         resultOfPhoto = (TextView) findViewById(R.id.result);
 
@@ -45,6 +47,7 @@ public class ResultOfImage extends AppCompatActivity {
         switch(typeOfTree) {
             case 1:
                 img.setImageResource(R.drawable.lemon);
+                resultOfPhoto.setText(lemonText);
                 setText(lemonText);
                 break;
             case 2:
@@ -66,20 +69,26 @@ public class ResultOfImage extends AppCompatActivity {
         resultOfPhoto.setText(textToSet);
         resultOfPhoto.setTextSize(30);
         resultOfPhoto.setTextColor(Color.parseColor("#000000"));
-        if(typeOfTree == 1){
-            nextButtonLemon = (Button) findViewById(R.id.nextLemon);
-        }
-    }
-
-    public void selectNextLemon(View view){
-        Intent intent = new Intent(getApplicationContext(), LemonResult.class);
-        startActivity(intent);
-        this.finish();
     }
 
     public void selectNext(View view) {
-        resultOfPhoto.setText("Keep seatching until you find the lemon");
-        returnToWorldOne.setVisibility(View.VISIBLE);
+
+        if(typeOfTree == 1){
+            if(flagForNextSelectedOnTypeLemon ==0) {
+                resultOfPhoto.setText("The king wants you to teach him how you collected this.");
+                flagForNextSelectedOnTypeLemon +=1;
+            }
+            else if(flagForNextSelectedOnTypeLemon == 1){
+                Intent intent = new Intent(getApplicationContext(), One_Lemon_LemonResult.class);
+                startActivity(intent);
+                this.finish();
+            }
+        }
+
+        else {
+            resultOfPhoto.setText("Keep seatching until you find the lemon");
+            returnToWorldOne.setVisibility(View.VISIBLE);
+        }
     }
 
     public void returnToWorldOne(View view) {
