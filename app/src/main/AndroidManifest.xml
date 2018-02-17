@@ -25,7 +25,17 @@
         <activity android:name=".One_PearTree" />
         <activity android:name=".One_Lemon_LemonResult" />
         <activity android:name=".One_Lemon_GiveLemonToKing" />
-        <activity android:name=".One_AppleTree"></activity>
+        <activity android:name=".One_AppleTree" />
+        <activity android:name=".Two_WorldTwo" />
+        <activity android:name=".Two_EggSmashed" />
+        <activity android:name=".Two_DisplayTrainingData" />
+        <activity android:name=".Three_WorldThree" />
+        <activity android:name=".Four_ClassificationQuizOne" />
+        <activity android:name=".Five_GuessThePose" />
+        <activity android:name=".Four_ClassificationQuizTwo" />
+        <activity android:name=".Four_ClassificationQuizThree" />
+        <activity android:name=".Four_ClassificationQuizFour" />
+        <activity android:name=".Four_ClassificationQuizFive"></activity>
     </application>
 
 </manifest>

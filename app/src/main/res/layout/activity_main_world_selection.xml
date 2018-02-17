@@ -15,16 +15,48 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose a world"
+        android:text="Select a minigame"
         android:textSize="22sp"
         android:layout_marginTop="30dp" />
 
     <Button
-        android:id="@+id/goToWorld"
+        android:id="@+id/goToWorld1"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:text="World one"
         android:layout_marginTop="80dp"
+        android:onClick="changeToWorld"/>
+
+    <Button
+        android:id="@+id/goToWorld2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="World two"
+        android:layout_marginTop="10dp"
+        android:onClick="changeToWorld"/>
+
+    <Button
+        android:id="@+id/goToWorld3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="World three"
+        android:layout_marginTop="10dp"
+        android:onClick="changeToWorld"/>
+
+    <Button
+        android:id="@+id/classificationQuiz"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Classification quiz"
+        android:layout_marginTop="10dp"
+        android:onClick="changeToWorld"/>
+
+    <Button
+        android:id="@+id/guessThePose"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Guess the pose"
+        android:layout_marginTop="10dp"
         android:onClick="changeToWorld"/>
 
 </LinearLayout>
