@@ -8,27 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class One_LemonTree extends AppCompatActivity {
+public class Three_GoodTurnipOne extends AppCompatActivity {
 
+    TextView turnipInstructions;
     Button nextButton;
-    TextView lemonTreeInstructions;
     boolean clickedNextOnceAlreadyFlag;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_one_lemon_tree);
+        setContentView(R.layout.activity_three__good_turnip_one);
         clickedNextOnceAlreadyFlag = false;
 
         //Instuctions
-        lemonTreeInstructions = (TextView) findViewById(R.id.lemonInstructions);
-        lemonTreeInstructions.setText("Looks like you'll need to reach up to get the fruit from the tree.");
-        lemonTreeInstructions.setTextSize(30);
-        lemonTreeInstructions.setTextColor(Color.parseColor("#000000"));
+        turnipInstructions = (TextView) findViewById(R.id.lemonInstructions);
+        turnipInstructions.setText("Looks like you'll need to reach up to get the fruit from the tree.");
+        turnipInstructions.setTextSize(30);
 
-        //Next button
         nextButton = (Button) findViewById(R.id.nextButton);
-
     }
 
     public void nextSection(View view) {
@@ -37,18 +35,21 @@ public class One_LemonTree extends AppCompatActivity {
         String buttonText = buttonPressed.getText().toString();
         if (buttonText.equals("Next")) {
             if(!clickedNextOnceAlreadyFlag) {
-                lemonTreeInstructions.setText("Act this out and take a photo!");
+                turnipInstructions.setText("Act this out and take a photo!");
                 clickedNextOnceAlreadyFlag = true;
             }
             else{
-                Intent intent = new Intent(getApplicationContext(), One_TakePhoto.class);
-                Bundle b = new Bundle();
-                b.putInt("key", 1); //Your id
-                intent.putExtras(b); //Put your id to your next Intent
+
+                turnipInstructions.setText("clicked once");
+                Intent intent = new Intent(getApplicationContext(), Three_TakePhoto.class);
                 startActivity(intent);
                 this.finish();
             }
 
         }
+    }
+
+    public void goBack(View view){
+        this.finish();
     }
 }

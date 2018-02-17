@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_two__collect_training_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hannah.machinelearn.Two_CollectTrainingData">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="130dp"
+        android:text="Done!"
+        android:textSize="11dp"
+        android:id="@+id/done"
+        android:onClick="changeActivity"/>
+
+    <ImageView
+        android:id="@+id/pic1"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="30dp"
+        android:text="Take Photo 1"
+        android:textSize="11dp"
+        android:id="@+id/TakePhoto"
+        android:onClick="takePhotograph"/>
+
+    <ImageView
+        android:id="@+id/pic2"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="130dp"
+        android:text="Take Photo 2"
+        android:textSize="11dp"
+        android:id="@+id/TakePhoto2"
+        android:onClick="takePhotograph"/>
+
+    <ImageView
+        android:id="@+id/pic3"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="230dp"
+        android:text="Take Photo 3"
+        android:textSize="11dp"
+        android:id="@+id/TakePhoto3"
+        android:onClick="takePhotograph"/>
+
+    <ImageView
+        android:id="@+id/pic4"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="80dp"
+        android:text="Take Photo 4"
+        android:textSize="11dp"
+        android:id="@+id/TakePhoto4"
+        android:onClick="takePhotograph"/>
+
+    <ImageView
+        android:id="@+id/pic5"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="180dp"
+        android:text="Take Photo 5"
+        android:textSize="11dp"
+        android:id="@+id/TakePhoto5"
+        android:onClick="takePhotograph"/>
+
+</RelativeLayout>

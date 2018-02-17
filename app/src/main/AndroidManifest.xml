@@ -28,14 +28,25 @@
         <activity android:name=".One_AppleTree" />
         <activity android:name=".Two_WorldTwo" />
         <activity android:name=".Two_EggSmashed" />
-        <activity android:name=".Two_DisplayTrainingData" />
         <activity android:name=".Three_WorldThree" />
         <activity android:name=".Four_ClassificationQuizOne" />
         <activity android:name=".Five_GuessThePose" />
         <activity android:name=".Four_ClassificationQuizTwo" />
         <activity android:name=".Four_ClassificationQuizThree" />
         <activity android:name=".Four_ClassificationQuizFour" />
-        <activity android:name=".Four_ClassificationQuizFive"></activity>
+        <activity android:name=".Four_ClassificationQuizFive" />
+        <activity android:name=".Three_GoodTurnipOne" />
+        <activity android:name=".Three_BadTurnipOne" />
+        <activity android:name=".Three_BadTurnipTwo" />
+        <activity android:name=".Three_TakePhoto" />
+        <activity android:name=".Three_ResultOfImage" />
+        <activity android:name=".Three_CollectTrainingData" />
+        <activity android:name=".Three_GiveTurnipToComputer" />
+        <activity android:name=".Two_GoodEgg" />
+        <activity android:name=".Two_TakePhoto" />
+        <activity android:name=".Two_ResultOfImage" />
+        <activity android:name=".Two_CollectTrainingData" />
+        <activity android:name=".Two_GiveEggToComputer"></activity>
     </application>
 
 </manifest>

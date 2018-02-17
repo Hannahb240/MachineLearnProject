@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class One_Lemon_LemonResult extends AppCompatActivity {
+public class Three_CollectTrainingData extends AppCompatActivity {
+
 
     TextView text;
     Button done;
@@ -28,14 +29,14 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_one_lemon_lemon_result);
+        setContentView(R.layout.activity_three__collect_training_data);
 
         //Photo code
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
 
         text = (TextView) findViewById(R.id.text);
-        text.setText("Take 5 pictures of you or your friends acting out picking a lemon from the tree, to teach the king how you did it.");
+        text.setText("Take 5 pictures of you or your friends acting out picking a turnip from the ground, to teach the computer how you did it.");
 
         done = (Button) findViewById(R.id.done);
         done.setVisibility(View.INVISIBLE);
@@ -93,14 +94,11 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
             }
         }
 
-        }
-
-        public void changeActivity(View view) {
-                Intent intent = new Intent(getApplicationContext(), One_Lemon_GiveLemonToKing.class);
-                startActivity(intent);
-                this.finish();
-            }
-
     }
 
-
+    public void changeActivity(View view) {
+        Intent intent = new Intent(getApplicationContext(), Three_GiveTurnipToComputer.class);
+        startActivity(intent);
+        this.finish();
+    }
+}
