@@ -25,7 +25,6 @@ public class One_PearTree extends AppCompatActivity {
         //Instuctions
         pearTreeInstructions = (TextView) findViewById(R.id.pearInstructions);
         pearTreeInstructions.setText("Be creative and come up with your own action to get the fruit from the tree!");
-        pearTreeInstructions.setTextSize(30);
         pearTreeInstructions.setTextColor(Color.parseColor("#000000"));
 
         //Next button
@@ -52,5 +51,8 @@ public class One_PearTree extends AppCompatActivity {
             }
 
         }
+    }
+    public void backButton(View view){
+        this.finish();
     }
 }

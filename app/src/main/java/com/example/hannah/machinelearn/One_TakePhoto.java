@@ -2,6 +2,7 @@ package com.example.hannah.machinelearn;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class One_TakePhoto extends AppCompatActivity {
 
@@ -21,6 +23,8 @@ public class One_TakePhoto extends AppCompatActivity {
     ImageView myImageView;
     int typeOfTree;
 
+    TextView takePhotoInstructions;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,28 @@ public class One_TakePhoto extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         typeOfTree = b.getInt("key");
+
+        takePhotoInstructions = (TextView) findViewById(R.id.photoInstructions);
+        takePhotoInstructions.setTextColor(Color.parseColor("#000000"));
+
+        switch(typeOfTree) {
+            case 1:
+                //lemon
+                takePhotoInstructions.setText("Take a photo of your partner pretending to reach up to get the fruit!");
+                break;
+            case 2:
+               //orange
+                takePhotoInstructions.setText("Take a photo of your partner pretending to jump up to reach the fruit!");
+                break;
+            case 3:
+                //apple
+                takePhotoInstructions.setText("Take a photo of your partner pretending to pick the fruit near to the ground");
+            case 4:
+                //pear
+                takePhotoInstructions.setText("Take a photo of your partner getting the fruit from the tree. Be creative with your ideas!");
+                break;
+        }
+
 
         takePhoto = (Button) findViewById(R.id.takePhoto);
 
@@ -61,7 +87,7 @@ public class One_TakePhoto extends AppCompatActivity {
             retakePhoto.setVisibility(View.VISIBLE);
             next.setVisibility(View.VISIBLE);
             takePhoto.setVisibility(View.INVISIBLE);
-
+            takePhotoInstructions.setVisibility(View.INVISIBLE);
         }
     }
 

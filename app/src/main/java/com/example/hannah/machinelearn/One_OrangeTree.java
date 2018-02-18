@@ -24,8 +24,8 @@ public class One_OrangeTree extends AppCompatActivity {
         //Instuctions
         orangeTreeInstructions = (TextView) findViewById(R.id.orangeInstructions);
         orangeTreeInstructions.setText("Oh no, the tree is too tall! Looks like you're going to have to jump to reach the fruit.");
-        orangeTreeInstructions.setTextSize(30);
         orangeTreeInstructions.setTextColor(Color.parseColor("#000000"));
+
 
         //Next button
         nextButton = (Button) findViewById(R.id.nextButton);
@@ -50,5 +50,9 @@ public class One_OrangeTree extends AppCompatActivity {
             }
 
         }
+    }
+
+    public void backButton(View view){
+        this.finish();
     }
 }

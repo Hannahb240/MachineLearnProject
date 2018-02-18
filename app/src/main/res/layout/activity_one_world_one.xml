@@ -26,28 +26,17 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="250dp"
+        android:layout_marginLeft="200dp"
         android:background="@drawable/tree" />
 
-
-    <ImageButton
-        android:id="@+id/selectTree6"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginLeft="100dp"
-        android:background="@drawable/tree"
-        android:layout_below="@+id/selectTree3"
-        android:layout_alignParentEnd="true" />
 
     <ImageButton
         android:id="@+id/selectTree4"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/tree"
-        android:layout_alignTop="@+id/selectTree5"
-        android:layout_marginRight="100dp"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="100dp" />
 
     <ImageButton
         android:id="@+id/selectTree2"
@@ -62,28 +51,26 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="100dp"
-        android:background="@drawable/tree"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:id="@+id/selectTree7"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:background="@drawable/tree"
-        android:layout_marginStart="13dp"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/selectTree8" />
+        android:background="@drawable/tree" />
 
     <ImageButton
         android:id="@+id/selectTree3"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/tree"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="200dp"
-        android:layout_below="@+id/returnButton" />
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="200dp" />
+
+    <ImageButton
+        android:id="@+id/selectTree6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/tree"
+        android:layout_alignBottom="@+id/selectTree3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="25dp" />
 
     <ImageButton
         android:id="@+id/selectTree5"
@@ -91,7 +78,17 @@
         android:layout_height="100dp"
         android:layout_marginLeft="140dp"
         android:background="@drawable/tree"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/selectTree1"
+        android:layout_alignStart="@+id/selectTree8"
+        android:layout_marginStart="20dp" />
+
+    <ImageButton
+        android:id="@+id/selectTree7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tree"
+        android:layout_below="@+id/selectTree4" />
 
 </RelativeLayout>

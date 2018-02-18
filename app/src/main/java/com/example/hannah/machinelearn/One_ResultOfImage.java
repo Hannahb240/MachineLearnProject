@@ -67,7 +67,6 @@ public class One_ResultOfImage extends AppCompatActivity {
 
     public void setText(String textToSet){
         resultOfPhoto.setText(textToSet);
-        resultOfPhoto.setTextSize(30);
         resultOfPhoto.setTextColor(Color.parseColor("#000000"));
     }
 
@@ -75,7 +74,7 @@ public class One_ResultOfImage extends AppCompatActivity {
 
         if(typeOfTree == 1){
             if(flagForNextSelectedOnTypeLemon ==0) {
-                resultOfPhoto.setText("The king wants you to teach him how you collected this.");
+                resultOfPhoto.setText("The computer wants you to teach it how you collected this.");
                 flagForNextSelectedOnTypeLemon +=1;
             }
             else if(flagForNextSelectedOnTypeLemon == 1){

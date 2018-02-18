@@ -25,7 +25,6 @@ public class One_AppleTree extends AppCompatActivity {
         //Instuctions
         appleTreeInstructions = (TextView) findViewById(R.id.appleInstructions);
         appleTreeInstructions.setText("The fruit is quite near to the ground, how are you going to pick it?");
-        appleTreeInstructions.setTextSize(30);
         appleTreeInstructions.setTextColor(Color.parseColor("#000000"));
 
         //Next button
@@ -51,5 +50,9 @@ public class One_AppleTree extends AppCompatActivity {
             }
 
         }
+    }
+
+    public void backButton(View view){
+        this.finish();
     }
 }

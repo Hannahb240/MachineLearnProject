@@ -23,7 +23,6 @@ public class One_LemonTree extends AppCompatActivity {
         //Instuctions
         lemonTreeInstructions = (TextView) findViewById(R.id.lemonInstructions);
         lemonTreeInstructions.setText("Looks like you'll need to reach up to get the fruit from the tree.");
-        lemonTreeInstructions.setTextSize(30);
         lemonTreeInstructions.setTextColor(Color.parseColor("#000000"));
 
         //Next button
@@ -50,5 +49,9 @@ public class One_LemonTree extends AppCompatActivity {
             }
 
         }
+    }
+
+    public void backButton(View view){
+        this.finish();
     }
 }
