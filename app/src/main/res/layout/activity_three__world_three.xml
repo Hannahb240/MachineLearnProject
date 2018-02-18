@@ -8,86 +8,87 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Three_WorldThree">
+    tools:context="com.example.hannah.machinelearn.Three_WorldThree"
+    android:background="@drawable/mapthree">
 
     <ImageButton
         android:id="@+id/turnip1"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="285dp"
         android:layout_marginLeft="250dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip2"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="250dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="285dp"
+        android:layout_marginLeft="140dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip3"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="150dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="120dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip4"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginLeft="100dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip5"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="80dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip6"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="300dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="170dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip7"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="250dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="185dp"
         android:layout_marginLeft="150dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip8"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="200dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="285dp"
+        android:layout_marginLeft="190dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip9"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="100dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="285dp"
+        android:layout_marginLeft="90dp"
         android:background="@drawable/turnip" />
 
     <ImageButton
         android:id="@+id/turnip10"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="285dp"
+        android:layout_marginLeft="40dp"
         android:background="@drawable/turnip" />
 
 

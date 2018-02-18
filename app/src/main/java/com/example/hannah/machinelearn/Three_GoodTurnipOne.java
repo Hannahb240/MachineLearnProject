@@ -23,7 +23,7 @@ public class Three_GoodTurnipOne extends AppCompatActivity {
 
         //Instuctions
         turnipInstructions = (TextView) findViewById(R.id.lemonInstructions);
-        turnipInstructions.setText("Looks like you'll need to reach up to get the fruit from the tree.");
+        turnipInstructions.setText("That looks difficult to pull out of the ground! You're going to have to lie down to get it ");
         turnipInstructions.setTextSize(30);
 
         nextButton = (Button) findViewById(R.id.nextButton);

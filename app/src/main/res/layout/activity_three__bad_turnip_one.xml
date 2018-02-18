@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Bad one"/>
+        android:text="Oh no! The turnip has gone bad. or Oh no! The turnip has been eaten by rats"/>
 
     <Button
         android:layout_width="100dp"

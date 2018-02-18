@@ -46,7 +46,15 @@
         <activity android:name=".Two_TakePhoto" />
         <activity android:name=".Two_ResultOfImage" />
         <activity android:name=".Two_CollectTrainingData" />
-        <activity android:name=".Two_GiveEggToComputer"></activity>
+        <activity android:name=".Two_GiveEggToComputer" />
+        <activity android:name=".Five_GuessPoseButtons" />
+        <activity android:name=".Five_StandingPose" />
+        <activity android:name=".Five_CrouchingPose" />
+        <activity android:name=".Five_LyingDownPose" />
+        <activity android:name=".Five_ResultOfGuessYes" />
+        <activity android:name=".Five_ResultOfGuessNo" />
+        <activity android:name=".Five_CollectTrainingData" />
+        <activity android:name=".Five_GiveTrainingDataToComputer"></activity>
     </application>
 
 </manifest>
