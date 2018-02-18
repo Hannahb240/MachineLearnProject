@@ -54,7 +54,8 @@
         <activity android:name=".Five_ResultOfGuessYes" />
         <activity android:name=".Five_ResultOfGuessNo" />
         <activity android:name=".Five_CollectTrainingData" />
-        <activity android:name=".Five_GiveTrainingDataToComputer"></activity>
+        <activity android:name=".Five_GiveTrainingDataToComputer" />
+        <activity android:name=".Four_ClassificationQuizSix"></activity>
     </application>
 
 </manifest>
