@@ -21,7 +21,7 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
         setContentView(R.layout.activity_one_lemon_give_lemon_to_king);
 
         text = (TextView) findViewById(R.id.text);
-        text.setText("We'll give the king the lemon and your training data.");
+        text.setText("We'll give the computer the lemon and your training data.");
 
         lemonPic = (ImageView) findViewById(R.id.lemon);
         lemonPic.setImageResource(R.drawable.lemon);
