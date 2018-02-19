@@ -35,7 +35,7 @@ public class Five_CollectTrainingData extends AppCompatActivity {
         StrictMode.setVmPolicy(builder.build());
 
         text = (TextView) findViewById(R.id.text);
-        text.setText("Take 5 pictures of you or your friends acting out picking a turnip from the ground, to teach the computer how you did it.");
+        text.setText("Take 5 pictures of you or your partner acting out the pose to give the computer some more training data, so it learns how to classify the pose.");
 
         done = (Button) findViewById(R.id.done);
         done.setVisibility(View.INVISIBLE);
@@ -74,21 +74,22 @@ public class Five_CollectTrainingData extends AppCompatActivity {
 
             //case statement for whatever the variable is set to
             switch(buttonPressedNumber) {
-                case "Take Photo 1":
+                case "Take      Photo 1":
                     pic1.setImageBitmap(photo);
                     break;
-                case "Take Photo 2":
+                case "Take      Photo 2":
                     pic2.setImageBitmap(photo);
                     break;
-                case "Take Photo 3":
+                case "Take      Photo 3":
                     pic3.setImageBitmap(photo);
                     break;
-                case "Take Photo 4":
+                case "Take      Photo 4":
                     pic4.setImageBitmap(photo);
                     break;
-                case "Take Photo 5":
+                case "Take      Photo 5":
                     pic5.setImageBitmap(photo);
                     done.setVisibility(View.VISIBLE);
+                    text.setVisibility(View.INVISIBLE);
                     break;
             }
         }

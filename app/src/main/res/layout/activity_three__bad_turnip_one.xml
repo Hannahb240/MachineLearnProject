@@ -8,17 +8,19 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Three_BadTurnipOne">
+    tools:context="com.example.hannah.machinelearn.Three_BadTurnipOne"
+    android:background="@drawable/onetakephotobackground">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Oh no! The turnip has gone bad. or Oh no! The turnip has been eaten by rats"/>
+        android:text="Oh no! The turnip has gone bad."/>
 
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/button"
         android:text="Return"
         android:onClick="goBack"/>
 

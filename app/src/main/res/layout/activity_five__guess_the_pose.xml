@@ -8,17 +8,19 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Five_GuessThePose">
+    tools:context="com.example.hannah.machinelearn.Five_GuessThePose"
+    android:background="@drawable/onetakephotobackground">
 
     <TextView
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:text="Can the computer guess your pose?"/>
 
-
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button"
         android:text="Try"
         android:onClick="tryToGuessPose"/>
 

@@ -8,10 +8,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Five_ResultOfGuessYes">
+    tools:context="com.example.hannah.machinelearn.Five_ResultOfGuessYes"
+    android:background="@drawable/onetakephotobackground">
 
     <TextView
-        android:layout_width="100dp"
+        android:layout_width="300dp"
         android:layout_height="100dp"
         android:text="The computer guessed that your pose is reaching up high, is this correct?"
         android:id="@+id/textBox"/>
@@ -22,6 +23,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginLeft="100dp"
         android:text="No"
+        android:background="@drawable/button"
         android:id="@+id/no"
         android:onClick="onNo"/>
 
@@ -31,6 +33,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginLeft="100dp"
         android:text="Add more training data"
+        android:background="@drawable/button"
         android:id="@+id/moreData"
         android:onClick="moreData"/>
 
@@ -39,6 +42,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="200dp"
         android:text="Yes"
+        android:background="@drawable/button"
         android:id="@+id/yes"
         android:onClick="onYes"/>
 
@@ -47,6 +51,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="200dp"
         android:text="Back"
+        android:background="@drawable/button"
         android:id="@+id/back"
         android:onClick="onBack"/>
 
