@@ -33,13 +33,11 @@
         android:layout_marginBottom="13dp" />
 
     <Button
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="105dp"
-        android:text="Return"
-        android:background="@drawable/button"
-        android:id="@+id/returnToWorldOneID"
-        android:onClick="returnToWorldTwo" />
+    android:layout_width="100dp"
+    android:layout_height="60dp"
+    android:layout_marginTop="300dp"
+    android:text="Return"
+    android:id="@+id/returnToWorldTwoID"
+    android:onClick="returnToWorldTwo" />
 
 </RelativeLayout>

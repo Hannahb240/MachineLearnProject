@@ -15,6 +15,8 @@ public class Three_ResultOfImage extends AppCompatActivity {
     int flagForNextSelected;
     TextView resultOfPhoto;
 
+    ImageView turnipPic;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,25 +24,19 @@ public class Three_ResultOfImage extends AppCompatActivity {
         setContentView(R.layout.activity_three__result_of_image);
         flagForNextSelected = 0;
 
-        ImageView img= (ImageView) findViewById(R.id.turnipPic);
+        turnipPic = (ImageView) findViewById(R.id.turnipPic);
+        turnipPic.setImageResource(R.drawable.turnip);
+
         resultOfPhoto = (TextView) findViewById(R.id.resultText);
 
         nextButton = (Button) findViewById(R.id.nextButton);
-
-        resultOfPhoto.setText("Hooray you picked a turnip!");
+        resultOfPhoto.setText("Teach the computer how you collected the turnip!");
 
     }
 
     public void selectNext(View view) {
-
-            if(flagForNextSelected==0) {
-                resultOfPhoto.setText("Teach the computer how you collected this!");
-                flagForNextSelected +=1;
-            }
-            else{
-                Intent intent = new Intent(getApplicationContext(), Three_CollectTrainingData.class);
-                startActivity(intent);
-                this.finish();
-            }
+        Intent intent = new Intent(getApplicationContext(), Three_CollectTrainingData.class);
+        startActivity(intent);
+        this.finish();
     }
 }

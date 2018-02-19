@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Three_GiveTurnipToComputer">
+    tools:context="com.example.hannah.machinelearn.Three_GiveTurnipToComputer"
+    android:background="@drawable/onetakephotobackground">
 
     <TextView
         android:id="@+id/text"
@@ -34,9 +35,11 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="105dp"
         android:text="Return"
-        android:id="@+id/returnToWorldTwoID"
+        android:background="@drawable/button"
+        android:id="@+id/returnToWorldThreeID"
         android:onClick="returnToWorldThree" />
 
 </RelativeLayout>
