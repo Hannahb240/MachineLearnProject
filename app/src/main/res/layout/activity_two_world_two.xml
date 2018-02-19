@@ -14,7 +14,7 @@
     <ImageButton
         android:id="@+id/egg1"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="250dp"
         android:background="@drawable/egg" />
@@ -22,7 +22,7 @@
     <ImageButton
         android:id="@+id/egg2"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="300dp"
         android:layout_marginLeft="250dp"
         android:background="@drawable/egg" />
@@ -30,15 +30,15 @@
     <ImageButton
         android:id="@+id/egg3"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="110dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/egg" />
 
     <ImageButton
         android:id="@+id/egg4"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="90dp"
         android:background="@drawable/egg" />
@@ -46,15 +46,15 @@
     <ImageButton
         android:id="@+id/egg5"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="410dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="380dp"
         android:layout_marginLeft="90dp"
         android:background="@drawable/egg" />
 
     <ImageButton
         android:id="@+id/egg6"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="200dp"
         android:layout_marginLeft="90dp"
         android:background="@drawable/egg" />
@@ -62,7 +62,7 @@
     <ImageButton
         android:id="@+id/egg7"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="160dp"
         android:layout_marginLeft="90dp"
         android:background="@drawable/egg" />
@@ -70,7 +70,7 @@
     <ImageButton
         android:id="@+id/egg8"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="190dp"
         android:background="@drawable/egg" />
@@ -78,39 +78,39 @@
     <ImageButton
         android:id="@+id/egg9"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="420dp"
-        android:layout_marginLeft="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="170dp"
         android:background="@drawable/egg" />
 
     <ImageButton
         android:id="@+id/egg10"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="130dp"
         android:background="@drawable/egg" />
 
     <ImageButton
         android:id="@+id/egg11"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="400dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="365dp"
         android:layout_marginLeft="30dp"
         android:background="@drawable/egg" />
 
     <ImageButton
         android:id="@+id/egg12"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="310dp"
-        android:layout_marginLeft="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="40dp"
         android:background="@drawable/egg" />
 
     <ImageButton
         android:id="@+id/egg13"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="250dp"
         android:layout_marginLeft="20dp"
         android:background="@drawable/egg" />
@@ -118,7 +118,7 @@
     <ImageButton
         android:id="@+id/egg14"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="200dp"
         android:layout_marginLeft="20dp"
         android:background="@drawable/egg" />
@@ -126,7 +126,7 @@
     <ImageButton
         android:id="@+id/egg15"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="130dp"
         android:layout_marginLeft="140dp"
         android:background="@drawable/egg" />
@@ -134,7 +134,7 @@
     <ImageButton
         android:id="@+id/egg16"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="240dp"
         android:layout_marginLeft="170dp"
         android:background="@drawable/egg" />
@@ -142,7 +142,7 @@
     <ImageButton
         android:id="@+id/egg17"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="240dp"
         android:layout_marginLeft="230dp"
         android:background="@drawable/egg" />
@@ -150,7 +150,7 @@
     <ImageButton
         android:id="@+id/egg18"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="240dp"
         android:layout_marginLeft="300dp"
         android:background="@drawable/egg" />
@@ -158,15 +158,15 @@
     <ImageButton
         android:id="@+id/egg19"
         android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="190dp"
         android:layout_marginLeft="250dp"
         android:background="@drawable/egg" />
 
     <ImageButton
         android:id="@+id/egg20"
         android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="360dp"
         android:layout_marginLeft="230dp"
         android:background="@drawable/egg" />

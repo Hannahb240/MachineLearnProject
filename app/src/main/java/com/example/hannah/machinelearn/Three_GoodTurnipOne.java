@@ -24,7 +24,7 @@ public class Three_GoodTurnipOne extends AppCompatActivity {
         //Instuctions
         turnipInstructions = (TextView) findViewById(R.id.lemonInstructions);
         turnipInstructions.setText("That looks difficult to pull out of the ground! You're going to have to lie down to get it ");
-        turnipInstructions.setTextSize(30);
+        turnipInstructions.setTextColor(Color.parseColor("#000000"));
 
         nextButton = (Button) findViewById(R.id.nextButton);
     }
@@ -35,12 +35,11 @@ public class Three_GoodTurnipOne extends AppCompatActivity {
         String buttonText = buttonPressed.getText().toString();
         if (buttonText.equals("Next")) {
             if(!clickedNextOnceAlreadyFlag) {
-                turnipInstructions.setText("Act this out and take a photo!");
+                turnipInstructions.setText("Take a photo of your partner pretending to lie down and pull the turnip out of the ground.");
                 clickedNextOnceAlreadyFlag = true;
             }
             else{
 
-                turnipInstructions.setText("clicked once");
                 Intent intent = new Intent(getApplicationContext(), Three_TakePhoto.class);
                 startActivity(intent);
                 this.finish();

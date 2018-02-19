@@ -1,6 +1,7 @@
 package com.example.hannah.machinelearn;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,8 +23,8 @@ public class Two_GoodEgg extends AppCompatActivity {
 
         //Instuctions
         eggInstructions = (TextView) findViewById(R.id.eggInstructions);
-        eggInstructions.setText("Looks like you'll need crouch to pick up the egg");
-        eggInstructions.setTextSize(30);
+        eggInstructions.setText("Looks like you'll need crouch down to pick up the egg.");
+        eggInstructions.setTextColor(Color.parseColor("#000000"));
 
         nextButton = (Button) findViewById(R.id.nextButton);
     }
@@ -34,7 +35,7 @@ public class Two_GoodEgg extends AppCompatActivity {
         String buttonText = buttonPressed.getText().toString();
         if (buttonText.equals("Next")) {
             if(!clickedNextOnceAlreadyFlag) {
-                eggInstructions.setText("Act this out and take a photo!");
+                eggInstructions.setText("Take a photo of your partner pretending to crouch to pick up the egg.");
                 clickedNextOnceAlreadyFlag = true;
             }
             else{

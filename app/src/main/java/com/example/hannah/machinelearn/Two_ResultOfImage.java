@@ -11,36 +11,28 @@ import android.widget.TextView;
 public class Two_ResultOfImage extends AppCompatActivity {
 
     Button nextButton;
-    int flagForNextSelected;
     TextView resultOfPhoto;
+
+    ImageView eggPic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two__result_of_image);
 
-        flagForNextSelected = 0;
+        eggPic = (ImageView) findViewById(R.id.eggPic);
+        eggPic.setImageResource(R.drawable.egg);
 
-        ImageView img= (ImageView) findViewById(R.id.eggPic);
+
         resultOfPhoto = (TextView) findViewById(R.id.resultText);
-
         nextButton = (Button) findViewById(R.id.nextButton);
-
-        resultOfPhoto.setText("Hooray you found an egg!");
-
+        resultOfPhoto.setText("Now teach the computer how you collected the egg!");
     }
 
     public void selectNext(View view) {
-
-        if(flagForNextSelected==0) {
-            resultOfPhoto.setText("Teach the computer how you collected this!");
-            flagForNextSelected +=1;
-        }
-        else{
-            Intent intent = new Intent(getApplicationContext(), Two_CollectTrainingData.class);
-            startActivity(intent);
-            this.finish();
-        }
+        Intent intent = new Intent(getApplicationContext(), Two_CollectTrainingData.class);
+        startActivity(intent);
+        this.finish();
     }
 
 

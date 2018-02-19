@@ -2,6 +2,7 @@ package com.example.hannah.machinelearn;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Two_TakePhoto extends AppCompatActivity {
 
@@ -20,12 +22,18 @@ public class Two_TakePhoto extends AppCompatActivity {
 
     ImageView myImageView;
 
+    TextView takePhotoInstructions;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two__take_photo);
 
         takePhoto = (Button) findViewById(R.id.takePhoto);
+
+        takePhotoInstructions = (TextView) findViewById(R.id.photoInstructions);
+        takePhotoInstructions.setTextColor(Color.parseColor("#000000"));
+        takePhotoInstructions.setText("Take a photo of your partner pretending to crouch down to pick up the egg!");
 
         next = (Button) findViewById(R.id.nextButton);
         next.setVisibility(View.INVISIBLE);
