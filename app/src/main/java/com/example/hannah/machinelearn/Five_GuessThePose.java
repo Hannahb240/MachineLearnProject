@@ -11,11 +11,15 @@ public class Five_GuessThePose extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_five__guess_the_pose);
-
     }
 
     public void tryToGuessPose(View view){
         Intent intent = new Intent(getApplicationContext(), Five_GuessPoseButtons.class);
+        startActivity(intent);
+    }
+
+    public void knn(View view){
+        Intent intent = new Intent(getApplicationContext(), Five_knn.class);
         startActivity(intent);
     }
 }
