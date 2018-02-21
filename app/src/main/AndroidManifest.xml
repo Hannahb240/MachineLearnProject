@@ -48,19 +48,21 @@
         <activity android:name=".Two_CollectTrainingData" />
         <activity android:name=".Two_GiveEggToComputer" />
         <activity android:name=".Five_GuessPoseButtons" />
-        <activity android:name=".Five_StandingPose" />
-        <activity android:name=".Five_CrouchingPose" />
-        <activity android:name=".Five_LyingDownPose" />
         <activity android:name=".Five_ResultOfGuessYes" />
         <activity android:name=".Five_ResultOfGuessNo" />
         <activity android:name=".Five_CollectTrainingData" />
         <activity android:name=".Five_GiveTrainingDataToComputer" />
         <activity android:name=".Four_ClassificationQuizSix" />
-        <activity android:name=".Five_knn"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <activity android:name=".Five_knn" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Five_TakePhotoToGuessPose"></activity>
     </application>
 
 </manifest>

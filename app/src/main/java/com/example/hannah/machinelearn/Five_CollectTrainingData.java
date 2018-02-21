@@ -16,6 +16,8 @@ public class Five_CollectTrainingData extends AppCompatActivity {
     TextView text;
     Button done;
 
+    int typeOfPose;
+
     ImageView pic1;
     ImageView pic2;
     ImageView pic3;
@@ -29,6 +31,9 @@ public class Five_CollectTrainingData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_five__collect_training_data);
+
+        Bundle b = getIntent().getExtras();
+        typeOfPose = b.getInt("key");
 
         //Photo code
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
@@ -98,6 +103,9 @@ public class Five_CollectTrainingData extends AppCompatActivity {
 
     public void changeActivity(View view) {
         Intent intent = new Intent(getApplicationContext(), Five_GiveTrainingDataToComputer.class);
+        Bundle b = new Bundle();
+        b.putInt("key", typeOfPose);
+        intent.putExtras(b);
         startActivity(intent);
         this.finish();
     }

@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-public class Five_StandingPose extends AppCompatActivity {
+public class Five_TakePhotoToGuessPose extends AppCompatActivity {
+
+    int typeOfPose;
 
     Button takePhoto;
     Button retakePhoto;
@@ -22,7 +25,10 @@ public class Five_StandingPose extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_five__standing_pose);
+        setContentView(R.layout.activity_five__take_photo_to_guess_pose);
+
+        Bundle b = getIntent().getExtras();
+        typeOfPose = b.getInt("key");
 
         takePhoto = (Button) findViewById(R.id.takePhoto);
         myImageView = (ImageView) findViewById(R.id.myImgView);
@@ -36,6 +42,10 @@ public class Five_StandingPose extends AppCompatActivity {
         //Photo code
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
+
+        TextView posetype;
+        posetype = (TextView) findViewById(R.id.typeofpose);
+        posetype.setText(Integer.toString(typeOfPose));
     }
 
     public void launchCamera(View view) {
@@ -62,14 +72,20 @@ public class Five_StandingPose extends AppCompatActivity {
 
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
+        //add bundle
+        Bundle b = new Bundle();
+        b.putInt("key", typeOfPose);
+
         if (buttonText.equals("Next"))
             yesOrNo = Math.random();
         if (yesOrNo > 0.5) {
             Intent intent = new Intent(getApplicationContext(), Five_ResultOfGuessYes.class);
+            intent.putExtras(b);
             startActivity(intent);
             this.finish();
         } else {
             Intent intent = new Intent(getApplicationContext(), Five_ResultOfGuessNo.class);
+            intent.putExtras(b);
             startActivity(intent);
             this.finish();
         }

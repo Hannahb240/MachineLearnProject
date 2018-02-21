@@ -16,52 +16,29 @@
         android:layout_height="50dp"
         android:text="These are the rules to this part of the activity, pick a button and see if the computer can guess your pose"/>
 
-    <ImageButton
-        android:id="@+id/button1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="50dp"
-        android:background="@drawable/qmark" />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:id="@+id/standingButton"
+        android:text="Reaching to get a lemon from the tree"
+        android:onClick="goToGuessPose"/>
 
-    <ImageButton
-        android:id="@+id/button2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="200dp"
-        android:background="@drawable/qmark" />
-
-    <ImageButton
-        android:id="@+id/button3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="50dp"
-        android:background="@drawable/qmark" />
+        android:id="@+id/crouchingButton"
+        android:text="Picking up an egg from the ground"
+        android:onClick="goToGuessPose"/>
 
-    <ImageButton
-        android:id="@+id/button4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="200dp"
-        android:background="@drawable/qmark" />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/lyingDownButton"
+        android:layout_marginTop="300dp"
+        android:text="Pulling a turnip out of the ground"
+        android:onClick="goToGuessPose"/>
 
-    <ImageButton
-        android:id="@+id/button5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="50dp"
-        android:background="@drawable/qmark" />
-
-    <ImageButton
-        android:id="@+id/button6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="200dp"
-        android:background="@drawable/qmark" />
 
 </RelativeLayout>
