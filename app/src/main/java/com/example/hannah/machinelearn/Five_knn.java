@@ -1,6 +1,7 @@
 package com.example.hannah.machinelearn;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -24,85 +25,125 @@ import java.util.List;
 
 public class Five_knn extends AppCompatActivity {
 
-    Bitmap bitmap;
-    Mat sourceImage;
     TextView resultOfMat;
-    ImageView myImageView;
-    ImageView myImageView2;
-    Mat trainData;
-    List<Integer> trainLabels;
+
+    //Training data variables
+    Bitmap trainingBitmap;
+    Mat trainingBitmapToMat;
+
+    //training data matrix and list of corresponding labels
+    Mat trainingData;
+    List<Integer> trainingLabels;
+
+    Mat testingData;
     List<Integer> testLabels;
 
+    ImageView myImageView;
+    ImageView myImageView2;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_five_knn);
 
-        resultOfMat = (TextView) findViewById(R.id.mattext);
-
-        //Apple
-        Bitmap bitmap;
-        Drawable apple = getDrawable(R.drawable.person1);
-
-        BitmapDrawable bitmapDrawable = (BitmapDrawable) apple;
-        bitmap = bitmapDrawable.getBitmap();
-
-        myImageView = (ImageView) findViewById(R.id.myImgView);
-        myImageView.setImageBitmap(bitmap);
-
-        Mat sourceImage = new Mat();
-        Utils.bitmapToMat(bitmap, sourceImage);
-
-        sourceImage.convertTo(sourceImage, CvType.CV_32F);
-        trainData = new Mat();
-        trainData.push_back(sourceImage.reshape(1,1));
-
-        trainLabels= new ArrayList<Integer>();
-        trainLabels.add(1);
+        trainingBitmapToMat = new Mat();
+        trainingData = new Mat();
+        trainingLabels= new ArrayList<Integer>();
 
 
-        //pear
-        Bitmap bitmap2;
-        Drawable pear = getDrawable(R.drawable.person2);
-
-        BitmapDrawable bitmapDrawable2 = (BitmapDrawable) pear;
-        bitmap2 = bitmapDrawable2.getBitmap();
-
-        myImageView2 = (ImageView) findViewById(R.id.myImgView2);
-        myImageView2.setImageBitmap(bitmap2);
-
-        Mat sourceImage2 = new Mat();
-        Utils.bitmapToMat(bitmap2, sourceImage2);
-
-        sourceImage2.convertTo(sourceImage2, CvType.CV_32F);
+        //Standing training data
 
 
-        trainData.push_back(sourceImage2.reshape(1,1));
-        trainLabels.add(2);
+        //Crouching training data
+
+
+        //Lying training data
+
+
+
+
+        for(int x = 1; x <= 2; x++){
+            //Find the training image id
+            int id = getResources().getIdentifier("person" + x,"drawable", getPackageName());
+
+            //Change from drawable to bitmap, to Mat, to float Mat
+            trainingBitmap = BitmapFactory.decodeResource(getResources(), id);
+            Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+            trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+
+            //Add training data
+            trainingData.push_back(trainingBitmapToMat.reshape(1,1));
+
+            //Add training label
+            if(x <= 1 ){
+                trainingLabels.add(1);
+            }
+            else if(x > 1){
+                trainingLabels.add(2);
+            }
+        }
 
         KNearest knn = KNearest.create();
-        knn.train(trainData, Ml.ROW_SAMPLE, Converters.vector_int_to_Mat(trainLabels));
+        knn.train(trainingData, Ml.ROW_SAMPLE, Converters.vector_int_to_Mat(trainingLabels));
 
-
-        Mat testData = new Mat();
-        testData.push_back(sourceImage2.reshape(1,1));
+        testingData = new Mat();
+        testingData.push_back(trainingBitmapToMat.reshape(1,1));
 
         testLabels= new ArrayList<Integer>();
         testLabels.add(2);
 
+        //Text to display
+        resultOfMat = (TextView) findViewById(R.id.mattext);
 
-        for (int i=0; i<testData.rows(); i++)
-        {
-            Mat one_feature = testData.row(i);
-            int testLabel = testLabels.get(i);
+        Mat one_feature = testingData.row(0);
+        int testLabel = testLabels.get(0);
 
-            Mat res = new Mat();
-            float p = knn.findNearest(one_feature, 1, res);
-            resultOfMat.setText(testLabel + " " + p + " " + res.dump());
+        Mat res = new Mat();
+        float p = knn.findNearest(one_feature, 1, res);
+        resultOfMat.setText(testLabel + " " + p + " " + res.dump());
 
-        }
+
+//        //TRAINING IMAGE 1
+//        //Convert training image 1 from bitmap to mat.
+//        trainingBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.person1);
+//        trainingBitmapToMat = new Mat();
+//        Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+//        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+//
+//        trainingData = new Mat();
+//        trainingData.push_back(trainingBitmapToMat.reshape(1,1));
+//
+//        trainingLabels= new ArrayList<Integer>();
+//        trainingLabels.add(1);
+//
+//
+//        //TRAINING IMAGE 2
+//        trainingBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.person2);
+//        Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+//        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+//
+//        trainingData.push_back(trainingBitmapToMat.reshape(1,1));
+//        trainingLabels.add(2);
+//
+//        KNearest knn = KNearest.create();
+//        knn.train(trainingData, Ml.ROW_SAMPLE, Converters.vector_int_to_Mat(trainingLabels));
+//
+//        testingData = new Mat();
+//        testingData.push_back(trainingBitmapToMat.reshape(1,1));
+
+//        testLabels= new ArrayList<Integer>();
+//        testLabels.add(2);
+
+
+//        for (int i=0; i<testingData.rows(); i++)
+//        {
+//            Mat one_feature = testingData.row(i);
+//            int testLabel = testLabels.get(i);
+//
+//            Mat res = new Mat();
+//            float p = knn.findNearest(one_feature, 1, res);
+//            resultOfMat.setText(testLabel + " " + p + " " + res.dump());
+//        }
 
 
 
@@ -111,8 +152,12 @@ public class Five_knn extends AppCompatActivity {
     }
 
     public void clickhere(View view) {
-        resultOfMat.setText(sourceImage.toString());
+        //resultOfMat.setText(sourceImage.toString());
     }
 
 
 }
+
+//Set training image code
+//myImageView = (ImageView) findViewById(R.id.myImgView);
+//        myImageView.setImageBitmap(bitmap);
