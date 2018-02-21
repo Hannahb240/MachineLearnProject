@@ -31,4 +31,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="13dp" />
 
+    <ImageView
+        android:id="@+id/myImgView2"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
+
 </RelativeLayout>
