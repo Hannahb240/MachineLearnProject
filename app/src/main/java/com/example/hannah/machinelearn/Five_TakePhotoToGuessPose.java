@@ -32,7 +32,7 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
         setContentView(R.layout.activity_five__take_photo_to_guess_pose);
 
         poseType = (TextView) findViewById(R.id.typeOfPose);
-        
+
         Bundle b = getIntent().getExtras();
         typeOfPose = b.getInt("key");
 
