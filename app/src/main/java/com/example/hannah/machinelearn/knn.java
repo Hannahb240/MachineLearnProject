@@ -153,6 +153,5 @@ public class knn {
         resultOfKnn = knnresult.dump();
 
         //resultOfMat.setText("Test label: " + testLabel + " p = " + p + " RESULT: " + knnresult.dump());
-
     }
 }
