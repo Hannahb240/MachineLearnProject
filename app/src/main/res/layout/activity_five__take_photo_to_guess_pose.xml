@@ -58,4 +58,11 @@
         android:layout_marginLeft="30dp"
         android:text="Remember what pose you need to do here? Take a photo of you pretending to get the fruit from the tree"/>
 
+    <TextView
+        android:id="@+id/typeOfPose"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="150dp"/>
+
 </RelativeLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Five_GuessPoseButtons extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class Five_GuessPoseButtons extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_five__guess_pose_buttons);
     }
+
 
     public void goToGuessPose(View view){
         Bundle b = new Bundle();

@@ -17,9 +17,4 @@ public class Five_GuessThePose extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Five_GuessPoseButtons.class);
         startActivity(intent);
     }
-
-    public void knn(View view){
-        Intent intent = new Intent(getApplicationContext(), Five_knn.class);
-        startActivity(intent);
-    }
 }

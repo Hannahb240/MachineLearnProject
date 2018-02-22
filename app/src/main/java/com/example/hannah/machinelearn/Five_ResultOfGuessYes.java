@@ -15,11 +15,16 @@ public class Five_ResultOfGuessYes extends AppCompatActivity {
     Button back;
     Button moreData;
 
+    int typeOfPose;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_five__result_of_guess_yes);
+
+        Bundle b = getIntent().getExtras();
+        typeOfPose = b.getInt("key");
 
         yes = (Button) findViewById(R.id.yes);
         no = (Button) findViewById(R.id.no);
@@ -53,6 +58,9 @@ public class Five_ResultOfGuessYes extends AppCompatActivity {
 
     public void moreData(View view){
         Intent intent = new Intent(getApplicationContext(), Five_CollectTrainingData.class);
+        Bundle b = new Bundle();
+        b.putInt("key", typeOfPose);
+        intent.putExtras(b);
         startActivity(intent);
         this.finish();
 
