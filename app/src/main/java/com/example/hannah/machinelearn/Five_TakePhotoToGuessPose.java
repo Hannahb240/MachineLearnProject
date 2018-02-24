@@ -21,10 +21,8 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
     Button next;
     ImageView myImageView;
     static final int REQUEST_IMAGE_CAPTURE = 1;
-    double yesOrNo;
 
     TextView poseType;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +69,7 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
             knn knearest = new knn(this.getApplicationContext());
             //call knn with photo
             String hannah = knearest.doKnn(photo);
+           // float hannah = knn.testAccuracyOfModel();
             poseType.setText(hannah);
 
             //myImageView.setImageBitmap(hannah);
@@ -79,7 +78,6 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
             takePhoto.setVisibility(View.INVISIBLE);
         }
     }
-
     public void goToResult(View view) {
 
         Button buttonPressed = (Button) findViewById(view.getId());
@@ -95,8 +93,6 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
 //
 
         //call knn
-
-
 
 //        if (buttonText.equals("Next"))
 //            yesOrNo = Math.random();

@@ -128,12 +128,10 @@ public class Five_CollectTrainingData extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap photo = (Bitmap) extras.get("data");
 
-
             //send to knn to test
             resultOfKnn = knn.trainAndDoKNNWithExtraData(1, photo, trainingImage1, trainingImage2, trainingImage3, trainingImage4, trainingImage5);
             text.setVisibility(View.VISIBLE);
             text.setText(resultOfKnn);
-
 
         }
 
@@ -149,12 +147,6 @@ public class Five_CollectTrainingData extends AppCompatActivity {
     }
 
     public void changeActivityRetrain(View view) {
-        //save images in knn public static
-        knn.retrain1 = trainingImage1;
-        knn.retrain2 = trainingImage2;
-        knn.retrain3 = trainingImage3;
-        knn.retrain4 = trainingImage4;
-        knn.retrain5 = trainingImage5;
 
         //set everything here to be invisible.
         pic1.setVisibility(View.INVISIBLE);

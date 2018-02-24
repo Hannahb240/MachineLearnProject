@@ -11,9 +11,9 @@ public class Five_TestRetrainedModel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_five__test_retrained_model);
 
-        //Image view
-        ImageView pic1 = (ImageView) findViewById(R.id.pic1);
-        pic1.setImageBitmap(knn.retrain1);
+//        //Image view
+//        ImageView pic1 = (ImageView) findViewById(R.id.pic1);
+//        pic1.setImageBitmap(knn.retrain1);
 
         //Set image view to be one of the pics collected on prev page
 

@@ -46,14 +46,6 @@
         android:onClick="changeToWorld"/>
 
     <Button
-        android:id="@+id/goToWorld3"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:text="World three"
-        android:layout_marginTop="10dp"
-        android:onClick="changeToWorld"/>
-
-    <Button
         android:id="@+id/classificationQuiz"
         android:layout_width="300dp"
         android:layout_height="60dp"

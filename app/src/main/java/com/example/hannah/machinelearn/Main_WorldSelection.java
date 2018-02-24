@@ -10,7 +10,7 @@ public class Main_WorldSelection extends AppCompatActivity {
 
     Button worldOneButton;
     Button worldTwoButton;
-    Button worldThreeButton;
+    //Button worldThreeButton;
     Button classificationQuiz;
     Button guessThePose;
 
@@ -19,7 +19,7 @@ public class Main_WorldSelection extends AppCompatActivity {
 
         worldOneButton = (Button) findViewById(R.id.goToWorld1);
         worldTwoButton = (Button) findViewById(R.id.goToWorld2);
-        worldThreeButton = (Button) findViewById(R.id.goToWorld3);
+        //worldThreeButton = (Button) findViewById(R.id.goToWorld3);
         classificationQuiz = (Button) findViewById(R.id.classificationQuiz);
         guessThePose = (Button) findViewById(R.id.guessThePose);
 

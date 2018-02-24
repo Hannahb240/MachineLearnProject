@@ -20,12 +20,6 @@ import java.util.List;
 
 public class knn {
 
-    public static Bitmap retrain1;
-    public static Bitmap retrain2;
-    public static Bitmap retrain3;
-    public static Bitmap retrain4;
-    public static Bitmap retrain5;
-
     //Training data variables
     private static Bitmap trainingBitmap;
     private static Mat trainingBitmapToMat;
@@ -155,11 +149,126 @@ public class knn {
         //Getting a feature to test
         Mat one_feature = testingData.row(0);
         int testLabel = testLabels.get(0);
-        float p = knearestneighbor.findNearest(one_feature, 3, knnresult);
+        float p = knearestneighbor.findNearest(one_feature, 2, knnresult);
         resultOfKnn = knnresult.dump();
-
-        //resultOfMat.setText("Test label: " + testLabel + " p = " + p + " RESULT: " + knnresult.dump());
     }
+
+    public static float testAccuracyOfModel() {
+
+        //get some train data 30 pics of each pose
+        //Standing training data
+
+        trainingBitmapToMat = new Mat();
+        trainingData = new Mat();
+        trainingLabels = new ArrayList<Integer>();
+        knearestneighbor = KNearest.create();
+
+        for (int x = 1; x <= 30; x++) {
+
+            //Find the training image id
+            id = myContext.getResources().getIdentifier("standing" + x, "drawable", myContext.getPackageName());
+
+            //Change from drawable to bitmap, to Mat, to float Mat
+            trainingBitmap = BitmapFactory.decodeResource(myContext.getResources(), id);
+            Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+            trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+
+            //Add training data
+            trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+
+            //Add label
+            trainingLabels.add(standingLabel);
+        }
+        //get some test data 6 pics of each pose
+        //Crouching training data
+        for (int x = 1; x <= 36; x++) {
+
+            //Find the training image id
+            id = myContext.getResources().getIdentifier("crouching" + x, "drawable", myContext.getPackageName());
+            //Change from drawable to bitmap, to Mat, to float Mat
+            trainingBitmap = BitmapFactory.decodeResource(myContext.getResources(), id);
+            Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+            trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+
+            //Add training data
+            trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+
+            //Add label
+            trainingLabels.add(crouchingLabel);
+        }
+
+        knearestneighbor.train(trainingData, Ml.ROW_SAMPLE, Converters.vector_int_to_Mat(trainingLabels));
+
+        //testing
+        //Get an array of testing data- pics 30 to 36, and add their labels.
+        testingData = new Mat();
+        testingBitmapToMat = new Mat();
+        testLabels = new ArrayList<Integer>();
+        knnresult = new Mat();
+        ArrayList<Integer> testSuccessVector = new ArrayList<Integer>();
+
+        //Standing testing data
+        for (int x = 31; x <= 36; x++) {
+
+            //Find the training image id
+            id = myContext.getResources().getIdentifier("standing" + x, "drawable", myContext.getPackageName());
+
+            //Change from drawable to bitmap, to Mat, to float Mat
+            trainingBitmap = BitmapFactory.decodeResource(myContext.getResources(), id);
+            Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+            trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+
+            //Add training data
+            testingData.push_back(trainingBitmapToMat.reshape(1, 1));
+
+            //Add label
+            testLabels.add(standingLabel);
+        }
+
+        //Standing testing data
+        for (int x = 31; x <= 36; x++) {
+
+            //Find the training image id
+            id = myContext.getResources().getIdentifier("crouching" + x, "drawable", myContext.getPackageName());
+
+            //Change from drawable to bitmap, to Mat, to float Mat
+            trainingBitmap = BitmapFactory.decodeResource(myContext.getResources(), id);
+            Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+            trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+
+            //Add training data
+            testingData.push_back(trainingBitmapToMat.reshape(1, 1));
+
+            //Add label
+            testLabels.add(crouchingLabel);
+        }
+
+        //loop through and test accuracy
+        for(int x = 0; x < testingData.rows(); x++){
+            Mat one_feature = testingData.row(x);
+            int testLabel = testLabels.get(x);
+            int p = Math.round(knearestneighbor.findNearest(one_feature, 2, knnresult));
+            if(p == testLabel){
+                testSuccessVector.add(1);
+            }
+            else{
+                testSuccessVector.add(0);
+            }
+        }
+
+        //Return out accuracy
+        float totalCorrect = 0;
+        for(int y = 0; y < testSuccessVector.size(); y++ ){
+            totalCorrect+= testSuccessVector.get(y);
+        }
+
+        return (totalCorrect / testSuccessVector.size());
+
+
+    }
+
+
+
 
     public static String trainAndDoKNNWithExtraData(int label, Bitmap testPhoto, Bitmap one, Bitmap two, Bitmap three, Bitmap four, Bitmap five){
 

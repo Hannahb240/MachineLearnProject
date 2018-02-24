@@ -18,7 +18,17 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginBottom="80dp"
-        android:text="return"
+        android:text="Back"
+        android:background="@drawable/button"
+        android:onClick="changeActivity"/>
+
+    <Button
+        android:id="@+id/instructionsButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Rules"
+        android:background="@drawable/button"
         android:onClick="changeActivity"/>
 
     <ImageButton
@@ -37,14 +47,6 @@
         android:background="@drawable/tree"
         android:layout_marginTop="200dp"
         android:layout_marginRight="100dp" />
-
-    <ImageButton
-        android:id="@+id/selectTree2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="50dp"
-        android:background="@drawable/tree" />
 
     <ImageButton
         android:id="@+id/selectTree8"
@@ -90,5 +92,13 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/tree"
         android:layout_below="@+id/selectTree4" />
+
+    <ImageButton
+        android:id="@+id/selectTree2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/tree" />
 
 </RelativeLayout>

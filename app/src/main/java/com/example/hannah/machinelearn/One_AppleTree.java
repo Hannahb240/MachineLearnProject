@@ -21,7 +21,6 @@ public class One_AppleTree extends AppCompatActivity {
         setContentView(R.layout.activity_one_apple_tree);
         clickedNextOnceAlreadyFlag = false;
 
-
         //Instuctions
         appleTreeInstructions = (TextView) findViewById(R.id.appleInstructions);
         appleTreeInstructions.setText("The fruit is quite near to the ground, how are you going to pick it?");
