@@ -21,6 +21,15 @@
         android:layout_marginTop="30dp" />
 
     <Button
+        android:id="@+id/desktop"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:text="D"
+        android:layout_marginTop="-50dp"
+        android:layout_marginLeft="-10dp"
+        android:onClick="changeToWorld"/>
+
+    <Button
         android:id="@+id/goToWorld1"
         android:layout_width="300dp"
         android:layout_height="60dp"

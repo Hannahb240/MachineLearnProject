@@ -24,6 +24,20 @@ public class Five_CollectTrainingData extends AppCompatActivity {
     ImageView pic4;
     ImageView pic5;
 
+    Bitmap trainingImage1;
+    Bitmap trainingImage2;
+    Bitmap trainingImage3;
+    Bitmap trainingImage4;
+    Bitmap trainingImage5;
+
+    Button takepic1;
+    Button takepic2;
+    Button takepic3;
+    Button takepic4;
+    Button takepic5;
+
+    String resultOfKnn;
+
     static final int REQUEST_IMAGE_CAPTURE = 1;
     String buttonPressedNumber;
 
@@ -44,6 +58,12 @@ public class Five_CollectTrainingData extends AppCompatActivity {
 
         done = (Button) findViewById(R.id.done);
         done.setVisibility(View.INVISIBLE);
+
+        takepic1 = (Button) findViewById(R.id.TakePhoto);
+        takepic2 = (Button) findViewById(R.id.TakePhoto2);
+        takepic3 = (Button) findViewById(R.id.TakePhoto3);
+        takepic4 = (Button) findViewById(R.id.TakePhoto4);
+        takepic5 = (Button) findViewById(R.id.TakePhoto5);
 
         pic1 = (ImageView) findViewById(R.id.pic1);
         pic1.setImageResource(R.drawable.photofillin);
@@ -81,22 +101,40 @@ public class Five_CollectTrainingData extends AppCompatActivity {
             switch(buttonPressedNumber) {
                 case "Take      Photo 1":
                     pic1.setImageBitmap(photo);
+                    trainingImage1 = photo;
                     break;
                 case "Take      Photo 2":
                     pic2.setImageBitmap(photo);
+                    trainingImage2 = photo;
                     break;
                 case "Take      Photo 3":
                     pic3.setImageBitmap(photo);
+                    trainingImage3 = photo;
                     break;
                 case "Take      Photo 4":
                     pic4.setImageBitmap(photo);
+                    trainingImage4 = photo;
                     break;
                 case "Take      Photo 5":
                     pic5.setImageBitmap(photo);
+                    trainingImage5 = photo;
                     done.setVisibility(View.VISIBLE);
                     text.setVisibility(View.INVISIBLE);
                     break;
             }
+        }
+        else if(requestCode == 2) {
+
+            Bundle extras = data.getExtras();
+            Bitmap photo = (Bitmap) extras.get("data");
+
+
+            //send to knn to test
+            resultOfKnn = knn.trainAndDoKNNWithExtraData(1, photo, trainingImage1, trainingImage2, trainingImage3, trainingImage4, trainingImage5);
+            text.setVisibility(View.VISIBLE);
+            text.setText(resultOfKnn);
+
+
         }
 
     }
@@ -110,5 +148,48 @@ public class Five_CollectTrainingData extends AppCompatActivity {
         this.finish();
     }
 
+    public void changeActivityRetrain(View view) {
+        //save images in knn public static
+        knn.retrain1 = trainingImage1;
+        knn.retrain2 = trainingImage2;
+        knn.retrain3 = trainingImage3;
+        knn.retrain4 = trainingImage4;
+        knn.retrain5 = trainingImage5;
+
+        //set everything here to be invisible.
+        pic1.setVisibility(View.INVISIBLE);
+        pic2.setVisibility(View.INVISIBLE);
+        pic3.setVisibility(View.INVISIBLE);
+        pic4.setVisibility(View.INVISIBLE);
+        pic5.setVisibility(View.INVISIBLE);
+
+        takepic1.setVisibility(View.INVISIBLE);
+        takepic2.setVisibility(View.INVISIBLE);
+        takepic3.setVisibility(View.INVISIBLE);
+        takepic4.setVisibility(View.INVISIBLE);
+        takepic5.setVisibility(View.INVISIBLE);
+
+        done.setVisibility(View.INVISIBLE);
+        text.setVisibility(View.INVISIBLE);
+
+        //do knn stuff. Call a method.
+        changeActivityRetrain();
+
+
+
+    }
+
+    private void changeActivityRetrain(){
+
+        pic1.setVisibility(View.VISIBLE);
+
+        //test it out! - button
+        //take a new picture of the pose youre trying to guess
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intent, 2);
+
+
+
+    }
 
 }

@@ -10,4 +10,370 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hannah.machinelearn.Desktop_simulation">
 
+    <ImageButton
+        android:id="@+id/trainingpic1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic1below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="00dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic2below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic3below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="250dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic4below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="250dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="300dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic5below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="300dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+    android:id="@+id/trainingpic6"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginLeft="500dp"
+    android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic6below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="500dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="550dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic7below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="550dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="600dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic8below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="600dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="650dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic9below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="650dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="700dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic10below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="700dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+    android:id="@+id/trainingpic11"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="70dp"
+    android:layout_marginLeft="700dp"
+    android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic11below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="700dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic12"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="650dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic12below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="650dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic13"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="600dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic13below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="600dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic14"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="550dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic14below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="550dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic15"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="500dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic15below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="500dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic16"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="300dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic16below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="300dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+    android:id="@+id/trainingpic17"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="70dp"
+    android:layout_marginLeft="250dp"
+    android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic17below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="250dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic18"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic18below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic19"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic19below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/apple" />
+
+    <ImageButton
+        android:id="@+id/trainingpic20"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/tree" />
+
+    <ImageButton
+        android:id="@+id/trainingpic20below"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/apple" />
+
+    <ImageView
+        android:id="@+id/myImgView"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="0dp"
+        android:text="Reset"
+        android:background="@drawable/button"
+        android:id="@+id/resetTrainingImages"
+        android:onClick="resetTrainingImages"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="0dp"
+        android:text="New image"
+        android:background="@drawable/button"
+        android:id="@+id/addNewTestingImage"
+        android:onClick="addNewTestingImage"/>
+
+    <TextView
+        android:id="@+id/crouchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="600dp"
+        android:text="yo"/>
+
+    <TextView
+        android:id="@+id/standingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="200dp"
+        android:text="Hi"/>
+
+
+
 </RelativeLayout>

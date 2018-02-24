@@ -89,6 +89,11 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
         Bundle b = new Bundle();
         b.putInt("actual", typeOfPose);
 
+        Intent intent = new Intent(getApplicationContext(), Five_ResultOfGuessNo.class);
+            intent.putExtras(b);
+            startActivity(intent);
+//
+
         //call knn
 
 

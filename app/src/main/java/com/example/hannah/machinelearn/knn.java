@@ -20,6 +20,12 @@ import java.util.List;
 
 public class knn {
 
+    public static Bitmap retrain1;
+    public static Bitmap retrain2;
+    public static Bitmap retrain3;
+    public static Bitmap retrain4;
+    public static Bitmap retrain5;
+
     //Training data variables
     private static Bitmap trainingBitmap;
     private static Mat trainingBitmapToMat;
@@ -153,5 +159,56 @@ public class knn {
         resultOfKnn = knnresult.dump();
 
         //resultOfMat.setText("Test label: " + testLabel + " p = " + p + " RESULT: " + knnresult.dump());
+    }
+
+    public static String trainAndDoKNNWithExtraData(int label, Bitmap testPhoto, Bitmap one, Bitmap two, Bitmap three, Bitmap four, Bitmap five){
+
+        trainingBitmapToMat = new Mat();
+        trainingData = new Mat();
+        trainingLabels = new ArrayList<Integer>();
+        knearestneighbor = KNearest.create();
+        Bitmap resizedPhoto;
+        Bitmap sizeComparison = BitmapFactory.decodeResource(myContext.getResources(), R.drawable.standing1);
+
+        trainModel();
+
+        //image one
+        resizedPhoto = Bitmap.createScaledBitmap(one, sizeComparison.getWidth(), sizeComparison.getHeight(), true);
+        Utils.bitmapToMat(resizedPhoto, trainingBitmapToMat);
+        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+        trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+        trainingLabels.add(label);
+
+        //image two
+        resizedPhoto = Bitmap.createScaledBitmap(two, sizeComparison.getWidth(), sizeComparison.getHeight(), true);
+        Utils.bitmapToMat(resizedPhoto, trainingBitmapToMat);
+        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+        trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+        trainingLabels.add(label);
+
+        //image three
+        resizedPhoto = Bitmap.createScaledBitmap(three, sizeComparison.getWidth(), sizeComparison.getHeight(), true);
+        Utils.bitmapToMat(resizedPhoto, trainingBitmapToMat);
+        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+        trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+        trainingLabels.add(label);
+
+        //image four
+        resizedPhoto = Bitmap.createScaledBitmap(four, sizeComparison.getWidth(), sizeComparison.getHeight(), true);
+        Utils.bitmapToMat(resizedPhoto, trainingBitmapToMat);
+        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+        trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+        trainingLabels.add(label);
+
+        //image five
+        resizedPhoto = Bitmap.createScaledBitmap(five, sizeComparison.getWidth(), sizeComparison.getHeight(), true);
+        Utils.bitmapToMat(resizedPhoto, trainingBitmapToMat);
+        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+        trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+        trainingLabels.add(label);
+
+        testModel(testPhoto);
+
+        return resultOfKnn;
     }
 }

@@ -51,5 +51,9 @@ public class Main_WorldSelection extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), Five_GuessThePose.class);
             startActivity(intent);
         }
+        else if(buttonText.equals("D")){
+            Intent intent = new Intent(getApplicationContext(), Desktop_simulation.class);
+            startActivity(intent);
+        }
     }
 }
