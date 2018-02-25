@@ -28,6 +28,16 @@
         android:id="@+id/returnButton"
         android:onClick="returnToWorldOne" />
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="100dp"
+        android:text="Next"
+        android:background="@drawable/button"
+        android:id="@+id/nextButton"
+        android:onClick="selectNext" />
+
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"

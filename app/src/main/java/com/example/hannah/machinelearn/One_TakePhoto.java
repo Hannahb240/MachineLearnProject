@@ -21,40 +21,47 @@ public class One_TakePhoto extends AppCompatActivity {
     Button next;
 
     ImageView myImageView;
-    int typeOfTree;
+    //int typeOfTree;
 
     TextView takePhotoInstructions;
+    TextView takePhotoInstructions2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one_take_photo);
 
-        Bundle b = getIntent().getExtras();
-        typeOfTree = b.getInt("key");
+//        Bundle b = getIntent().getExtras();
+//        typeOfTree = b.getInt("key");
 
         takePhotoInstructions = (TextView) findViewById(R.id.photoInstructions);
         takePhotoInstructions.setTextColor(Color.parseColor("#000000"));
 
-        switch(typeOfTree) {
-            case 1:
-                //lemon
-                takePhotoInstructions.setText("Take a photo of your partner pretending to reach up to get the fruit!");
-                break;
-            case 2:
-               //orange
-                takePhotoInstructions.setText("Take a photo of your partner pretending to jump up to reach the fruit!");
-                break;
-            case 3:
-                //apple
-                takePhotoInstructions.setText("Take a photo of your partner pretending to pick the fruit near to the ground");
-            case 4:
-                //pear
-                takePhotoInstructions.setText("Take a photo of your partner getting the fruit from the tree. Be creative with your ideas!");
-                break;
-        }
+        takePhotoInstructions2 = (TextView) findViewById(R.id.photoInstructions2);
+        takePhotoInstructions2.setTextColor(Color.parseColor("#000000"));
 
+//        switch(typeOfTree) {
+//            case 1:
+//                //lemon
+//                takePhotoInstructions.setText("Take a photo of your partner pretending to reach up to get the fruit!");
+//                break;
+//            case 2:
+//               //orange
+//                takePhotoInstructions.setText("Take a photo of your partner pretending to jump up to reach the fruit!");
+//                break;
+//            case 3:
+//                //apple
+//                takePhotoInstructions.setText("Take a photo of your partner pretending to pick the fruit near to the ground");
+//            case 4:
+//                //pear
+//                takePhotoInstructions.setText("Take a photo of your partner getting the fruit from the tree. Be creative with your ideas!");
+//                break;
+//        }
 
+        //takePhotoInstructions.setText("Take a picture of your partner pretending to collect a lemon from the tree.");
+
+        takePhotoInstructions2.setText("You're going to need to reach up high!");
+        takePhotoInstructions2.setTextSize(20);
         takePhoto = (Button) findViewById(R.id.takePhoto);
 
         next = (Button) findViewById(R.id.nextButton);
@@ -87,7 +94,9 @@ public class One_TakePhoto extends AppCompatActivity {
             retakePhoto.setVisibility(View.VISIBLE);
             next.setVisibility(View.VISIBLE);
             takePhoto.setVisibility(View.INVISIBLE);
-            takePhotoInstructions.setVisibility(View.INVISIBLE);
+            takePhotoInstructions.setText("If you're happy with your picture, tap next to go to the next page.");
+            takePhotoInstructions.setTextSize(20);
+            takePhotoInstructions2.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -96,10 +105,10 @@ public class One_TakePhoto extends AppCompatActivity {
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
         if(buttonText.equals("Next")) {
-            Intent intent = new Intent(getApplicationContext(), One_ResultOfImage.class);
-            Bundle b = new Bundle();
-            b.putInt("key",typeOfTree);
-            intent.putExtras(b);
+            Intent intent = new Intent(getApplicationContext(), One_ExplainTrainingData.class);
+//            Bundle b = new Bundle();
+//            b.putInt("key",typeOfTree);
+//            intent.putExtras(b);
             startActivity(intent);
             this.finish();
         }

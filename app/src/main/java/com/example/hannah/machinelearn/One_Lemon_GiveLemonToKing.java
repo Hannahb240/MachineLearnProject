@@ -1,5 +1,6 @@
 package com.example.hannah.machinelearn;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +11,11 @@ import android.widget.TextView;
 public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
 
     TextView text;
+    TextView text2;
 
     ImageView lemonPic;
-    ImageView folderPic;
-    Button returnToWorldSelection;
+    Button goToWorld2;
+    Button nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,20 +23,30 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
         setContentView(R.layout.activity_one_lemon_give_lemon_to_king);
 
         text = (TextView) findViewById(R.id.text);
-        text.setText("We'll give the computer the lemon and your training data.");
+        text.setTextSize(20);
+        text2 = (TextView) findViewById(R.id.text);
+        text2.setTextSize(20);
+
+        text.setText("Well done! You've collected the lemon. The next task is to find two eggs. Tap next.");
 
         lemonPic = (ImageView) findViewById(R.id.lemon);
         lemonPic.setImageResource(R.drawable.lemon);
 
-        folderPic = (ImageView) findViewById(R.id.folder);
-        folderPic.setImageResource(R.drawable.folder);
+        goToWorld2 = (Button) findViewById(R.id.worldtwo);
+        goToWorld2.setVisibility(View.INVISIBLE);
 
-        returnToWorldSelection = (Button) findViewById(R.id.returnToWorldOneID);
-
+        nextButton = (Button) findViewById(R.id.next);
 
     }
 
-    public void returnToWorldOne(View view){
-        this.finish();
+    public void next(View view){
+        text2.setText("Tap the button below to go to the next world where you'll search for the eggs.");
+        goToWorld2.setVisibility(View.VISIBLE);
+        nextButton.setVisibility(View.INVISIBLE);
+    }
+
+    public void worldTwo(View view){
+        Intent intent = new Intent(getApplicationContext(), Two_WorldTwo.class);
+        startActivity(intent);
     }
 }

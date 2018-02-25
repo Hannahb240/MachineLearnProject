@@ -35,7 +35,7 @@ public class One_WorldOne extends AppCompatActivity {
         treeButton1 = (ImageButton) findViewById(R.id.selectTree1);
         treeButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), One_LemonTree.class);
+                    Intent intent = new Intent(getApplicationContext(), One_ResultOfImage.class);
                     Bundle b = new Bundle();
                     b.putInt("key", 1);
                     intent.putExtras(b);

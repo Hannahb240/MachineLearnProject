@@ -2,6 +2,7 @@ package com.example.hannah.machinelearn;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +36,9 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
         StrictMode.setVmPolicy(builder.build());
 
         text = (TextView) findViewById(R.id.text);
-        text.setText("Take 5 photos of you or your partner acting out picking a lemon from the tree, to teach the computer the pose.");
+        text.setTextSize(20);
+        text.setTextColor(Color.parseColor("#000000"));
+        text.setText("Take 5 photos of you or your partner acting out picking a lemon from the tree.");
 
         done = (Button) findViewById(R.id.done);
         done.setVisibility(View.INVISIBLE);

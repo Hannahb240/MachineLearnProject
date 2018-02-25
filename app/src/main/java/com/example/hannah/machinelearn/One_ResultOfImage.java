@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class One_ResultOfImage extends AppCompatActivity {
@@ -19,9 +20,8 @@ public class One_ResultOfImage extends AppCompatActivity {
 
     int flagForNextSelectedOnTypeLemon;
 
-
     String orangeText = "This is an orange tree! Tap the back button below to keep searching for the lemon tree.";
-    String lemonText = "Hooray you found the lemon!";
+    String lemonText = "Hooray, you found the lemon tree! Tap next below.";
     String appleText = "This is an apple tree! Tap the back button below to keep searching for the lemon tree.";
     String pearText = "This is a pear tree! Tap the back button below to keep searching for the lemon tree.";
 
@@ -29,7 +29,11 @@ public class One_ResultOfImage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one_result_of_image);
+
         ImageView img= (ImageView) findViewById(R.id.treeType);
+
+        RelativeLayout layout = new RelativeLayout(this);
+
         flagForNextSelectedOnTypeLemon = 0;
 
         resultOfPhoto = (TextView) findViewById(R.id.result);
@@ -44,19 +48,24 @@ public class One_ResultOfImage extends AppCompatActivity {
 
         switch(typeOfTree) {
             case 1:
+                layout.setBackgroundResource(R.drawable.lemonbackground);
+                returnToWorldOne.setVisibility(View.INVISIBLE);
                 img.setImageResource(R.drawable.lemontree);
                 resultOfPhoto.setText(lemonText);
                 setText(lemonText);
                 break;
             case 2:
+                nextButton.setVisibility(View.INVISIBLE);
                 img.setImageResource(R.drawable.orangetree);
                 setText(orangeText);
                 break;
             case 3:
+                nextButton.setVisibility(View.INVISIBLE);
                 img.setImageResource(R.drawable.appletree);
                 setText(appleText);
                 break;
             case 4:
+                nextButton.setVisibility(View.INVISIBLE);
                 img.setImageResource(R.drawable.peartree);
                 setText(pearText);
                 break;
@@ -73,19 +82,19 @@ public class One_ResultOfImage extends AppCompatActivity {
 
         if(typeOfTree == 1){
             if(flagForNextSelectedOnTypeLemon ==0) {
-                resultOfPhoto.setText("The computer wants you to teach it how you collected this.");
+                resultOfPhoto.setText("How are you going to collect a lemon from the tree?");
                 flagForNextSelectedOnTypeLemon +=1;
             }
-            else if(flagForNextSelectedOnTypeLemon == 1){
-                Intent intent = new Intent(getApplicationContext(), One_Lemon_LemonResult.class);
+            else if(flagForNextSelectedOnTypeLemon == 1) {
+                resultOfPhoto.setText("Take a picture of your partner pretending to collect a lemon from the tree.");
+                flagForNextSelectedOnTypeLemon +=1;
+                //You're going to need to reach up high!")
+            }
+            else if(flagForNextSelectedOnTypeLemon == 2){
+                Intent intent = new Intent(getApplicationContext(), One_TakePhoto.class);
                 startActivity(intent);
                 this.finish();
             }
-        }
-
-        else {
-            resultOfPhoto.setText("Keep seatching until you find the lemon");
-            //returnToWorldOne.setVisibility(View.VISIBLE);
         }
     }
 
