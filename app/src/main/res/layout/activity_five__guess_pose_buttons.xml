@@ -19,25 +19,11 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:id="@+id/standingButton"
-        android:text="Reaching to get a lemon from the tree"
-        android:onClick="goToGuessPose"/>
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="200dp"
-        android:id="@+id/crouchingButton"
-        android:text="Picking up an egg from the ground"
-        android:onClick="goToGuessPose"/>
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:id="@+id/lyingDownButton"
-        android:layout_marginTop="300dp"
-        android:text="Pulling a turnip out of the ground"
+        android:id="@+id/guessPoseButton"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="50dp"
+        android:text="Guess my pose!"
+        android:background="@drawable/button"
         android:onClick="goToGuessPose"/>
 
     <TextView

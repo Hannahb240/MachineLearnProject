@@ -64,7 +64,9 @@
         <activity android:name=".Five_TakePhotoToGuessPose" />
         <activity android:name=".Desktop_simulation" />
         <activity android:name=".Five_TestRetrainedModel" />
-        <activity android:name=".One_ExplainTrainingData"></activity>
+        <activity android:name=".One_ExplainTrainingData" />
+        <activity android:name=".Five_TrainStand" />
+        <activity android:name=".Five_TrainCrouch"></activity>
     </application>
 
 </manifest>

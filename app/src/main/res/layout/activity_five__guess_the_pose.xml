@@ -20,8 +20,35 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
         android:background="@drawable/button"
-        android:text="Try"
+        android:text="Reaching to pick a lemon"
+        android:onClick="goToTrainStand"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/button"
+        android:text="Crouching to pick up an egg"
+        android:onClick="goToTrainCrouch"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="95dp"
+        android:background="@drawable/button"
+        android:text="Guess my pose"
         android:onClick="tryToGuessPose"/>
+
+    <ImageView
+        android:id="@+id/progressBar"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="340dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
 
 </RelativeLayout>

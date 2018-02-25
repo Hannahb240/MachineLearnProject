@@ -27,17 +27,6 @@
         android:id="@+id/done"
         android:onClick="changeActivity"/>
 
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="200dp"
-        android:text="Retrain!"
-        android:background="@drawable/button"
-        android:textSize="11dp"
-        android:id="@+id/retrain"
-        android:onClick="changeActivityRetrain"/>
-
     <ImageView
         android:id="@+id/pic1"
         android:layout_width="80dp"

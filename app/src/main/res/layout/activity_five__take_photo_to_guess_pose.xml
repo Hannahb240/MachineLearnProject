@@ -12,10 +12,19 @@
     android:background="@drawable/onetakephotobackground">
 
     <TextView
-        android:id="@+id/typeofpose"
+        android:id="@+id/instructions2"
+        android:text="What was your pose?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical|center_horizontal"/>
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:id="@+id/resultOfPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="150dp"/>
 
     <Button
         android:layout_width="80dp"
@@ -29,6 +38,26 @@
     <Button
         android:layout_width="80dp"
         android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/button"
+        android:id="@+id/crouchButton"
+        android:text="Crouching"
+        android:onClick="isResultCorrect"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/button"
+        android:id="@+id/standButton"
+        android:text="Standing"
+        android:onClick="isResultCorrect"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/button"
         android:text="Next"
@@ -36,19 +65,30 @@
         android:onClick="goToResult"/>
 
     <Button
+    android:layout_width="80dp"
+    android:layout_height="60dp"
+    android:layout_marginTop="250dp"
+    android:layout_marginLeft="30dp"
+    android:background="@drawable/button"
+    android:text="Try taking another photo"
+    android:id="@+id/tryAnotherPhoto"
+    android:onClick="launchCamera"/>
+
+    <Button
         android:layout_width="80dp"
         android:layout_height="60dp"
-        android:layout_marginTop="200dp"
-        android:text="Retake Photo"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="150dp"
         android:background="@drawable/button"
-        android:id="@+id/retakePhoto"
-        android:onClick="launchCamera"/>
+        android:text="Back"
+        android:id="@+id/goBack"
+        android:onClick="goBack"/>
 
     <ImageView
         android:id="@+id/myImgView"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="13dp" />
 
@@ -56,7 +96,8 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginLeft="30dp"
-        android:text="Remember what pose you need to do here? Take a photo of you pretending to get the fruit from the tree"/>
+        android:id="@+id/initialTextView"
+        android:text="Tap below to take a photo of your pose, for the computer to guess."/>
 
     <TextView
         android:id="@+id/typeOfPose"
