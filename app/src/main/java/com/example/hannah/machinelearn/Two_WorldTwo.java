@@ -5,19 +5,17 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Two_WorldTwo extends AppCompatActivity {
 
-    //smashed eggs
     ImageButton egg1;
     ImageButton egg2;
     ImageButton egg3;
     ImageButton egg4;
     ImageButton egg5;
     ImageButton egg6;
-
-    //normal eggs
     ImageButton egg7;
     ImageButton egg8;
     ImageButton egg9;
@@ -33,6 +31,8 @@ public class Two_WorldTwo extends AppCompatActivity {
     ImageButton egg19;
     ImageButton egg20;
 
+    private int foundEggs = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,19 +43,30 @@ public class Two_WorldTwo extends AppCompatActivity {
         egg1 = (ImageButton) findViewById(R.id.egg1);
         egg1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                foundEggs++;
+                Bundle b = new Bundle();
+                b.putInt("key", foundEggs);
                 Intent intent = new Intent(getApplicationContext(), Two_GoodEgg.class);
+                intent.putExtras(b);
                 startActivity(intent);
                 egg1.setVisibility(View.INVISIBLE);
+                shouldFinish();
             }
         });
+
 
         //egg good
         egg2 = (ImageButton) findViewById(R.id.egg2);
         egg2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                foundEggs++;
+                Bundle b = new Bundle();
+                b.putInt("key", foundEggs);
                 Intent intent = new Intent(getApplicationContext(), Two_GoodEgg.class);
+                intent.putExtras(b);
                 startActivity(intent);
                 egg2.setVisibility(View.INVISIBLE);
+                shouldFinish();
             }
         });
 
@@ -238,5 +249,22 @@ public class Two_WorldTwo extends AppCompatActivity {
                 egg20.setVisibility(View.INVISIBLE);
             }
         });
+    }
+
+    public void changeActivity(View view) {
+        Button buttonPressed = (Button) findViewById(view.getId());
+        String buttonText = buttonPressed.getText().toString();
+        if (buttonText.equals("Back")) {
+            this.finish();
+        }
+        if (buttonText.equals("Rules")) {
+            //add instructions
+        }
+    }
+
+    public void shouldFinish() {
+        if (foundEggs == 2) {
+            this.finish();
+        }
     }
 }

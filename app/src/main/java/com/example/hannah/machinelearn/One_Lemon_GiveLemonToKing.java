@@ -24,7 +24,7 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
 
         text = (TextView) findViewById(R.id.text);
         text.setTextSize(20);
-        text2 = (TextView) findViewById(R.id.text);
+        text2 = (TextView) findViewById(R.id.text2);
         text2.setTextSize(20);
 
         text.setText("Well done! You've collected the lemon. The next task is to find two eggs. Tap next.");

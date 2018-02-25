@@ -138,7 +138,7 @@ public class One_WorldOne extends AppCompatActivity {
         if(buttonText.equals("Back")){
             this.finish();
         }
-        if(buttonText.equals("instructions")){
+        if(buttonText.equals("Rules")){
             //add instructions
         }
     }

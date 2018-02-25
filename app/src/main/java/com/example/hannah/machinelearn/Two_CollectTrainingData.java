@@ -2,6 +2,7 @@ package com.example.hannah.machinelearn;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,8 @@ public class Two_CollectTrainingData extends AppCompatActivity {
     ImageView pic4;
     ImageView pic5;
 
+    int foundEggs;
+
     static final int REQUEST_IMAGE_CAPTURE = 1;
     String buttonPressedNumber;
 
@@ -31,12 +34,17 @@ public class Two_CollectTrainingData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two__collect_training_data);
 
+        Bundle b = getIntent().getExtras();
+        foundEggs = b.getInt("key");
+
         //Photo code
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
 
         text = (TextView) findViewById(R.id.text);
-        text.setText("Take 5 photos of you or your partner acting out picking up the egg from the ground, to teach the computer the pose.");
+        text.setTextSize(20);
+        text.setTextColor(Color.parseColor("#000000"));
+        text.setText("Take 5 photos of you or your partner acting out picking up an egg from the ground.");
 
         done = (Button) findViewById(R.id.done);
         done.setVisibility(View.INVISIBLE);
@@ -99,6 +107,9 @@ public class Two_CollectTrainingData extends AppCompatActivity {
 
     public void changeActivity(View view) {
         Intent intent = new Intent(getApplicationContext(), Two_GiveEggToComputer.class);
+        Bundle b = new Bundle();
+        b.putInt("key", foundEggs);
+        intent.putExtras(b);
         startActivity(intent);
         this.finish();
     }

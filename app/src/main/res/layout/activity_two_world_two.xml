@@ -11,6 +11,24 @@
     tools:context="com.example.hannah.machinelearn.Two_WorldTwo"
     android:background="@drawable/worldtwomap">
 
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:text="Back"
+        android:background="@drawable/button"
+        android:onClick="changeActivity"/>
+
+    <Button
+        android:id="@+id/instructionsButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Rules"
+        android:background="@drawable/button"
+        android:onClick="changeActivity"/>
+
     <ImageButton
         android:id="@+id/egg1"
         android:layout_width="20dp"
@@ -31,8 +49,8 @@
         android:id="@+id/egg3"
         android:layout_width="20dp"
         android:layout_height="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/egg" />
 
     <ImageButton

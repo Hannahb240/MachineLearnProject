@@ -1,6 +1,7 @@
 package com.example.hannah.machinelearn;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,26 +12,37 @@ import android.widget.TextView;
 public class Two_ResultOfImage extends AppCompatActivity {
 
     Button nextButton;
-    TextView resultOfPhoto;
 
-    ImageView eggPic;
+    TextView takePhotosInstructions;
+    TextView takePhotosInstructions2;
+
+    int foundEggs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two__result_of_image);
 
-        eggPic = (ImageView) findViewById(R.id.eggPic);
-        eggPic.setImageResource(R.drawable.egg);
+        Bundle b = getIntent().getExtras();
+        foundEggs = b.getInt("key");
 
+        takePhotosInstructions = (TextView) findViewById(R.id.text1);
+        takePhotosInstructions.setTextColor(Color.parseColor("#000000"));
+        takePhotosInstructions.setTextSize(20);
+        takePhotosInstructions.setText("Great! Now lets take a few more photos to teach this pose to the computer.");
 
-        resultOfPhoto = (TextView) findViewById(R.id.resultText);
-        nextButton = (Button) findViewById(R.id.nextButton);
-        resultOfPhoto.setText("Now teach the computer how you collected the egg!");
+        takePhotosInstructions2 = (TextView) findViewById(R.id.text2);
+        takePhotosInstructions2.setTextSize(20);
+        takePhotosInstructions2.setTextColor(Color.parseColor("#000000"));
+        takePhotosInstructions2.setText("Tap next below");
+
     }
 
-    public void selectNext(View view) {
+    public void changeActivity(View view){
+        Bundle b = new Bundle();
+        b.putInt("key", foundEggs);
         Intent intent = new Intent(getApplicationContext(), Two_CollectTrainingData.class);
+        intent.putExtras(b);
         startActivity(intent);
         this.finish();
     }

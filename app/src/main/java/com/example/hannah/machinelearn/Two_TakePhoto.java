@@ -20,20 +20,36 @@ public class Two_TakePhoto extends AppCompatActivity {
     Button retakePhoto;
     Button next;
 
+    int foundEggs;
+
     ImageView myImageView;
 
     TextView takePhotoInstructions;
+    TextView takePhotoInstructions2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two__take_photo);
 
+        Bundle b = getIntent().getExtras();
+        foundEggs = b.getInt("key");
+
         takePhoto = (Button) findViewById(R.id.takePhoto);
+
+//        takePhotoInstructions = (TextView) findViewById(R.id.photoInstructions);
+//        takePhotoInstructions.setTextColor(Color.parseColor("#000000"));
+//        takePhotoInstructions.setText("Take a photo of your partner pretending to crouch down to pick up the egg!");
+
 
         takePhotoInstructions = (TextView) findViewById(R.id.photoInstructions);
         takePhotoInstructions.setTextColor(Color.parseColor("#000000"));
-        takePhotoInstructions.setText("Take a photo of your partner pretending to crouch down to pick up the egg!");
+
+        takePhotoInstructions2 = (TextView) findViewById(R.id.photoInstructions2);
+        takePhotoInstructions2.setTextColor(Color.parseColor("#000000"));
+
+        takePhotoInstructions2.setText("You're going to need to crouch down low!");
+        takePhotoInstructions2.setTextSize(20);
 
         next = (Button) findViewById(R.id.nextButton);
         next.setVisibility(View.INVISIBLE);
@@ -63,6 +79,9 @@ public class Two_TakePhoto extends AppCompatActivity {
             retakePhoto.setVisibility(View.VISIBLE);
             next.setVisibility(View.VISIBLE);
             takePhoto.setVisibility(View.INVISIBLE);
+            takePhotoInstructions.setText("If you're happy with your picture, tap next to go to the next page.");
+            takePhotoInstructions.setTextSize(20);
+            takePhotoInstructions2.setVisibility(View.INVISIBLE);
 
         }
     }
@@ -71,7 +90,10 @@ public class Two_TakePhoto extends AppCompatActivity {
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
         if(buttonText.equals("Next")) {
+            Bundle b = new Bundle();
+            b.putInt("key", foundEggs);
             Intent intent = new Intent(getApplicationContext(), Two_ResultOfImage.class);
+            intent.putExtras(b);
             startActivity(intent);
             this.finish();
         }
