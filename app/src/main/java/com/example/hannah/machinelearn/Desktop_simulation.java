@@ -25,9 +25,6 @@ public class Desktop_simulation extends AppCompatActivity {
     ImageButton trainingPic4;
     ImageButton trainingPic4Below;
 
-    ImageButton trainingPic5;
-    ImageButton trainingPic5Below;
-
     ImageButton trainingPic6;
     ImageButton trainingPic6Below;
 
@@ -40,9 +37,6 @@ public class Desktop_simulation extends AppCompatActivity {
     ImageButton trainingPic9;
     ImageButton trainingPic9Below;
 
-    ImageButton trainingPic10;
-    ImageButton trainingPic10Below;
-
     ImageButton trainingPic11;
     ImageButton trainingPic11Below;
 
@@ -54,12 +48,6 @@ public class Desktop_simulation extends AppCompatActivity {
 
     ImageButton trainingPic14;
     ImageButton trainingPic14Below;
-
-    ImageButton trainingPic15;
-    ImageButton trainingPic15Below;
-
-    ImageButton trainingPic16;
-    ImageButton trainingPic16Below;
 
     ImageButton trainingPic17;
     ImageButton trainingPic17Below;
@@ -83,18 +71,14 @@ public class Desktop_simulation extends AppCompatActivity {
     boolean trainingPic2Clicked = false;
     boolean trainingPic3Clicked = false;
     boolean trainingPic4Clicked = false;
-    boolean trainingPic5Clicked = false;
     boolean trainingPic6Clicked = false;
     boolean trainingPic7Clicked = false;
     boolean trainingPic8Clicked = false;
     boolean trainingPic9Clicked = false;
-    boolean trainingPic10Clicked = false;
     boolean trainingPic11Clicked = false;
     boolean trainingPic12Clicked = false;
     boolean trainingPic13Clicked = false;
     boolean trainingPic14Clicked = false;
-    boolean trainingPic15Clicked = false;
-    boolean trainingPic16Clicked = false;
     boolean trainingPic17Clicked = false;
     boolean trainingPic18Clicked = false;
     boolean trainingPic19Clicked = false;
@@ -110,7 +94,6 @@ public class Desktop_simulation extends AppCompatActivity {
         setContentView(R.layout.activity_desktop_simulation);
 
         myImageView = (ImageView) findViewById(R.id.myImgView);
-        myImageView.setImageResource(R.drawable.egg);
 
         crouchLabel = (TextView) findViewById(R.id.crouchLabel);
         standingLabel = (TextView) findViewById(R.id.standingLabel);
@@ -128,7 +111,6 @@ public class Desktop_simulation extends AppCompatActivity {
         trainingPicButtons.add(trainingPic1);
         trainingPicBelowButtons.add(trainingPic1Below);
 
-
         trainingPic2Below = (ImageButton) findViewById(R.id.trainingpic2below);
         trainingPic2Below.setVisibility(View.INVISIBLE);
         trainingPicButtons.add(trainingPic2);
@@ -143,11 +125,6 @@ public class Desktop_simulation extends AppCompatActivity {
         trainingPic4Below.setVisibility(View.INVISIBLE);
         trainingPicButtons.add(trainingPic4);
         trainingPicBelowButtons.add(trainingPic4Below);
-
-        trainingPic5Below = (ImageButton) findViewById(R.id.trainingpic5below);
-        trainingPic5Below.setVisibility(View.INVISIBLE);
-        trainingPicButtons.add(trainingPic5);
-        trainingPicBelowButtons.add(trainingPic5Below);
 
         trainingPic6Below = (ImageButton) findViewById(R.id.trainingpic6below);
         trainingPic6Below.setVisibility(View.INVISIBLE);
@@ -169,11 +146,6 @@ public class Desktop_simulation extends AppCompatActivity {
         trainingPicButtons.add(trainingPic9);
         trainingPicBelowButtons.add(trainingPic9Below);
 
-        trainingPic10Below = (ImageButton) findViewById(R.id.trainingpic10below);
-        trainingPic10Below.setVisibility(View.INVISIBLE);
-        trainingPicButtons.add(trainingPic10);
-        trainingPicBelowButtons.add(trainingPic10Below);
-
         trainingPic11Below = (ImageButton) findViewById(R.id.trainingpic11below);
         trainingPic11Below.setVisibility(View.INVISIBLE);
         trainingPicButtons.add(trainingPic11);
@@ -193,16 +165,6 @@ public class Desktop_simulation extends AppCompatActivity {
         trainingPic14Below.setVisibility(View.INVISIBLE);
         trainingPicButtons.add(trainingPic14);
         trainingPicBelowButtons.add(trainingPic14Below);
-
-        trainingPic15Below = (ImageButton) findViewById(R.id.trainingpic15below);
-        trainingPic15Below.setVisibility(View.INVISIBLE);
-        trainingPicButtons.add(trainingPic15);
-        trainingPicBelowButtons.add(trainingPic15Below);
-
-        trainingPic16Below = (ImageButton) findViewById(R.id.trainingpic16below);
-        trainingPic16Below.setVisibility(View.INVISIBLE);
-        trainingPicButtons.add(trainingPic16);
-        trainingPicBelowButtons.add(trainingPic16Below);
 
         trainingPic17Below = (ImageButton) findViewById(R.id.trainingpic17below);
         trainingPic17Below.setVisibility(View.INVISIBLE);
@@ -232,7 +194,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic1Clicked) {
-                    findViewById(R.id.trainingpic1).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic1).setBackgroundResource(R.drawable.grid1);
                     trainingPic1Clicked = true;
                 }
 
@@ -259,7 +221,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic2Clicked) {
-                    findViewById(R.id.trainingpic2).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic2).setBackgroundResource(R.drawable.grid2);
                     trainingPic2Clicked = true;
                 }
 
@@ -285,7 +247,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic3Clicked) {
-                    findViewById(R.id.trainingpic3).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic3).setBackgroundResource(R.drawable.grid3);
                     trainingPic3Clicked = true;
                 }
 
@@ -311,7 +273,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic4Clicked) {
-                    findViewById(R.id.trainingpic4).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic4).setBackgroundResource(R.drawable.grid4);
                     trainingPic4Clicked = true;
                 }
 
@@ -330,32 +292,6 @@ public class Desktop_simulation extends AppCompatActivity {
             }
         });
 
-        //TRAINING PIC 5 ////////////////////////////////////////////////////////////////////////
-        trainingPic5 = (ImageButton) findViewById(R.id.trainingpic5);
-        trainingPic5.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                //on first click, change to new image.
-                if(!trainingPic5Clicked) {
-                    findViewById(R.id.trainingpic5).setBackgroundResource(R.drawable.peartree);
-                    trainingPic5Clicked = true;
-                }
-
-                //move on second click
-                else if(trainingPic5Clicked){
-                    trainingPic5.setVisibility(View.INVISIBLE);
-                    trainingPic5Below.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
-        trainingPic5Below.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                trainingPic5.setVisibility(View.VISIBLE);
-                trainingPic5Below.setVisibility(View.INVISIBLE);
-            }
-        });
-
         //TRAINING PIC 6 ////////////////////////////////////////////////////////////////////////
         trainingPic6 = (ImageButton) findViewById(R.id.trainingpic6);
         trainingPic6.setOnClickListener(new View.OnClickListener() {
@@ -363,7 +299,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic6Clicked) {
-                    findViewById(R.id.trainingpic6).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic6).setBackgroundResource(R.drawable.grid9);
                     trainingPic6Clicked = true;
                 }
 
@@ -389,7 +325,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic7Clicked) {
-                    findViewById(R.id.trainingpic7).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic7).setBackgroundResource(R.drawable.grid10);
                     trainingPic7Clicked = true;
                 }
 
@@ -415,7 +351,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic8Clicked) {
-                    findViewById(R.id.trainingpic8).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic8).setBackgroundResource(R.drawable.grid11);
                     trainingPic8Clicked = true;
                 }
 
@@ -441,7 +377,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic9Clicked) {
-                    findViewById(R.id.trainingpic9).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic9).setBackgroundResource(R.drawable.grid12);
                     trainingPic9Clicked = true;
                 }
 
@@ -460,32 +396,6 @@ public class Desktop_simulation extends AppCompatActivity {
             }
         });
 
-        //TRAINING PIC 10////////////////////////////////////////////////////////////////////////
-        trainingPic10 = (ImageButton) findViewById(R.id.trainingpic10);
-        trainingPic10.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                //on first click, change to new image.
-                if(!trainingPic10Clicked) {
-                    findViewById(R.id.trainingpic10).setBackgroundResource(R.drawable.peartree);
-                    trainingPic10Clicked = true;
-                }
-
-                //move on second click
-                else if(trainingPic10Clicked){
-                    trainingPic10.setVisibility(View.INVISIBLE);
-                    trainingPic10Below.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
-        trainingPic10Below.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                trainingPic10.setVisibility(View.VISIBLE);
-                trainingPic10Below.setVisibility(View.INVISIBLE);
-            }
-        });
-
 
         //TRAINING PIC 11////////////////////////////////////////////////////////////////////////
         trainingPic11 = (ImageButton) findViewById(R.id.trainingpic11);
@@ -494,7 +404,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic11Clicked) {
-                    findViewById(R.id.trainingpic11).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic11).setBackgroundResource(R.drawable.grid13);
                     trainingPic11Clicked = true;
                 }
 
@@ -520,7 +430,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic12Clicked) {
-                    findViewById(R.id.trainingpic12).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic12).setBackgroundResource(R.drawable.grid14);
                     trainingPic12Clicked = true;
                 }
 
@@ -546,7 +456,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic13Clicked) {
-                    findViewById(R.id.trainingpic13).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic13).setBackgroundResource(R.drawable.grid15);
                     trainingPic13Clicked = true;
                 }
 
@@ -572,7 +482,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic14Clicked) {
-                    findViewById(R.id.trainingpic14).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic14).setBackgroundResource(R.drawable.grid16);
                     trainingPic14Clicked = true;
                 }
 
@@ -591,58 +501,6 @@ public class Desktop_simulation extends AppCompatActivity {
             }
         });
 
-        //TRAINING PIC 15////////////////////////////////////////////////////////////////////////
-        trainingPic15 = (ImageButton) findViewById(R.id.trainingpic15);
-        trainingPic15.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                //on first click, change to new image.
-                if(!trainingPic15Clicked) {
-                    findViewById(R.id.trainingpic15).setBackgroundResource(R.drawable.peartree);
-                    trainingPic15Clicked = true;
-                }
-
-                //move on second click
-                else if(trainingPic15Clicked){
-                    trainingPic15.setVisibility(View.INVISIBLE);
-                    trainingPic15Below.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
-        trainingPic15Below.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                trainingPic15.setVisibility(View.VISIBLE);
-                trainingPic15Below.setVisibility(View.INVISIBLE);
-            }
-        });
-
-        //TRAINING PIC 16////////////////////////////////////////////////////////////////////////
-        trainingPic16 = (ImageButton) findViewById(R.id.trainingpic16);
-        trainingPic16.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                //on first click, change to new image.
-                if(!trainingPic16Clicked) {
-                    findViewById(R.id.trainingpic16).setBackgroundResource(R.drawable.peartree);
-                    trainingPic16Clicked = true;
-                }
-
-                //move on second click
-                else if(trainingPic16Clicked){
-                    trainingPic16.setVisibility(View.INVISIBLE);
-                    trainingPic16Below.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
-        trainingPic16Below.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                trainingPic16.setVisibility(View.VISIBLE);
-                trainingPic16Below.setVisibility(View.INVISIBLE);
-            }
-        });
-
         //TRAINING PIC 17////////////////////////////////////////////////////////////////////////
         trainingPic17 = (ImageButton) findViewById(R.id.trainingpic17);
         trainingPic17.setOnClickListener(new View.OnClickListener() {
@@ -650,7 +508,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic17Clicked) {
-                    findViewById(R.id.trainingpic17).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic17).setBackgroundResource(R.drawable.grid5);
                     trainingPic17Clicked = true;
                 }
 
@@ -676,7 +534,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic18Clicked) {
-                    findViewById(R.id.trainingpic18).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic18).setBackgroundResource(R.drawable.grid6);
                     trainingPic18Clicked = true;
                 }
 
@@ -702,7 +560,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic19Clicked) {
-                    findViewById(R.id.trainingpic19).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic19).setBackgroundResource(R.drawable.grid7);
                     trainingPic19Clicked = true;
                 }
 
@@ -728,7 +586,7 @@ public class Desktop_simulation extends AppCompatActivity {
 
                 //on first click, change to new image.
                 if(!trainingPic20Clicked) {
-                    findViewById(R.id.trainingpic20).setBackgroundResource(R.drawable.peartree);
+                    findViewById(R.id.trainingpic20).setBackgroundResource(R.drawable.grid8);
                     trainingPic20Clicked = true;
                 }
 
@@ -754,19 +612,15 @@ public class Desktop_simulation extends AppCompatActivity {
         trainingPic2.setVisibility(View.VISIBLE);
         trainingPic3.setVisibility(View.VISIBLE);
         trainingPic4.setVisibility(View.VISIBLE);
-        trainingPic5.setVisibility(View.VISIBLE);
         trainingPic6.setVisibility(View.VISIBLE);
         trainingPic7.setVisibility(View.VISIBLE);
         trainingPic8.setVisibility(View.VISIBLE);
         trainingPic9.setVisibility(View.VISIBLE);
-        trainingPic10.setVisibility(View.VISIBLE);
 
         trainingPic11.setVisibility(View.VISIBLE);
         trainingPic12.setVisibility(View.VISIBLE);
         trainingPic13.setVisibility(View.VISIBLE);
         trainingPic14.setVisibility(View.VISIBLE);
-        trainingPic15.setVisibility(View.VISIBLE);
-        trainingPic16.setVisibility(View.VISIBLE);
         trainingPic17.setVisibility(View.VISIBLE);
         trainingPic18.setVisibility(View.VISIBLE);
         trainingPic19.setVisibility(View.VISIBLE);
@@ -776,19 +630,15 @@ public class Desktop_simulation extends AppCompatActivity {
         trainingPic2Below.setVisibility(View.INVISIBLE);
         trainingPic3Below.setVisibility(View.INVISIBLE);
         trainingPic4Below.setVisibility(View.INVISIBLE);
-        trainingPic5Below.setVisibility(View.INVISIBLE);
         trainingPic6Below.setVisibility(View.INVISIBLE);
         trainingPic7Below.setVisibility(View.INVISIBLE);
         trainingPic8Below.setVisibility(View.INVISIBLE);
         trainingPic9Below.setVisibility(View.INVISIBLE);
-        trainingPic10Below.setVisibility(View.INVISIBLE);
 
         trainingPic11Below.setVisibility(View.INVISIBLE);
         trainingPic12Below.setVisibility(View.INVISIBLE);
         trainingPic13Below.setVisibility(View.INVISIBLE);
         trainingPic14Below.setVisibility(View.INVISIBLE);
-        trainingPic15Below.setVisibility(View.INVISIBLE);
-        trainingPic16Below.setVisibility(View.INVISIBLE);
         trainingPic17Below.setVisibility(View.INVISIBLE);
         trainingPic18Below.setVisibility(View.INVISIBLE);
         trainingPic19Below.setVisibility(View.INVISIBLE);
@@ -798,21 +648,41 @@ public class Desktop_simulation extends AppCompatActivity {
     public void addNewTestingImage(View view){
         switch(imageCount) {
             case 0:
-                myImageView.setImageResource(R.drawable.lemon);
+                myImageView.setImageResource(R.drawable.changetogrid1);
                 break;
             case 1:
-                myImageView.setImageResource(R.drawable.orange);
+                myImageView.setImageResource(R.drawable.changetogrid2);
                 break;
             case 2:
-                myImageView.setImageResource(R.drawable.apple);
+                myImageView.setImageResource(R.drawable.changetogrid3);
                 break;
             case 3:
-                myImageView.setImageResource(R.drawable.pear);
+                myImageView.setImageResource(R.drawable.changetogrid4);
                 break;
             case 4:
-                myImageView.setImageResource(R.drawable.egg);
+                myImageView.setImageResource(R.drawable.changetogrid5);
                 break;
         }
         imageCount++;
+    }
+
+    public void changeToGrid(View view){
+        switch(imageCount) {
+            case 1:
+                myImageView.setImageResource(R.drawable.changetogrid1grid);
+                break;
+            case 2:
+                myImageView.setImageResource(R.drawable.changetogrid2grid);
+                break;
+            case 3:
+                myImageView.setImageResource(R.drawable.changetogrid3grid);
+                break;
+            case 4:
+                myImageView.setImageResource(R.drawable.changetogrid4grid);
+                break;
+            case 5:
+                myImageView.setImageResource(R.drawable.changetogrid5grid);
+                break;
+        }
     }
 }

@@ -83,19 +83,19 @@ public class Two_CollectTrainingData extends AppCompatActivity {
 
             //case statement for whatever the variable is set to
             switch(buttonPressedNumber) {
-                case "Take      Photo 1":
+                case "Take Photo     1":
                     pic1.setImageBitmap(photo);
                     break;
-                case "Take      Photo 2":
+                case "Take Photo     2":
                     pic2.setImageBitmap(photo);
                     break;
-                case "Take      Photo 3":
+                case "Take Photo     3":
                     pic3.setImageBitmap(photo);
                     break;
-                case "Take      Photo 4":
+                case "Take Photo     4":
                     pic4.setImageBitmap(photo);
                     break;
-                case "Take      Photo 5":
+                case "Take Photo     5":
                     pic5.setImageBitmap(photo);
                     done.setVisibility(View.VISIBLE);
                     text.setVisibility(View.INVISIBLE);
