@@ -58,9 +58,10 @@ public class One_TakePhoto extends AppCompatActivity {
 //                break;
 //        }
 
-        //takePhotoInstructions.setText("Take a picture of your partner pretending to collect a lemon from the tree.");
+        takePhotoInstructions.setText("Take a picture of your partner pretending to collect a lemon from the tree.");
+        takePhotoInstructions.setTextSize(20);
 
-        takePhotoInstructions2.setText("You're going to need to reach up high!");
+        takePhotoInstructions2.setText("You're going to need to reach up high! Tap the button below.");
         takePhotoInstructions2.setTextSize(20);
         takePhoto = (Button) findViewById(R.id.takePhoto);
 

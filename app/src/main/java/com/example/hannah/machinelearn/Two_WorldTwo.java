@@ -54,7 +54,6 @@ public class Two_WorldTwo extends AppCompatActivity {
             }
         });
 
-
         //egg good
         egg2 = (ImageButton) findViewById(R.id.egg2);
         egg2.setOnClickListener(new View.OnClickListener() {
@@ -251,6 +250,12 @@ public class Two_WorldTwo extends AppCompatActivity {
         });
     }
 
+    public void shouldFinish() {
+        if (foundEggs == 2) {
+            this.finish();
+        }
+    }
+
     public void changeActivity(View view) {
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
@@ -258,13 +263,9 @@ public class Two_WorldTwo extends AppCompatActivity {
             this.finish();
         }
         if (buttonText.equals("Rules")) {
-            //add instructions
+            Intent intent = new Intent(getApplicationContext(), Two_Rules.class);
+            startActivity(intent);
         }
     }
 
-    public void shouldFinish() {
-        if (foundEggs == 2) {
-            this.finish();
-        }
-    }
 }

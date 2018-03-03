@@ -21,7 +21,7 @@ public class One_ResultOfImage extends AppCompatActivity {
     int flagForNextSelectedOnTypeLemon;
 
     String orangeText = "This is an orange tree! Tap the back button below to keep searching for the lemon tree.";
-    String lemonText = "Hooray, you found the lemon tree! Tap next below.";
+    String lemonText = "Hooray, you found the lemon tree! Tap the next button.";
     String appleText = "This is an apple tree! Tap the back button below to keep searching for the lemon tree.";
     String pearText = "This is a pear tree! Tap the back button below to keep searching for the lemon tree.";
 
@@ -82,15 +82,15 @@ public class One_ResultOfImage extends AppCompatActivity {
 
         if(typeOfTree == 1){
             if(flagForNextSelectedOnTypeLemon ==0) {
-                resultOfPhoto.setText("How are you going to collect a lemon from the tree?");
+                resultOfPhoto.setText("How are you going to collect a lemon from the lemon tree?");
                 flagForNextSelectedOnTypeLemon +=1;
             }
-            else if(flagForNextSelectedOnTypeLemon == 1) {
-                resultOfPhoto.setText("Take a picture of your partner pretending to collect a lemon from the tree.");
-                flagForNextSelectedOnTypeLemon +=1;
-                //You're going to need to reach up high!")
-            }
-            else if(flagForNextSelectedOnTypeLemon == 2){
+//            else if(flagForNextSelectedOnTypeLemon == 1) {
+//                resultOfPhoto.setText("Take a picture of your partner pretending to collect a lemon from the tree.");
+//                flagForNextSelectedOnTypeLemon +=1;
+//                //You're going to need to reach up high!")
+//            }
+            else if(flagForNextSelectedOnTypeLemon == 1){
                 Intent intent = new Intent(getApplicationContext(), One_TakePhoto.class);
                 startActivity(intent);
                 this.finish();

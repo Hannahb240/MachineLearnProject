@@ -1,12 +1,17 @@
 package com.example.hannah.machinelearn;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+import android.view.ViewGroup.LayoutParams;
 
 public class One_WorldOne extends AppCompatActivity {
 
@@ -20,6 +25,15 @@ public class One_WorldOne extends AppCompatActivity {
     ImageButton treeButton7;
     ImageButton treeButton8;
 
+    boolean isClicked = true;
+    PopupWindow popUpWindow;
+    ActionBar.LayoutParams layoutParams;
+    LinearLayout mainLayout;
+    Button btnClickHere;
+    LinearLayout containerLayout;
+    TextView tvMsg;
+
+
     //Tree types:
     //1 = Lemon
     //2 = Orange
@@ -31,6 +45,7 @@ public class One_WorldOne extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one_world_one);
+
 
         treeButton1 = (ImageButton) findViewById(R.id.selectTree1);
         treeButton1.setOnClickListener(new View.OnClickListener() {
@@ -139,7 +154,8 @@ public class One_WorldOne extends AppCompatActivity {
             this.finish();
         }
         if(buttonText.equals("Rules")){
-            //add instructions
+            Intent intent = new Intent(getApplicationContext(), One_Rules.class);
+            startActivity(intent);
         }
     }
 }

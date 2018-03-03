@@ -45,11 +45,11 @@ import org.opencv.android.OpenCVLoader;
 
          Button buttonPressed = (Button) findViewById(view.getId());
          String buttonText = buttonPressed.getText().toString();
-         if(buttonText.equals("World one")) {
+         if(buttonText.equals("Lemon world")) {
              Intent intent = new Intent(getApplicationContext(), One_WorldOne.class);
              startActivity(intent);
          }
-         else if(buttonText.equals("World two")) {
+         else if(buttonText.equals("Egg world")) {
              Intent intent = new Intent(getApplicationContext(), Two_WorldTwo.class);
              startActivity(intent);
          }

@@ -21,13 +21,12 @@ public class One_ExplainTrainingData extends AppCompatActivity {
         takePhotosInstructions = (TextView) findViewById(R.id.text1);
         takePhotosInstructions.setTextColor(Color.parseColor("#000000"));
         takePhotosInstructions.setTextSize(20);
-        takePhotosInstructions.setText("Great! Now lets take a few more photos to teach this pose to the computer.");
+        takePhotosInstructions.setText("Great! Now take 5 more photos the same as this one, to teach the computer how to collect a lemon from the tree.");
 
         takePhotosInstructions2 = (TextView) findViewById(R.id.text2);
         takePhotosInstructions2.setTextSize(20);
         takePhotosInstructions2.setTextColor(Color.parseColor("#000000"));
-        takePhotosInstructions2.setText("Tap next below");
-
+//        takePhotosInstructions2.setText("Take 5 photos of you and your partner pretending to collect the lemon from the tree. Tap next below.");
 
     }
 
