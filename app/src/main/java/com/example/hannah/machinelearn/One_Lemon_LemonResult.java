@@ -92,7 +92,7 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
                 case "Take Photo     5":
                     pic5.setImageBitmap(photo);
                     done.setVisibility(View.VISIBLE);
-                    text.setVisibility(View.INVISIBLE);
+                    text.setText("Great work! Tap done.");
                     break;
             }
         }

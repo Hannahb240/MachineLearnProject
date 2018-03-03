@@ -20,6 +20,8 @@ public class One_TakePhoto extends AppCompatActivity {
     Button retakePhoto;
     Button next;
 
+    Bitmap imageTaken;
+
     ImageView myImageView;
     //int typeOfTree;
 
@@ -91,6 +93,7 @@ public class One_TakePhoto extends AppCompatActivity {
             //Get the photo
             Bundle extras = data.getExtras();
             Bitmap photo = (Bitmap) extras.get("data");
+            imageTaken = photo;
             myImageView.setImageBitmap(photo);
             retakePhoto.setVisibility(View.VISIBLE);
             next.setVisibility(View.VISIBLE);
@@ -98,6 +101,7 @@ public class One_TakePhoto extends AppCompatActivity {
             takePhotoInstructions.setText("If you're happy with your picture, tap next to go to the next page.");
             takePhotoInstructions.setTextSize(20);
             takePhotoInstructions2.setVisibility(View.INVISIBLE);
+
         }
     }
 
@@ -110,6 +114,7 @@ public class One_TakePhoto extends AppCompatActivity {
 //            Bundle b = new Bundle();
 //            b.putInt("key",typeOfTree);
 //            intent.putExtras(b);
+            intent.putExtra("BitmapImage", imageTaken);
             startActivity(intent);
             this.finish();
         }

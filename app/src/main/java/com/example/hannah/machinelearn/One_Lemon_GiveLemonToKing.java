@@ -1,6 +1,7 @@
 package com.example.hannah.machinelearn;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +28,9 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
         text2 = (TextView) findViewById(R.id.text2);
         text2.setTextSize(20);
 
-        text.setText("Well done! You've collected the lemon. The next task is to find two eggs. Tap next.");
+        text.setText("Well done! You've collected a lemon. The next task is to find an egg, tap next to go to the next world.");
+        text.setTextColor(Color.parseColor("#000000"));
+        text.setTextSize(20);
 
         lemonPic = (ImageView) findViewById(R.id.lemon);
         lemonPic.setImageResource(R.drawable.lemon);
@@ -39,11 +42,11 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
 
     }
 
-    public void next(View view){
-        text2.setText("Tap the button below to go to the next world where you'll search for the eggs.");
-        goToWorld2.setVisibility(View.VISIBLE);
-        nextButton.setVisibility(View.INVISIBLE);
-    }
+//    public void next(View view){
+//        text2.setText("Tap the button below to go to the next world where you'll search for the eggs.");
+//        goToWorld2.setVisibility(View.VISIBLE);
+//        nextButton.setVisibility(View.INVISIBLE);
+//    }
 
     public void worldTwo(View view){
         Intent intent = new Intent(getApplicationContext(), Two_WorldTwo.class);
