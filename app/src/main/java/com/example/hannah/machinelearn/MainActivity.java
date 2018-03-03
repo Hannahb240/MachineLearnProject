@@ -21,8 +21,10 @@ import org.opencv.android.OpenCVLoader;
      Button worldOneButton;
      Button worldTwoButton;
      //Button worldThreeButton;
-     Button classificationQuiz;
+     //Button classificationQuiz;
      Button guessThePose;
+
+     boolean hiddenButtonPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +34,10 @@ import org.opencv.android.OpenCVLoader;
         worldOneButton = (Button) findViewById(R.id.goToWorld1);
         worldTwoButton = (Button) findViewById(R.id.goToWorld2);
         //worldThreeButton = (Button) findViewById(R.id.goToWorld3);
-        classificationQuiz = (Button) findViewById(R.id.classificationQuiz);
+        //classificationQuiz = (Button) findViewById(R.id.classificationQuiz);
         guessThePose = (Button) findViewById(R.id.guessThePose);
 
+        hiddenButtonPressed = false;
 
     }
 
@@ -62,10 +65,18 @@ import org.opencv.android.OpenCVLoader;
              Intent intent = new Intent(getApplicationContext(), Five_GuessThePose.class);
              startActivity(intent);
          }
-         else if(buttonText.equals("D")){
+     }
+
+     public void tvActivity(View view) {
+
+         if(!hiddenButtonPressed){
+             hiddenButtonPressed = true;
+         }
+         else if(hiddenButtonPressed){
              Intent intent = new Intent(getApplicationContext(), Desktop_simulation.class);
              startActivity(intent);
          }
+
      }
 
 }
