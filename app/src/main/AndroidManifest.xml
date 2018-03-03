@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".One_WorldOne" />
-        <activity android:name=".Main_WorldSelection" />
         <activity android:name=".One_ResultOfImage" />
         <activity android:name=".One_LemonTree" />
         <activity android:name=".One_TakePhoto" />

@@ -104,7 +104,6 @@ public class Two_CollectTrainingData extends AppCompatActivity {
         }
 
     }
-
     public void changeActivity(View view) {
         Intent intent = new Intent(getApplicationContext(), Two_GiveEggToComputer.class);
         Bundle b = new Bundle();

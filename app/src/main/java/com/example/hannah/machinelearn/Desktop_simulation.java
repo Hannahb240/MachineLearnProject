@@ -66,7 +66,6 @@ public class Desktop_simulation extends AppCompatActivity {
     ArrayList<ImageButton> trainingPicBelowButtons;
     int imageCount;
 
-
     boolean trainingPic1Clicked = false;
     boolean trainingPic2Clicked = false;
     boolean trainingPic3Clicked = false;
