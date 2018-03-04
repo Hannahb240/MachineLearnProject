@@ -54,30 +54,30 @@ public class Two_WorldTwo extends AppCompatActivity {
             }
         });
 
-        //egg good
-        egg2 = (ImageButton) findViewById(R.id.egg2);
-        egg2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                foundEggs++;
-                Bundle b = new Bundle();
-                b.putInt("key", foundEggs);
-                Intent intent = new Intent(getApplicationContext(), Two_GoodEgg.class);
-                intent.putExtras(b);
-                startActivity(intent);
-                egg2.setVisibility(View.INVISIBLE);
-                shouldFinish();
-            }
-        });
+//        //egg good
+//        egg2 = (ImageButton) findViewById(R.id.egg2);
+//        egg2.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                foundEggs++;
+//                Bundle b = new Bundle();
+//                b.putInt("key", foundEggs);
+//                Intent intent = new Intent(getApplicationContext(), Two_GoodEgg.class);
+//                intent.putExtras(b);
+//                startActivity(intent);
+//                egg2.setVisibility(View.INVISIBLE);
+//                shouldFinish();
+//            }
+//        });
 
         //egg smashed
-        egg3 = (ImageButton) findViewById(R.id.egg3);
-        egg3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
-                startActivity(intent);
-                egg3.setVisibility(View.INVISIBLE);
-            }
-        });
+//        egg3 = (ImageButton) findViewById(R.id.egg3);
+//        egg3.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
+//                startActivity(intent);
+//                egg3.setVisibility(View.INVISIBLE);
+//            }
+//        });
 
         //egg smashed
         egg4 = (ImageButton) findViewById(R.id.egg4);
@@ -100,14 +100,14 @@ public class Two_WorldTwo extends AppCompatActivity {
         });
 
         //egg smashed
-        egg6 = (ImageButton) findViewById(R.id.egg6);
-        egg6.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
-                startActivity(intent);
-                egg6.setVisibility(View.INVISIBLE);
-            }
-        });
+//        egg6 = (ImageButton) findViewById(R.id.egg6);
+//        egg6.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
+//                startActivity(intent);
+//                egg6.setVisibility(View.INVISIBLE);
+//            }
+//        });
 
         //egg smashed
         egg7 = (ImageButton) findViewById(R.id.egg7);
@@ -119,15 +119,15 @@ public class Two_WorldTwo extends AppCompatActivity {
             }
         });
 
-        //egg smashed
-        egg8 = (ImageButton) findViewById(R.id.egg8);
-        egg8.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
-                startActivity(intent);
-                egg8.setVisibility(View.INVISIBLE);
-            }
-        });
+//        //egg smashed
+//        egg8 = (ImageButton) findViewById(R.id.egg8);
+//        egg8.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
+//                startActivity(intent);
+//                egg8.setVisibility(View.INVISIBLE);
+//            }
+//        });
 
         //egg smashed
         egg9 = (ImageButton) findViewById(R.id.egg9);
@@ -139,25 +139,25 @@ public class Two_WorldTwo extends AppCompatActivity {
             }
         });
 
-        //egg smashed
-        egg10 = (ImageButton) findViewById(R.id.egg10);
-        egg10.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
-                startActivity(intent);
-                egg10.setVisibility(View.INVISIBLE);
-            }
-        });
+//        //egg smashed
+//        egg10 = (ImageButton) findViewById(R.id.egg10);
+//        egg10.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
+//                startActivity(intent);
+//                egg10.setVisibility(View.INVISIBLE);
+//            }
+//        });
 
         //egg smashed
-        egg11 = (ImageButton) findViewById(R.id.egg11);
-        egg11.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
-                startActivity(intent);
-                egg11.setVisibility(View.INVISIBLE);
-            }
-        });
+//        egg11 = (ImageButton) findViewById(R.id.egg11);
+//        egg11.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
+//                startActivity(intent);
+//                egg11.setVisibility(View.INVISIBLE);
+//            }
+//        });
 
         //egg smashed
         egg12 = (ImageButton) findViewById(R.id.egg12);
@@ -170,14 +170,14 @@ public class Two_WorldTwo extends AppCompatActivity {
         });
 
         //egg smashed
-        egg13 = (ImageButton) findViewById(R.id.egg13);
-        egg13.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
-                startActivity(intent);
-                egg13.setVisibility(View.INVISIBLE);
-            }
-        });
+//        egg13 = (ImageButton) findViewById(R.id.egg13);
+//        egg13.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
+//                startActivity(intent);
+//                egg13.setVisibility(View.INVISIBLE);
+//            }
+//        });
 
         //egg smashed
         egg14 = (ImageButton) findViewById(R.id.egg14);
@@ -240,14 +240,14 @@ public class Two_WorldTwo extends AppCompatActivity {
         });
 
         //egg smashed
-        egg20 = (ImageButton) findViewById(R.id.egg20);
-        egg20.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
-                startActivity(intent);
-                egg20.setVisibility(View.INVISIBLE);
-            }
-        });
+//        egg20 = (ImageButton) findViewById(R.id.egg20);
+//        egg20.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Two_EggSmashed.class);
+//                startActivity(intent);
+//                egg20.setVisibility(View.INVISIBLE);
+//            }
+//        });
     }
 
     public void shouldFinish() {

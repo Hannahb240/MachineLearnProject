@@ -46,7 +46,6 @@
         <activity android:name=".Two_ResultOfImage" />
         <activity android:name=".Two_CollectTrainingData" />
         <activity android:name=".Two_GiveEggToComputer" />
-        <activity android:name=".Five_GuessPoseButtons" />
         <activity android:name=".Five_ResultOfGuessYes" />
         <activity android:name=".Five_ResultOfGuessNo" />
         <activity android:name=".Five_CollectTrainingData" />

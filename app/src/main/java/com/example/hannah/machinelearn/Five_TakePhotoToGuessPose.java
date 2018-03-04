@@ -19,19 +19,26 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
     Button takePhoto;
     Button next;
 
-    Button crouchButton;
-    Button standButton;
+    Button yesButton;
+    Button noButton;
 
     Button tryAgain;
     Button back;
 
     ImageView myImageView;
+
+    ImageView pose1;
+    ImageView pose2;
+
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
     TextView poseType;
     TextView initialInstructions;
     TextView instructions2;
     TextView resultOfPhoto;
+
+    int resultOfKnn;
+    String resultOfKnnToString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +50,19 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
         next = (Button) findViewById(R.id.nextButton);
         next.setVisibility(View.INVISIBLE);
 
-        crouchButton = (Button) findViewById(R.id.crouchButton);
-        crouchButton.setVisibility(View.INVISIBLE);
-        standButton = (Button) findViewById(R.id.standButton);
-        standButton.setVisibility(View.INVISIBLE);
+        yesButton = (Button) findViewById(R.id.yesButton);
+        yesButton.setVisibility(View.INVISIBLE);
+        noButton = (Button) findViewById(R.id.noButton);
+        noButton.setVisibility(View.INVISIBLE);
 
         myImageView = (ImageView) findViewById(R.id.myImgView);
+
+        pose1 = (ImageView) findViewById(R.id.pose1);
+        pose1.setImageResource(R.drawable.qtwo);
+
+        pose2 = (ImageView) findViewById(R.id.pose2);
+        pose2.setImageResource(R.drawable.qone);
+
         initialInstructions = (TextView) findViewById(R.id.initialTextView);
         instructions2 = (TextView) findViewById(R.id.instructions2);
         instructions2.setVisibility(View.INVISIBLE);
@@ -59,35 +73,22 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
         back = (Button) findViewById(R.id.goBack);
         back.setVisibility(View.INVISIBLE);
 
-        resultOfPhoto  = (TextView) findViewById(R.id.resultOfPicture);
+        resultOfPhoto = (TextView) findViewById(R.id.resultOfPicture);
         resultOfPhoto.setTextSize(20);
 
-
-
-//        poseType = (TextView) findViewById(R.id.typeOfPose);
-//
-//        Bundle b = getIntent().getExtras();
-//        typeOfPose = b.getInt("key");
-//
-//       // poseType.setText(knn.hiHannah());
-//
-
-//
-//        retakePhoto = (Button) findViewById(R.id.retakePhoto);
-//
-//        //Photo code
+        //Photo code
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
-//
-//        TextView posetype;
-//        posetype = (TextView) findViewById(R.id.typeofpose);
-//        posetype.setText(Integer.toString(typeOfPose));
     }
-//
+
+
+
     public void launchCamera(View view) {
         resultOfPhoto.setVisibility(View.INVISIBLE);
         tryAgain.setVisibility(View.INVISIBLE);
         back.setVisibility(View.INVISIBLE);
+        pose1.setVisibility(View.INVISIBLE);
+        pose2.setVisibility(View.INVISIBLE);
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
     }
@@ -102,37 +103,56 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
             myImageView.setImageBitmap(photo);
             takePhoto.setVisibility(View.INVISIBLE);
 
-            crouchButton.setVisibility(View.VISIBLE);
-            standButton.setVisibility(View.VISIBLE);
+            yesButton.setVisibility(View.VISIBLE);
+            noButton.setVisibility(View.VISIBLE);
             instructions2.setVisibility(View.VISIBLE);
             initialInstructions.setVisibility(View.INVISIBLE);
 
-
-//            knn knearest = new knn(this.getApplicationContext());
+            knn knearest = new knn(this.getApplicationContext());
             //call knn with photo
-//            String hannah = knearest.doKnn(photo);
-           // float hannah = knn.testAccuracyOfModel();
-//            poseType.setText(hannah);
+            String hannah = knearest.doKnn(photo);
 
+            if(hannah.equals("[1]")){
+                resultOfKnnToString = "standing";
+            }
+            else if(hannah.equals("[2]")){
+                resultOfKnnToString = "crouching";
+            }
+
+            instructions2.setText("The classifier guessed that your pose is " + resultOfKnnToString + " Is this correct?");
+            //float hannah = knn.testAccuracyOfModel();
         }
     }
 
-    public void isResultCorrect(View view){
+    public void correct(View view){
 
         resultOfPhoto.setVisibility(View.VISIBLE);
-        tryAgain.setVisibility(View.VISIBLE);
         back.setVisibility(View.VISIBLE);
-        crouchButton.setVisibility(View.INVISIBLE);
-        standButton.setVisibility(View.INVISIBLE);
+
+        yesButton.setVisibility(View.INVISIBLE);
+        noButton.setVisibility(View.INVISIBLE);
+
         instructions2.setVisibility(View.INVISIBLE);
         myImageView.setVisibility(View.INVISIBLE);
-        if(Math.random() > 0.5){
-            resultOfPhoto.setText("Hooray! The classifier guessed correctly");
-        }
-        else {
-            resultOfPhoto.setText("Oh no! The classifier was wrong.");
-        }
+
+        resultOfPhoto.setText("Hooray! The classifier guessed correctly");
     }
+
+    public void notCorrect(View view) {
+        tryAgain.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
+
+        resultOfPhoto.setText("Oh no! The classifier was wrong.");
+
+        yesButton.setVisibility(View.INVISIBLE);
+        noButton.setVisibility(View.INVISIBLE);
+        instructions2.setVisibility(View.INVISIBLE);
+        myImageView.setVisibility(View.INVISIBLE);
+
+
+    }
+
+
 
     public void goBack(View view){
         this.finish();

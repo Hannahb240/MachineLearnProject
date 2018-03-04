@@ -22,6 +22,7 @@ public class Two_EggSmashed extends AppCompatActivity {
 
         eggSmashedText = (TextView) findViewById(R.id.eggsmashedtext);
         eggSmashedText.setTextColor(Color.parseColor("#000000"));
+        eggSmashedText.setTextSize(20);
     }
 
     public void returnToWorldTwo(View view) {

@@ -22,7 +22,7 @@ public class Five_GuessThePose extends AppCompatActivity {
     }
 
     public void tryToGuessPose(View view){
-        Intent intent = new Intent(getApplicationContext(), Five_GuessPoseButtons.class);
+        Intent intent = new Intent(getApplicationContext(), Five_TakePhotoToGuessPose.class);
         startActivity(intent);
     }
 
