@@ -79,4 +79,9 @@ import org.opencv.android.OpenCVLoader;
 
      }
 
+     public void accuracy(View view){
+         Intent intent = new Intent(getApplicationContext(), accuracyImproving.class);
+         startActivity(intent);
+     }
+
 }

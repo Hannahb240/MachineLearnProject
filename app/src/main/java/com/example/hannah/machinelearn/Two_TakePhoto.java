@@ -22,6 +22,8 @@ public class Two_TakePhoto extends AppCompatActivity {
 
     int foundEggs;
 
+    Bitmap imageTaken;
+
     ImageView myImageView;
 
     TextView takePhotoInstructions;
@@ -44,11 +46,13 @@ public class Two_TakePhoto extends AppCompatActivity {
 
         takePhotoInstructions = (TextView) findViewById(R.id.photoInstructions);
         takePhotoInstructions.setTextColor(Color.parseColor("#000000"));
+        takePhotoInstructions.setText("Take a picture of your partner pretending to pick up an egg from the floor.");
+        takePhotoInstructions.setTextSize(20);
 
         takePhotoInstructions2 = (TextView) findViewById(R.id.photoInstructions2);
         takePhotoInstructions2.setTextColor(Color.parseColor("#000000"));
 
-        takePhotoInstructions2.setText("You're going to need to crouch down low!");
+        takePhotoInstructions2.setText("You’re going to need to crouch down low! Tap the button below.");
         takePhotoInstructions2.setTextSize(20);
 
         next = (Button) findViewById(R.id.nextButton);
@@ -76,6 +80,7 @@ public class Two_TakePhoto extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap photo = (Bitmap) extras.get("data");
             myImageView.setImageBitmap(photo);
+            imageTaken = photo;
             retakePhoto.setVisibility(View.VISIBLE);
             next.setVisibility(View.VISIBLE);
             takePhoto.setVisibility(View.INVISIBLE);
@@ -90,10 +95,12 @@ public class Two_TakePhoto extends AppCompatActivity {
         Button buttonPressed = (Button) findViewById(view.getId());
         String buttonText = buttonPressed.getText().toString();
         if(buttonText.equals("Next")) {
-            Bundle b = new Bundle();
-            b.putInt("key", foundEggs);
+//            Bundle b = new Bundle();
+//            b.putInt("key", foundEggs);
+
             Intent intent = new Intent(getApplicationContext(), Two_ResultOfImage.class);
-            intent.putExtras(b);
+            intent.putExtra("BitmapImage", imageTaken);
+//            intent.putExtras(b);
             startActivity(intent);
             this.finish();
         }

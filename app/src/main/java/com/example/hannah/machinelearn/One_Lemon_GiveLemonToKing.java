@@ -51,5 +51,6 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
     public void worldTwo(View view){
         Intent intent = new Intent(getApplicationContext(), Two_WorldTwo.class);
         startActivity(intent);
+        this.finish();
     }
 }

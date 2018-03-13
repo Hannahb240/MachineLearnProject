@@ -51,6 +51,10 @@ public class knn {
 
     public knn (Context context)
     {
+        trainingBitmapToMat = new Mat();
+        trainingData = new Mat();
+        trainingLabels = new ArrayList<Integer>();
+        knearestneighbor = KNearest.create();
         myContext =context;
     }
 
@@ -152,6 +156,77 @@ public class knn {
         float p = knearestneighbor.findNearest(one_feature, 2, knnresult);
         resultOfKnn = knnresult.dump();
     }
+
+    public static float testAccuracyOfModelTwo() {
+
+        //testing
+        //Get an array of testing data- pics 30 to 36, and add their labels.
+        testingData = new Mat();
+        testingBitmapToMat = new Mat();
+        testLabels = new ArrayList<Integer>();
+        knnresult = new Mat();
+        ArrayList<Integer> testSuccessVector = new ArrayList<Integer>();
+
+        //Standing testing data
+        for (int x = 31; x <= 36; x++) {
+
+            //Find the training image id
+            id = myContext.getResources().getIdentifier("standing" + x, "drawable", myContext.getPackageName());
+
+            //Change from drawable to bitmap, to Mat, to float Mat
+            trainingBitmap = BitmapFactory.decodeResource(myContext.getResources(), id);
+            Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+            trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+
+            //Add training data
+            testingData.push_back(trainingBitmapToMat.reshape(1, 1));
+
+            //Add label
+            testLabels.add(standingLabel);
+        }
+
+        //Standing testing data
+        for (int x = 31; x <= 36; x++) {
+
+            //Find the training image id
+            id = myContext.getResources().getIdentifier("crouching" + x, "drawable", myContext.getPackageName());
+
+            //Change from drawable to bitmap, to Mat, to float Mat
+            trainingBitmap = BitmapFactory.decodeResource(myContext.getResources(), id);
+            Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
+            trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+
+            //Add training data
+            testingData.push_back(trainingBitmapToMat.reshape(1, 1));
+
+            //Add label
+            testLabels.add(crouchingLabel);
+        }
+
+        //loop through and test accuracy
+        for(int x = 0; x < testingData.rows(); x++){
+            Mat one_feature = testingData.row(x);
+            int testLabel = testLabels.get(x);
+            int p = Math.round(knearestneighbor.findNearest(one_feature, 2, knnresult));
+            if(p == testLabel){
+                testSuccessVector.add(1);
+            }
+            else{
+                testSuccessVector.add(0);
+            }
+        }
+
+        //Return out accuracy
+        float totalCorrect = 0;
+        for(int y = 0; y < testSuccessVector.size(); y++ ){
+            totalCorrect+= testSuccessVector.get(y);
+        }
+
+        return (totalCorrect / testSuccessVector.size());
+
+    }
+
+
 
     public static float testAccuracyOfModel() {
 
@@ -267,7 +342,22 @@ public class knn {
 
     }
 
+    public static void trainKnnWithExtraData(Bitmap trainPhoto, int label){
 
+        trainingBitmapToMat = new Mat();
+        trainingData = new Mat();
+        trainingLabels = new ArrayList<Integer>();
+        knearestneighbor = KNearest.create();
+        Bitmap resizedPhoto;
+        Bitmap sizeComparison = BitmapFactory.decodeResource(myContext.getResources(), R.drawable.standing1);
+
+        resizedPhoto = Bitmap.createScaledBitmap(trainPhoto, sizeComparison.getWidth(), sizeComparison.getHeight(), true);
+        Utils.bitmapToMat(resizedPhoto, trainingBitmapToMat);
+        trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
+        trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
+        trainingLabels.add(label);
+
+    }
 
 
     public static String trainAndDoKNNWithExtraData(int label, Bitmap testPhoto, Bitmap one, Bitmap two, Bitmap three, Bitmap four, Bitmap five){
@@ -317,6 +407,7 @@ public class knn {
         trainingLabels.add(label);
 
         testModel(testPhoto);
+        float result = testAccuracyOfModel();
 
         return resultOfKnn;
     }

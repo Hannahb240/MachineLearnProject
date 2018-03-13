@@ -2,6 +2,7 @@ package com.example.hannah.machinelearn;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.StrictMode;
 import android.provider.MediaStore;
@@ -58,14 +59,18 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
         myImageView = (ImageView) findViewById(R.id.myImgView);
 
         pose1 = (ImageView) findViewById(R.id.pose1);
-        pose1.setImageResource(R.drawable.qtwo);
+        pose1.setImageResource(R.drawable.guessposepic1);
 
         pose2 = (ImageView) findViewById(R.id.pose2);
-        pose2.setImageResource(R.drawable.qone);
+        pose2.setImageResource(R.drawable.guessposepic2);
 
         initialInstructions = (TextView) findViewById(R.id.initialTextView);
+        initialInstructions.setTextSize(20);
+        initialInstructions.setTextColor(Color.parseColor("#000000"));
         instructions2 = (TextView) findViewById(R.id.instructions2);
         instructions2.setVisibility(View.INVISIBLE);
+        instructions2.setTextSize(20);
+        instructions2.setTextColor(Color.parseColor("#000000"));
 
         tryAgain = (Button) findViewById(R.id.tryAnotherPhoto);
         tryAgain.setVisibility(View.INVISIBLE);
@@ -113,13 +118,13 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
             String hannah = knearest.doKnn(photo);
 
             if(hannah.equals("[1]")){
-                resultOfKnnToString = "standing";
+                resultOfKnnToString = "reaching for a lemon!";
             }
             else if(hannah.equals("[2]")){
-                resultOfKnnToString = "crouching";
+                resultOfKnnToString = "crouching to pick up an egg!";
             }
 
-            instructions2.setText("The classifier guessed that your pose is " + resultOfKnnToString + " Is this correct?");
+            instructions2.setText("The computer guessed that your pose is " + resultOfKnnToString + " Is this correct?");
             //float hannah = knn.testAccuracyOfModel();
         }
     }
@@ -135,14 +140,25 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
         instructions2.setVisibility(View.INVISIBLE);
         myImageView.setVisibility(View.INVISIBLE);
 
-        resultOfPhoto.setText("Hooray! The classifier guessed correctly");
+        resultOfPhoto.setText("Hooray! The computer guessed correctly. Tap the back button below.");
+        resultOfPhoto.setTextSize(20);
+        resultOfPhoto.setTextColor(Color.parseColor("#000000"));
     }
 
     public void notCorrect(View view) {
         tryAgain.setVisibility(View.VISIBLE);
         back.setVisibility(View.VISIBLE);
 
-        resultOfPhoto.setText("Oh no! The classifier was wrong.");
+
+        resultOfPhoto.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
+
+        instructions2.setVisibility(View.INVISIBLE);
+        myImageView.setVisibility(View.INVISIBLE);
+
+        resultOfPhoto.setText("Oh no! The computer was wrong. Try taking another photo, or tap back below.");
+        resultOfPhoto.setTextSize(20);
+        resultOfPhoto.setTextColor(Color.parseColor("#000000"));
 
         yesButton.setVisibility(View.INVISIBLE);
         noButton.setVisibility(View.INVISIBLE);

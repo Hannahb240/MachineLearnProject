@@ -44,7 +44,7 @@ public class Two_CollectTrainingData extends AppCompatActivity {
         text = (TextView) findViewById(R.id.text);
         text.setTextSize(20);
         text.setTextColor(Color.parseColor("#000000"));
-        text.setText("Take 5 photos of you or your partner acting out picking up an egg from the ground.");
+        text.setText("Take 5 more photos of your pose to pretend to pick up an egg from the floor.");
 
         done = (Button) findViewById(R.id.done);
         done.setVisibility(View.INVISIBLE);
@@ -83,22 +83,22 @@ public class Two_CollectTrainingData extends AppCompatActivity {
 
             //case statement for whatever the variable is set to
             switch(buttonPressedNumber) {
-                case "Take Photo     1":
+                case "Take            Photo 1":
                     pic1.setImageBitmap(photo);
                     break;
-                case "Take Photo     2":
+                case "Take            Photo 2":
                     pic2.setImageBitmap(photo);
                     break;
-                case "Take Photo     3":
+                case "Take            Photo 3":
                     pic3.setImageBitmap(photo);
                     break;
-                case "Take Photo     4":
+                case "Take            Photo 4":
                     pic4.setImageBitmap(photo);
                     break;
-                case "Take Photo     5":
+                case "Take            Photo 5":
                     pic5.setImageBitmap(photo);
+                    text.setText("Great work! Tap done.");
                     done.setVisibility(View.VISIBLE);
-                    text.setVisibility(View.INVISIBLE);
                     break;
             }
         }

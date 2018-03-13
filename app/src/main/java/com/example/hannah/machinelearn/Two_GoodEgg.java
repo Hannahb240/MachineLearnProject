@@ -55,10 +55,6 @@ public class Two_GoodEgg extends AppCompatActivity {
                 eggInstructions.setText("How are you going to pick up the egg from the ground?");
                 nextCount++;
             }
-            else if(nextCount == 1){
-                eggInstructions.setText("Take a picture of your partner pretending to pick up an egg from the floor.");
-                nextCount++;
-            }
             else{
                 Bundle b = new Bundle();
                 b.putInt("key", foundEggs);

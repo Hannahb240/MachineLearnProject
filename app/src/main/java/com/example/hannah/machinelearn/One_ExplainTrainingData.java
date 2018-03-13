@@ -44,5 +44,6 @@ public class One_ExplainTrainingData extends AppCompatActivity {
     public void changeActivity(View view){
         Intent intent = new Intent(getApplicationContext(), One_Lemon_LemonResult.class);
         startActivity(intent);
+        this.finish();
     }
 }

@@ -251,9 +251,7 @@ public class Two_WorldTwo extends AppCompatActivity {
     }
 
     public void shouldFinish() {
-        if (foundEggs == 2) {
             this.finish();
-        }
     }
 
     public void changeActivity(View view) {

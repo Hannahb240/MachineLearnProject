@@ -1,15 +1,19 @@
 package com.example.hannah.machinelearn;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Five_GuessThePose extends AppCompatActivity {
 
     ImageView progresBarImageView;
     int progressBarSize = 0;
+
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,9 @@ public class Five_GuessThePose extends AppCompatActivity {
         progresBarImageView = (ImageView) findViewById(R.id.progressBar);
         progresBarImageView.setImageResource(R.drawable.progressbar2);
         progressBarSize = 3;
+        tv =(TextView) findViewById(R.id.text);
+        tv.setTextSize(20);
+        tv.setTextColor(Color.parseColor("#000000"));
     }
 
     public void tryToGuessPose(View view){

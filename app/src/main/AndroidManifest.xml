@@ -66,7 +66,8 @@
         <activity android:name=".Five_TrainStand" />
         <activity android:name=".Five_TrainCrouch" />
         <activity android:name=".One_Rules" />
-        <activity android:name=".Two_Rules"></activity>
+        <activity android:name=".Two_Rules" />
+        <activity android:name=".accuracyImproving"></activity>
     </application>
 
 </manifest>

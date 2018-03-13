@@ -31,7 +31,7 @@ public class Two_GiveEggToComputer extends AppCompatActivity {
         text2 = (TextView) findViewById(R.id.text);
         text2.setTextSize(20);
 
-        text.setText("Well done! You've collected an egg. Tap next.");
+        text.setText("Well done! You've collected an egg. Tap finish to end the game.");
 
         eggPic = (ImageView) findViewById(R.id.eggView);
         eggPic.setImageResource(R.drawable.egg);
@@ -43,19 +43,19 @@ public class Two_GiveEggToComputer extends AppCompatActivity {
 
     }
 
-    public void next(View view){
-        if(foundEggs == 1){
-            text2.setText("Tap the button below to go to back and find one more egg.");
-            goBack.setVisibility(View.VISIBLE);
-            nextButton.setVisibility(View.INVISIBLE);
-        }
-        else if(foundEggs == 2){
-            text2.setText("You've found both eggs, tap the button below to finish the game.");
-            goBack.setVisibility(View.VISIBLE);
-            nextButton.setVisibility(View.INVISIBLE);
-            goBack.setText("Finish");
-        }
-    }
+//    public void next(View view){
+//        if(foundEggs == 1){
+//            text2.setText("Tap the button below to go to back and find one more egg.");
+//            goBack.setVisibility(View.VISIBLE);
+//            nextButton.setVisibility(View.INVISIBLE);
+//        }
+//        else if(foundEggs == 2){
+//            text2.setText("You've found both eggs, tap the button below to finish the game.");
+//            goBack.setVisibility(View.VISIBLE);
+//            nextButton.setVisibility(View.INVISIBLE);
+//            goBack.setText("Finish");
+//        }
+//    }
 
     public void worldTwo(View view){
         this.finish();

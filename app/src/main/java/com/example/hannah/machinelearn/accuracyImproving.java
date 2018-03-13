@@ -12,24 +12,26 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class One_Lemon_LemonResult extends AppCompatActivity {
+public class accuracyImproving extends AppCompatActivity {
 
+    knn myKnn;
     TextView text;
-    Button done;
+    Button test;
 
     ImageView pic1;
     ImageView pic2;
     ImageView pic3;
-    ImageView pic4;
-    ImageView pic5;
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     String buttonPressedNumber;
 
+    Bitmap lastPhotoTaken;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_one_lemon_lemon_result);
+        setContentView(R.layout.activity_accuracy_improving);
 
         //Photo code
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
@@ -40,8 +42,12 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
         text.setTextColor(Color.parseColor("#000000"));
         text.setText("Take 5 more photos of your pose to pretend to collect a lemon from the tree.");
 
-        done = (Button) findViewById(R.id.done);
-        done.setVisibility(View.INVISIBLE);
+        myKnn = new knn(this.getApplicationContext());
+        myKnn.trainModel();
+//        float result = myKnn.testAccuracyOfModelTwo();
+//        text.setText(Float.toString(result));
+
+        test = (Button) findViewById(R.id.test);
 
         pic1 = (ImageView) findViewById(R.id.pic1);
         pic1.setImageResource(R.drawable.photofillin);
@@ -49,10 +55,6 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
         pic2.setImageResource(R.drawable.photofillin);
         pic3 = (ImageView) findViewById(R.id.pic3);
         pic3.setImageResource(R.drawable.photofillin);
-        pic4 = (ImageView) findViewById(R.id.pic4);
-        pic4.setImageResource(R.drawable.photofillin);
-        pic5 = (ImageView) findViewById(R.id.pic5);
-        pic5.setImageResource(R.drawable.photofillin);
 
     }
 
@@ -65,8 +67,8 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
         //Take the photo
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
-
     }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -77,34 +79,34 @@ public class One_Lemon_LemonResult extends AppCompatActivity {
 
             //case statement for whatever the variable is set to
             switch(buttonPressedNumber) {
-                case "Take            Photo 1":
+                case "Take Photo     1":
                     pic1.setImageBitmap(photo);
+                    lastPhotoTaken = photo;
                     break;
-                case "Take            Photo 2":
+                case "Take Photo     2":
                     pic2.setImageBitmap(photo);
+                    lastPhotoTaken = photo;
                     break;
-                case "Take            Photo 3":
+                case "Take Photo     3":
                     pic3.setImageBitmap(photo);
-                    break;
-                case "Take            Photo 4":
-                    pic4.setImageBitmap(photo);
-                    break;
-                case "Take            Photo 5":
-                    pic5.setImageBitmap(photo);
-                    done.setVisibility(View.VISIBLE);
+                    lastPhotoTaken = photo;
                     text.setText("Great work! Tap done.");
                     break;
             }
         }
+    }
 
-        }
+    public void test(View view) {
 
-        public void changeActivity(View view) {
-                Intent intent = new Intent(getApplicationContext(), One_Lemon_GiveLemonToKing.class);
-                startActivity(intent);
-                this.finish();
-            }
+        //THIS WORKS WITH THE METHOD trainAndDoKNNWithExtraData. so collect all pics in variables,
+        // and send them to the method each time. Maybe an arraylist.
+
+        //Take current set of photos to knn
+        //myKnn.trainKnnWithExtraData(lastPhotoTaken,1);
+        //keep adding training data to it
+        float result = myKnn.testAccuracyOfModelTwo();
+        text.setText(Float.toString(result));
 
     }
 
-
+}

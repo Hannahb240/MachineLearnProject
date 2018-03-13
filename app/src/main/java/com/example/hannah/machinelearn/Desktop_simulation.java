@@ -658,9 +658,6 @@ public class Desktop_simulation extends AppCompatActivity {
             case 3:
                 myImageView.setImageResource(R.drawable.changetogrid4);
                 break;
-            case 4:
-                myImageView.setImageResource(R.drawable.changetogrid5);
-                break;
         }
         imageCount++;
     }
@@ -678,9 +675,6 @@ public class Desktop_simulation extends AppCompatActivity {
                 break;
             case 4:
                 myImageView.setImageResource(R.drawable.changetogrid4grid);
-                break;
-            case 5:
-                myImageView.setImageResource(R.drawable.changetogrid5grid);
                 break;
         }
     }
