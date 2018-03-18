@@ -97,8 +97,8 @@ public class Desktop_simulation extends AppCompatActivity {
         crouchLabel = (TextView) findViewById(R.id.crouchLabel);
         standingLabel = (TextView) findViewById(R.id.standingLabel);
 
-        crouchLabel.setText("Crouching");
-        standingLabel.setText("Standing");
+        crouchLabel.setText("Reaching up");
+        standingLabel.setText("Crouching");
 
         imageCount = 0;
 
