@@ -41,11 +41,6 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
         goToWorld2.setVisibility(View.INVISIBLE);
 
         nextButton = (Button) findViewById(R.id.next);
-
-        texxt = (TextView) findViewById(R.id.testingText);
-        int testerr = knn.trainingData.rows();
-        texxt.setText(Integer.toString(testerr));
-
     }
 
 //    public void next(View view){

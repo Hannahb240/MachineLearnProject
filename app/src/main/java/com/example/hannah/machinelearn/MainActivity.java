@@ -22,6 +22,7 @@ import java.util.List;
     }
 
      TextView texxt;
+     TextView texxt2;
      Button worldOneButton;
      Button worldTwoButton;
      //Button worldThreeButton;
@@ -56,6 +57,7 @@ import java.util.List;
 
 //        int tester = knn.trainingData.rows();
         texxt = (TextView) findViewById(R.id.testingText);
+        texxt2 = (TextView) findViewById(R.id.testingText2);
 //        texxt.setText(Integer.toString(tester));
     }
 
@@ -106,6 +108,9 @@ import java.util.List;
 
          int testerr = knn.trainingData.rows();
          texxt.setText(Integer.toString(testerr));
+
+         float result = knn.testAccuracyOfModel(knn.trainingData, knn.trainingLabels);
+         texxt2.setText(Float.toString(result));
      }
 
 }

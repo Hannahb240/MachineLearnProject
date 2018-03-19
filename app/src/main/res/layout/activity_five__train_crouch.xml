@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Five_TrainCrouch">
+    tools:context="com.example.hannah.machinelearn.Five_TrainCrouch"
+    android:background="@drawable/onetakephotobackground">
 
     <TextView
         android:id="@+id/text"
@@ -19,7 +20,7 @@
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="210dp"
         android:text="Done!"
         android:background="@drawable/button"
         android:textSize="11dp"
@@ -35,11 +36,11 @@
         android:layout_marginBottom="13dp" />
 
     <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="92dp"
+        android:layout_height="60dp"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="20dp"
-        android:text="Take Photo     1"
+        android:text="Take            Photo 1"
         android:background="@drawable/button"
         android:textSize="11dp"
         android:id="@+id/TakePhoto"
@@ -54,11 +55,11 @@
         android:layout_marginBottom="13dp" />
 
     <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="92dp"
+        android:layout_height="60dp"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="105dp"
-        android:text="Take Photo     2"
+        android:text="Take            Photo 2"
         android:textSize="11dp"
         android:background="@drawable/button"
         android:id="@+id/TakePhoto2"
@@ -73,11 +74,11 @@
         android:layout_marginBottom="13dp" />
 
     <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="92dp"
+        android:layout_height="60dp"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="190dp"
-        android:text="Take Photo     3"
+        android:text="Take            Photo 3"
         android:background="@drawable/button"
         android:textSize="11dp"
         android:id="@+id/TakePhoto3"
@@ -92,11 +93,11 @@
         android:layout_marginBottom="13dp" />
 
     <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="92dp"
+        android:layout_height="60dp"
         android:layout_marginTop="350dp"
         android:layout_marginLeft="60dp"
-        android:text="Take Photo     4"
+        android:text="Take            Photo 4"
         android:background="@drawable/button"
         android:textSize="11dp"
         android:id="@+id/TakePhoto4"
@@ -111,11 +112,11 @@
         android:layout_marginBottom="13dp" />
 
     <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+        android:layout_width="92dp"
+        android:layout_height="60dp"
         android:layout_marginTop="350dp"
         android:layout_marginLeft="150dp"
-        android:text="Take Photo     5"
+        android:text="Take            Photo 5"
         android:background="@drawable/button"
         android:textSize="11dp"
         android:id="@+id/TakePhoto5"

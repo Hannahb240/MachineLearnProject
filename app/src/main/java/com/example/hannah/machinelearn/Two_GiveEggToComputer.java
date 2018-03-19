@@ -44,10 +44,6 @@ public class Two_GiveEggToComputer extends AppCompatActivity {
 
         nextButton = (Button) findViewById(R.id.next);
 
-        texxt = (TextView) findViewById(R.id.testingText);
-        int testerr = knn.trainingData.rows();
-        texxt.setText(Integer.toString(testerr));
-
 
     }
 
