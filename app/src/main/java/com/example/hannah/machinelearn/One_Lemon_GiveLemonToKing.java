@@ -18,6 +18,8 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
     Button goToWorld2;
     Button nextButton;
 
+    TextView texxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,10 @@ public class One_Lemon_GiveLemonToKing extends AppCompatActivity {
         goToWorld2.setVisibility(View.INVISIBLE);
 
         nextButton = (Button) findViewById(R.id.next);
+
+        texxt = (TextView) findViewById(R.id.testingText);
+        int testerr = knn.trainingData.rows();
+        texxt.setText(Integer.toString(testerr));
 
     }
 

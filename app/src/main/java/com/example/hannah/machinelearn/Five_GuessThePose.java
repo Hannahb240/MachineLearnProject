@@ -15,6 +15,8 @@ public class Five_GuessThePose extends AppCompatActivity {
 
     TextView tv;
 
+    TextView texxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,10 @@ public class Five_GuessThePose extends AppCompatActivity {
         tv =(TextView) findViewById(R.id.text);
         tv.setTextSize(20);
         tv.setTextColor(Color.parseColor("#000000"));
+
+        int tester = knn.trainingData.rows();
+        texxt = (TextView) findViewById(R.id.testingText);
+        texxt.setText(Integer.toString(tester));
     }
 
     public void tryToGuessPose(View view){

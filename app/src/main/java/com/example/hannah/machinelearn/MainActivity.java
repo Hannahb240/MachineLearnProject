@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.opencv.android.OpenCVLoader;
+import org.opencv.core.Mat;
+
+import java.util.List;
 
  public class MainActivity extends AppCompatActivity {
 
@@ -18,12 +21,15 @@ import org.opencv.android.OpenCVLoader;
         System.loadLibrary("opencv_java3");
     }
 
+     TextView texxt;
      Button worldOneButton;
      Button worldTwoButton;
      //Button worldThreeButton;
      //Button classificationQuiz;
      Button guessThePose;
 
+
+     Button changenum;
      boolean hiddenButtonPressed;
 
     @Override
@@ -39,6 +45,18 @@ import org.opencv.android.OpenCVLoader;
 
         hiddenButtonPressed = false;
 
+        knn knearest = new knn(this.getApplicationContext());
+        //call knn with photo
+        knearest.trainModel();
+        Mat trainData = knearest.getTrainingData();
+        List<Integer> trainLabels = knearest.getTrainingLabels();
+
+        knn.trainingData = trainData;
+        knn.trainingLabels = trainLabels;
+
+//        int tester = knn.trainingData.rows();
+        texxt = (TextView) findViewById(R.id.testingText);
+//        texxt.setText(Integer.toString(tester));
     }
 
      public void changeToWorld(View view) {
@@ -82,6 +100,12 @@ import org.opencv.android.OpenCVLoader;
      public void accuracy(View view){
          Intent intent = new Intent(getApplicationContext(), accuracyImproving.class);
          startActivity(intent);
+     }
+
+     public void updateNumber(View view){
+
+         int testerr = knn.trainingData.rows();
+         texxt.setText(Integer.toString(testerr));
      }
 
 }

@@ -12,6 +12,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.opencv.core.Mat;
+
+import java.util.List;
+
 public class Two_CollectTrainingData extends AppCompatActivity {
 
     TextView text;
@@ -81,22 +85,31 @@ public class Two_CollectTrainingData extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap photo = (Bitmap) extras.get("data");
 
+            Mat trainData = knn.trainingData;
+            List<Integer> trainLabels = knn.trainingLabels;
+            knn knearest = new knn(this.getApplicationContext());
+
             //case statement for whatever the variable is set to
             switch(buttonPressedNumber) {
                 case "Take            Photo 1":
                     pic1.setImageBitmap(photo);
+                    knn.trainKnnWithExtraData(photo, 2, trainData, trainLabels);
                     break;
                 case "Take            Photo 2":
                     pic2.setImageBitmap(photo);
+                    knn.trainKnnWithExtraData(photo, 2, trainData, trainLabels);
                     break;
                 case "Take            Photo 3":
                     pic3.setImageBitmap(photo);
+                    knn.trainKnnWithExtraData(photo, 2, trainData, trainLabels);
                     break;
                 case "Take            Photo 4":
                     pic4.setImageBitmap(photo);
+                    knn.trainKnnWithExtraData(photo, 2, trainData, trainLabels);
                     break;
                 case "Take            Photo 5":
                     pic5.setImageBitmap(photo);
+                    knn.trainKnnWithExtraData(photo, 2, trainData, trainLabels);
                     text.setText("Great work! Tap done.");
                     done.setVisibility(View.VISIBLE);
                     break;

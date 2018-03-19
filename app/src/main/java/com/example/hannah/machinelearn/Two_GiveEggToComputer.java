@@ -18,6 +18,9 @@ public class Two_GiveEggToComputer extends AppCompatActivity {
 
     int foundEggs;
 
+    TextView texxt;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,11 @@ public class Two_GiveEggToComputer extends AppCompatActivity {
         goBack.setVisibility(View.INVISIBLE);
 
         nextButton = (Button) findViewById(R.id.next);
+
+        texxt = (TextView) findViewById(R.id.testingText);
+        int testerr = knn.trainingData.rows();
+        texxt.setText(Integer.toString(testerr));
+
 
     }
 
