@@ -87,7 +87,7 @@ public class knn {
     public static void trainModel(){
 
         //Standing training data
-        for (int x = 5; x <= 10; x++) {
+        for (int x = 1; x <= 75; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("standing" + x, "drawable", myContext.getPackageName());
@@ -105,7 +105,7 @@ public class knn {
         }
 
         //Crouching training data
-        for (int x = 10; x <= 15; x++) {
+        for (int x = 10; x <= 82; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("crouching" + x, "drawable", myContext.getPackageName());
@@ -208,7 +208,7 @@ public class knn {
         ArrayList<Integer> testSuccessVectorCrouching = new ArrayList<>();
 
         //Standing testing data
-        for (int x = 15; x <= 20; x++) {
+        for (int x = 76; x <= 82; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("standing" + x, "drawable", myContext.getPackageName());
@@ -229,7 +229,7 @@ public class knn {
 
 
         //Crouching testing data
-        for (int x = 14; x <= 20; x++) {
+        for (int x = 1; x <= 9; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("crouching" + x, "drawable", myContext.getPackageName());

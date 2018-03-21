@@ -98,6 +98,11 @@ public class Five_GuessThePose extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToAddTrainingData(View view){
+        Intent intent  = new Intent(getApplicationContext(), Five_Add_Data.class);
+        startActivity(intent);
+    }
+
     public void updateProgressBar(View view){
         float result = knn.testAccuracyOfModel(knn.trainingData, knn.trainingLabels);
         int floatToInt = Math.round(result * 100);

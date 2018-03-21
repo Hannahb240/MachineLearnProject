@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:textSize="22sp"
         android:layout_marginTop="290dp"
         android:id="@+id/testingText"/>
@@ -38,19 +38,10 @@
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="95dp"
         android:background="@drawable/button"
-        android:text="Reaching          to pick a         lemon"
-        android:onClick="goToTrainStand"/>
-
-    <Button
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="150dp"
-        android:background="@drawable/button"
-        android:text="Crouching         to pick up          an egg"
-        android:onClick="goToTrainCrouch"/>
+        android:text="Add more training        data"
+        android:onClick="goToAddTrainingData"/>
 
     <Button
         android:layout_width="120dp"

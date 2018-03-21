@@ -104,7 +104,7 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
             //Get the photo
             Bundle extras = data.getExtras();
             Bitmap photo = (Bitmap) extras.get("data");
-
+            myImageView.setVisibility(View.VISIBLE);
             myImageView.setImageBitmap(photo);
             takePhoto.setVisibility(View.INVISIBLE);
 

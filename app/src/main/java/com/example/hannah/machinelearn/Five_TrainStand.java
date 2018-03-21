@@ -82,27 +82,27 @@ public class Five_TrainStand extends AppCompatActivity {
 
             //case statement for whatever the variable is set to
             switch(buttonPressedNumber) {
-                case "Take Photo     1":
+                case "Take            Photo 1":
                     pic1.setImageBitmap(photo);
                     knn.trainKnnWithExtraData(photo, 1, trainData, trainLabels);
                     break;
-                case "Take Photo     2":
+                case "Take            Photo 2":
                     pic2.setImageBitmap(photo);
                     knn.trainKnnWithExtraData(photo, 1, trainData, trainLabels);
                     break;
-                case "Take Photo     3":
+                case "Take            Photo 3":
                     pic3.setImageBitmap(photo);
                     knn.trainKnnWithExtraData(photo, 1, trainData, trainLabels);
                     break;
-                case "Take Photo     4":
+                case "Take            Photo 4":
                     pic4.setImageBitmap(photo);
                     knn.trainKnnWithExtraData(photo, 1, trainData, trainLabels);
                     break;
-                case "Take Photo     5":
+                case "Take            Photo 5":
                     pic5.setImageBitmap(photo);
                     knn.trainKnnWithExtraData(photo, 1, trainData, trainLabels);
                     done.setVisibility(View.VISIBLE);
-                    text.setVisibility(View.INVISIBLE);
+                    text.setText("Great work! Tap done.");
                     break;
             }
         }
