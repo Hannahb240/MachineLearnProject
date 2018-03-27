@@ -37,7 +37,7 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
     TextView initialInstructions;
     TextView instructions2;
     TextView resultOfPhoto;
-
+     
     int resultOfKnn;
     String resultOfKnnToString;
 
@@ -87,7 +87,6 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
     }
 
 
-
     public void launchCamera(View view) {
         resultOfPhoto.setVisibility(View.INVISIBLE);
         tryAgain.setVisibility(View.INVISIBLE);
@@ -113,16 +112,17 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
             instructions2.setVisibility(View.VISIBLE);
             initialInstructions.setVisibility(View.INVISIBLE);
 
-            knn knearest = new knn(this.getApplicationContext());
+//            knn knearest = new knn(this.getApplicationContext());
             //call knn with photo
-            String hannah = knearest.doKnn(photo);
+            String hannah = knn.testModel(photo, knn.trainingData, knn.trainingLabels);
 
-            if(hannah.equals("[1]")){
-                resultOfKnnToString = "reaching for a lemon!";
-            }
-            else if(hannah.equals("[2]")){
-                resultOfKnnToString = "crouching to pick up an egg!";
-            }
+            resultOfKnnToString = hannah;
+//            if(hannah.equals("[1]")){
+//                resultOfKnnToString = "reaching for a lemon!";
+//            }
+//            else if(hannah.equals("[2]")){
+//                resultOfKnnToString = "crouching to pick up an egg!";
+//            }
 
             instructions2.setText("The computer guessed that your pose is " + resultOfKnnToString + " Is this correct?");
             //float hannah = knn.testAccuracyOfModel();
@@ -165,9 +165,7 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
         instructions2.setVisibility(View.INVISIBLE);
         myImageView.setVisibility(View.INVISIBLE);
 
-
     }
-
 
 
     public void goBack(View view){

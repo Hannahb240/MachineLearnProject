@@ -99,11 +99,6 @@ import java.util.List;
 
      }
 
-     public void accuracy(View view){
-         Intent intent = new Intent(getApplicationContext(), accuracyImproving.class);
-         startActivity(intent);
-     }
-
      public void updateNumber(View view){
 
          int testerr = knn.trainingData.rows();

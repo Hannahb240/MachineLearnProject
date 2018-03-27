@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +18,8 @@ public class Five_GuessThePose extends AppCompatActivity {
 
     TextView texxt;
     TextView texxt2;
+
+    Button testButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,10 @@ public class Five_GuessThePose extends AppCompatActivity {
         int tester = knn.trainingData.rows();
         texxt = (TextView) findViewById(R.id.testingText);
         texxt2 = (TextView) findViewById(R.id.testingText2);
+
+        //Set to visible to view statistics about the data
+        testButton = (Button) findViewById(R.id.testButton);
+//        testButton.setVisibility(View.INVISIBLE);
 
 //        texxt.setText(Integer.toString(tester));
 

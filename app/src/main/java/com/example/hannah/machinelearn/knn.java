@@ -20,6 +20,18 @@ import java.util.List;
  * Created by Hannah on 22/02/2018.
  */
 
+//To get a high accuracy to begin with (88%):
+//In method trainModel(), standing training data =  for (int x = 1; x <= 75; x++) and
+//crouching traning data =  for (int x = 10; x <= 82; x++)
+//and in method testAccuracyOfModel(), standing testing data = for (int x = 76; x <= 82; x++) and
+//crouching testing data = for (int x = 1; x <= 9; x++)
+
+//To get a lower accuracy to begin with (46%), so the model can be, trained:
+//In mehthod trainModel(), standing training data = 5-10 and
+//crouching trainng data = 10-15
+//in method testAccuracyOfModel(), standing testing data  = 15-20
+//and crouching testing data = 14-20
+
 public class knn {
 
     public static int tester = 0;
@@ -70,15 +82,15 @@ public class knn {
         myContext =context;
     }
 
-    public static String doKnn(Bitmap photo){
+    public static String doKnn(Bitmap photo, Mat trainData, List<Integer> trainLabels){
 
-        trainingBitmapToMat = new Mat();
-        trainingData = new Mat();
-        trainingLabels = new ArrayList<Integer>();
-        knearestneighbor = KNearest.create();
-
-        trainModel();
-        testModel(photo);
+//        trainingBitmapToMat = new Mat();
+//        trainingData = new Mat();
+//        trainingLabels = new ArrayList<Integer>();
+//        knearestneighbor = KNearest.create();
+//
+//        trainModel();
+//        testModel(photo);
 
         return resultOfKnn;
 
@@ -87,7 +99,7 @@ public class knn {
     public static void trainModel(){
 
         //Standing training data
-        for (int x = 1; x <= 75; x++) {
+        for (int x = 5; x <=5; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("standing" + x, "drawable", myContext.getPackageName());
@@ -105,7 +117,7 @@ public class knn {
         }
 
         //Crouching training data
-        for (int x = 10; x <= 82; x++) {
+        for (int x = 10; x <= 10; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("crouching" + x, "drawable", myContext.getPackageName());
@@ -208,7 +220,7 @@ public class knn {
         ArrayList<Integer> testSuccessVectorCrouching = new ArrayList<>();
 
         //Standing testing data
-        for (int x = 76; x <= 82; x++) {
+        for (int x = 15; x <= 20; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("standing" + x, "drawable", myContext.getPackageName());
@@ -229,7 +241,7 @@ public class knn {
 
 
         //Crouching testing data
-        for (int x = 1; x <= 9; x++) {
+        for (int x = 14; x <= 20; x++) {
 
             //Find the training image id
             id = myContext.getResources().getIdentifier("crouching" + x, "drawable", myContext.getPackageName());
@@ -446,12 +458,16 @@ public class knn {
         trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
         trainingLabels.add(label);
 
-        testModel(testPhoto);
+//        testModel(testPhoto);
 //        float result = testAccuracyOfModel();
         return resultOfKnn;
     }
 
-    public static void testModel(Bitmap photo){
+    public static String testModel(Bitmap photo, Mat trainData, List<Integer> trainLabels){
+
+
+        knearestneighbor = KNearest.create();
+        knearestneighbor.train(trainData, Ml.ROW_SAMPLE, Converters.vector_int_to_Mat(trainLabels));
 
         testingData = new Mat();
         testingBitmapToMat = new Mat();
@@ -477,8 +493,8 @@ public class knn {
         int testLabel = testLabels.get(0);
         float p = knearestneighbor.findNearest(one_feature, 2, knnresult);
         resultOfKnn = knnresult.dump();
+        return resultOfKnn;
     }
-
 
     public Mat getTrainingData(){
         return trainingData;
