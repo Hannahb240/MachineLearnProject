@@ -1,14 +1,19 @@
  package com.example.hannah.machinelearn;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.opencv.android.OpenCVLoader;
+import org.opencv.android.Utils;
+import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 
 import java.util.List;
@@ -52,13 +57,34 @@ import java.util.List;
         Mat trainData = knearest.getTrainingData();
         List<Integer> trainLabels = knearest.getTrainingLabels();
 
+
         knn.trainingData = trainData;
         knn.trainingLabels = trainLabels;
 
-//        int tester = knn.trainingData.rows();
+        int id = this.getApplicationContext().getResources().getIdentifier("small", "drawable", this.getApplicationContext().getPackageName());
+        Bitmap picture = BitmapFactory.decodeResource(this.getApplicationContext().getResources(), id);
+
+        Log.d("picturew", Integer.toString(picture.getWidth()));
+        Log.d("pictureh", Integer.toString(picture.getHeight()));
+
+        Mat changedPic = new Mat();
+        Utils.bitmapToMat(picture, changedPic);
+        Log.d("changedr", Integer.toString( changedPic.rows()));
+        Log.d("changedc", Integer.toString( changedPic.cols()));
+        Log.d("changedp", changedPic.dump());
+
+        changedPic.convertTo(changedPic, CvType.CV_32F);
+        Mat bigMat = new Mat();
+        bigMat.push_back(changedPic.reshape(1, 1));
+
+        Log.d("bigmatcol", Integer.toString(bigMat.cols()));
+        Log.d("bigmatrow", Integer.toString(bigMat.rows()));
+        Log.d("bigmatpic", bigMat.dump());
+
+
         texxt = (TextView) findViewById(R.id.testingText);
         texxt2 = (TextView) findViewById(R.id.testingText2);
-//        texxt.setText(Integer.toString(tester));
+
     }
 
      public void changeToWorld(View view) {

@@ -14,13 +14,16 @@ public class Five_GuessThePose extends AppCompatActivity {
     ImageView progresBarImageView;
     int progressBarSize = 0;
 
+
     TextView tv;
 
     TextView texxt;
     TextView texxt2;
 
     Button testButton;
+    Button testAccuracyButton;
 
+    Button seeAccuracyButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,7 @@ public class Five_GuessThePose extends AppCompatActivity {
 
         progresBarImageView = (ImageView) findViewById(R.id.progressBar);
         progresBarImageView.setImageResource(R.drawable.progressbar2);
+        progresBarImageView.setVisibility(View.INVISIBLE);
         progressBarSize = 3;
         tv =(TextView) findViewById(R.id.text);
         tv.setTextSize(20);
@@ -39,12 +43,24 @@ public class Five_GuessThePose extends AppCompatActivity {
 
         //Set to visible to view statistics about the data
         testButton = (Button) findViewById(R.id.testButton);
+        testButton.setVisibility(View.INVISIBLE);
+        testAccuracyButton = (Button) findViewById(R.id.testAccuracyButton);
+        testAccuracyButton.setVisibility(View.INVISIBLE);
+
+        seeAccuracyButton = (Button) findViewById(R.id.seeAccuracyButton);
+
+
 //        testButton.setVisibility(View.INVISIBLE);
 
 //        texxt.setText(Integer.toString(tester));
 
 //        float result = knn.testAccuracyOfModel(knn.trainingData, knn.trainingLabels);
 //        texxt2.setText(Float.toString(result));
+    }
+
+    public void seeAccuracy(View view) {
+        Intent intent = new Intent(getApplicationContext(), SeeAccuracy.class);
+        startActivity(intent);
     }
 
     public void tryToGuessPose(View view){

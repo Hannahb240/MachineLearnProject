@@ -18,6 +18,12 @@
         android:text="Which category would you like to add more trainng data to? Tap below."
         android:id="@+id/textbox"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:id="@+id/numberOfSamples"/>
+
     <Button
         android:layout_width="120dp"
         android:layout_height="100dp"

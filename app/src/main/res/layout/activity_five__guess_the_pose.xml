@@ -62,6 +62,7 @@
         android:onClick="testAccuracy"/>
 
     <Button
+        android:id="@+id/testAccuracyButton"
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:layout_marginTop="280dp"
@@ -69,6 +70,16 @@
         android:text="Test acccuracy"
         android:background="@drawable/button"
         android:onClick="updateProgressBar"/>
+
+    <Button
+        android:id="@+id/seeAccuracyButton"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="80dp"
+        android:text="View acccuracy"
+        android:background="@drawable/button"
+        android:onClick="seeAccuracy"/>
 
     <ImageView
         android:id="@+id/progressBar"

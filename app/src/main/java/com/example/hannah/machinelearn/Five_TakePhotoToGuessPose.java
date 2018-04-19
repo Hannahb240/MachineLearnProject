@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import org.opencv.core.Algorithm;
+import org.opencv.core.Point;
 
 public class Five_TakePhotoToGuessPose extends AppCompatActivity {
 
@@ -37,7 +39,6 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
     TextView initialInstructions;
     TextView instructions2;
     TextView resultOfPhoto;
-     
     int resultOfKnn;
     String resultOfKnnToString;
 
@@ -117,19 +118,24 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
             String hannah = knn.testModel(photo, knn.trainingData, knn.trainingLabels);
 
             resultOfKnnToString = hannah;
-//            if(hannah.equals("[1]")){
-//                resultOfKnnToString = "reaching for a lemon!";
-//            }
-//            else if(hannah.equals("[2]")){
-//                resultOfKnnToString = "crouching to pick up an egg!";
-//            }
+            if(hannah.equals("[1]")){
+                resultOfKnnToString = "reaching for a lemon!";
+            }
+            else if(hannah.equals("[2]")){
+                resultOfKnnToString = "crouching to pick up an egg!";
+            }
 
             instructions2.setText("The computer guessed that your pose is " + resultOfKnnToString + " Is this correct?");
+
+            Point point = new Point();
+
             //float hannah = knn.testAccuracyOfModel();
         }
     }
 
     public void correct(View view){
+
+        knn.numberGuessedCorrectly++;
 
         resultOfPhoto.setVisibility(View.VISIBLE);
         back.setVisibility(View.VISIBLE);
@@ -146,6 +152,8 @@ public class Five_TakePhotoToGuessPose extends AppCompatActivity {
     }
 
     public void notCorrect(View view) {
+
+        knn.numberGuessedIncorrectly++;
         tryAgain.setVisibility(View.VISIBLE);
         back.setVisibility(View.VISIBLE);
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.View;
 
 import org.opencv.android.Utils;
@@ -35,6 +36,9 @@ import java.util.List;
 public class knn {
 
     public static int tester = 0;
+
+    public static int numberGuessedCorrectly = 0;
+    public static int numberGuessedIncorrectly = 0;
 
     //Training data variables
     private static Bitmap trainingBitmap;
@@ -106,9 +110,11 @@ public class knn {
 
             //Change from drawable to bitmap, to Mat, to float Mat
             trainingBitmap = BitmapFactory.decodeResource(myContext.getResources(), id);
+
             Utils.bitmapToMat(trainingBitmap, trainingBitmapToMat);
             trainingBitmapToMat.convertTo(trainingBitmapToMat, CvType.CV_32F);
 
+            trainingBitmapToMat.reshape(1,1);
             //Add training data
             trainingData.push_back(trainingBitmapToMat.reshape(1, 1));
 
@@ -465,7 +471,6 @@ public class knn {
 
     public static String testModel(Bitmap photo, Mat trainData, List<Integer> trainLabels){
 
-
         knearestneighbor = KNearest.create();
         knearestneighbor.train(trainData, Ml.ROW_SAMPLE, Converters.vector_int_to_Mat(trainLabels));
 
@@ -494,6 +499,9 @@ public class knn {
         float p = knearestneighbor.findNearest(one_feature, 2, knnresult);
         resultOfKnn = knnresult.dump();
         return resultOfKnn;
+
+
+
     }
 
     public Mat getTrainingData(){

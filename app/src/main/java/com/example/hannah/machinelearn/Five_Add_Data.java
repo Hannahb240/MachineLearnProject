@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class Five_Add_Data extends AppCompatActivity {
 
     TextView text;
+    TextView numberSamples;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,11 @@ public class Five_Add_Data extends AppCompatActivity {
         text =(TextView) findViewById(R.id.textbox);
         text.setTextSize(20);
         text.setTextColor(Color.parseColor("#000000"));
+
+        numberSamples =(TextView) findViewById(R.id.textbox);
+        numberSamples.setTextSize(20);
+        numberSamples.setTextColor(Color.parseColor("#000000"));
+        numberSamples.setText("Number of training photos: " + Integer.toString(knn.trainingData.rows()));
     }
 
     public void goToTrainCrouch(View view) {

@@ -24,7 +24,7 @@ public class Two_Rules extends AppCompatActivity {
         getWindow().setLayout((int)(width*0.8), (int)(height*0.6));
 
         rules = (TextView) findViewById(R.id.rules);
-        rules.setText("You need to find two eggs that are not cracked! Tap on each egg until you find them.");
+        rules.setText("You need to find an egg which is not cracked! Tap on each egg until you find it.");
         rules.setTextSize(20);
     }
 
