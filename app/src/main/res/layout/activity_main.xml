@@ -21,22 +21,6 @@
         android:textSize="22sp"
         android:layout_marginTop="30dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:textSize="22sp"
-        android:layout_marginTop="290dp"
-        android:id="@+id/testingText"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:textSize="22sp"
-        android:layout_marginTop="250dp"
-        android:id="@+id/testingText2"/>
-
     <Button
         android:id="@+id/desktop"
         android:layout_width="100dp"

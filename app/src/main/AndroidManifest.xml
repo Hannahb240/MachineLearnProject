@@ -15,42 +15,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".One_WorldOne" />
-        <activity android:name=".One_ResultOfImage" />
-        <activity android:name=".One_LemonTree" />
-        <activity android:name=".One_TakePhoto" />
-        <activity android:name=".One_OrangeTree" />
-        <activity android:name=".One_LemonTree$AppleTree" />
-        <activity android:name=".One_PearTree" />
-        <activity android:name=".One_Lemon_LemonResult" />
-        <activity android:name=".One_Lemon_GiveLemonToKing" />
-        <activity android:name=".One_AppleTree" />
-        <activity android:name=".Two_WorldTwo" />
-        <activity android:name=".Two_EggSmashed" />
-        <activity android:name=".Three_WorldThree" />
-        <activity android:name=".Four_ClassificationQuizOne" />
-        <activity android:name=".Five_GuessThePose" />
-        <activity android:name=".Four_ClassificationQuizTwo" />
-        <activity android:name=".Four_ClassificationQuizThree" />
-        <activity android:name=".Four_ClassificationQuizFour" />
-        <activity android:name=".Four_ClassificationQuizFive" />
-        <activity android:name=".Three_GoodTurnipOne" />
-        <activity android:name=".Three_BadTurnipOne" />
-        <activity android:name=".Three_BadTurnipTwo" />
-        <activity android:name=".Three_TakePhoto" />
-        <activity android:name=".Three_ResultOfImage" />
-        <activity android:name=".Three_CollectTrainingData" />
-        <activity android:name=".Three_GiveTurnipToComputer" />
-        <activity android:name=".Two_GoodEgg" />
-        <activity android:name=".Two_TakePhoto" />
-        <activity android:name=".Two_ResultOfImage" />
-        <activity android:name=".Two_CollectTrainingData" />
-        <activity android:name=".Two_GiveEggToComputer" />
-        <activity android:name=".Five_ResultOfGuessYes" />
-        <activity android:name=".Five_ResultOfGuessNo" />
-        <activity android:name=".Five_CollectTrainingData" />
-        <activity android:name=".Five_GiveTrainingDataToComputer" />
-        <activity android:name=".Four_ClassificationQuizSix" />
+        <activity android:name=".WorldOneCollectLemon.One_WorldOne" />
+        <activity android:name=".WorldOneCollectLemon.One_ResultOfImage" />
+        <activity android:name=".WorldOneCollectLemon.One_LemonTree" />
+        <activity android:name=".WorldOneCollectLemon.One_TakePhoto" />
+        <activity android:name=".WorldOneCollectLemon.One_OrangeTree" />
+        <activity android:name=".WorldOneCollectLemon.One_LemonTree$AppleTree" />
+        <activity android:name=".WorldOneCollectLemon.One_PearTree" />
+        <activity android:name=".WorldOneCollectLemon.One_Lemon_LemonResult" />
+        <activity android:name=".WorldOneCollectLemon.One_Lemon_GiveLemonToKing" />
+        <activity android:name=".WorldOneCollectLemon.One_AppleTree" />
+        <activity android:name=".WorldTwoCollectEgg.Two_WorldTwo" />
+        <activity android:name=".WorldTwoCollectEgg.Two_EggSmashed" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_WorldThree" />
+        <activity android:name=".GuessThePose.Five_GuessThePose" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_GoodTurnipOne" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_BadTurnipOne" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_BadTurnipTwo" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_TakePhoto" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_ResultOfImage" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_CollectTrainingData" />
+        <activity android:name=".WorldThreeCollectTurnip.Three_GiveTurnipToComputer" />
+        <activity android:name=".WorldTwoCollectEgg.Two_GoodEgg" />
+        <activity android:name=".WorldTwoCollectEgg.Two_TakePhoto" />
+        <activity android:name=".WorldTwoCollectEgg.Two_ResultOfImage" />
+        <activity android:name=".WorldTwoCollectEgg.Two_CollectTrainingData" />
+        <activity android:name=".WorldTwoCollectEgg.Two_GiveEggToComputer" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -59,17 +49,16 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".Five_TakePhotoToGuessPose" />
+        <activity android:name=".GuessThePose.Five_TakePhotoToGuessPose" />
         <activity android:name=".Desktop_simulation" />
-        <activity android:name=".Five_TestRetrainedModel" />
-        <activity android:name=".One_ExplainTrainingData" />
-        <activity android:name=".Five_TrainStand" />
-        <activity android:name=".Five_TrainCrouch" />
-        <activity android:name=".One_Rules" />
-        <activity android:name=".Two_Rules" />
-        <activity android:name=".Five_Test_Accuracy" />
-        <activity android:name=".Five_Add_Data" />
-        <activity android:name=".SeeAccuracy"></activity>
+        <activity android:name=".WorldOneCollectLemon.One_ExplainTrainingData" />
+        <activity android:name=".GuessThePose.Five_TrainStand" />
+        <activity android:name=".GuessThePose.Five_TrainCrouch" />
+        <activity android:name=".WorldOneCollectLemon.One_Rules" />
+        <activity android:name=".WorldTwoCollectEgg.Two_Rules" />
+        <activity android:name=".GuessThePose.Five_Test_Accuracy" />
+        <activity android:name=".GuessThePose.Five_Add_Data" />
+        <activity android:name=".GuessThePose.SeeAccuracy"></activity>
     </application>
 
 </manifest>

@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Five_TakePhotoToGuessPose"
+    tools:context="com.example.hannah.machinelearn.GuessThePose.Five_TakePhotoToGuessPose"
     android:background="@drawable/onetakephotobackground">
 
     <TextView
@@ -110,7 +110,7 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginLeft="30dp"
-        android:id="@+id/initialTextView"
+        android:id="@+id/initialInsturctionsTextView"
         android:text="Take a photo of your partner in one of the poses from below! Tap the take photo button."/>
 
     <TextView

@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hannah.machinelearn.Two_WorldTwo"
+    tools:context="com.example.hannah.machinelearn.WorldTwoCollectEgg.Two_WorldTwo"
     android:background="@drawable/worldtwomap">
 
     <Button
@@ -38,7 +38,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg4"
+        android:id="@+id/egg2"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
@@ -46,7 +46,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg5"
+        android:id="@+id/egg3"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="340dp"
@@ -54,7 +54,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg7"
+        android:id="@+id/egg4"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="160dp"
@@ -62,7 +62,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg9"
+        android:id="@+id/egg5"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="340dp"
@@ -70,7 +70,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg12"
+        android:id="@+id/egg6"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="330dp"
@@ -78,7 +78,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg14"
+        android:id="@+id/egg7"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="200dp"
@@ -86,7 +86,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg15"
+        android:id="@+id/egg8"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="130dp"
@@ -94,7 +94,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg16"
+        android:id="@+id/egg9"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="240dp"
@@ -102,7 +102,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg17"
+        android:id="@+id/egg10"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="240dp"
@@ -110,7 +110,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg18"
+        android:id="@+id/egg11"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="240dp"
@@ -118,7 +118,7 @@
         android:background="@drawable/egg" />
 
     <ImageButton
-        android:id="@+id/egg19"
+        android:id="@+id/egg12"
         android:layout_width="40dp"
         android:layout_height="60dp"
         android:layout_marginTop="190dp"
